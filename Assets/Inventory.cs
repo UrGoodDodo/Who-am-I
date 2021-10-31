@@ -34,7 +34,7 @@ public class Inventory : MonoBehaviour
             AddGraphics();
         }
 
-        for (int i = 0; i < maxCount; i++)    //Тест, заполнить рандомные ячейки
+        for (int i = 0; i < maxCount; i++)    
         {
             AddItem(i, data.items[Random.Range(0, data.items.Count)], Random.Range(1, 99));
         }
