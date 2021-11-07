@@ -2,28 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.EventSystems;
-
-public class Inventory : MonoBehaviour
+using UnityEngine.EventSystems; //Подключает систему событий. Способ отправки событий к объектам в приложении
+//Событие происходит в зависимости от  действий пользователя, например: События нажатия кнопки I, чтобы открыть инвентарь. Или событие взятие предмета из инвентаря.
+public class Inventory : MonoBehaviour  //Наследуем класс Inventory от класса со скриптами
 {
-    public DataBase data;
+    public DataBase data;   //Информация из скрипта DataBase
 
-    public List<ItemInventory> items = new List<ItemInventory>();
+    public List<ItemInventory> items = new List<ItemInventory>();   //Список предметов в инвентаре
 
-    public GameObject gameObjShow;
+    public GameObject gameObjShow;  //Игровые объекты, которые должны быть отображены
 
-    public GameObject InventoryMainObject;
+    public GameObject InventoryMainObject;  //Предмет в инвентаре
 
-    public int maxCount;
+    public int maxCount;    //Максимальное количество элементов в ячейке
 
-    public Camera cam;
-    public EventSystem es;
+    public Camera cam;  //К этой переменной привязана камера
+    public EventSystem es;  //Сюда привязали систему событий
 
     public int currentID;
     public ItemInventory currentItem;
 
-    public RectTransform movingObject;
-    public Vector3 offset;
+    public RectTransform movingObject;  //Позволит перемещать  объект и держать его на курсоре
+    public Vector3 offset;  //Смещает объект, когда поднимаем его курсором
 
     public GameObject backGround;
 
@@ -34,7 +34,7 @@ public class Inventory : MonoBehaviour
             AddGraphics();
         }
 
-        for (int i = 0; i < maxCount; i++)    
+        for (int i = 0; i < maxCount; i++)    //Заполняет ячейки рандомными предметы с рандомным количеством
         {
             AddItem(i, data.items[Random.Range(0, data.items.Count)], Random.Range(1, 99));
         }
@@ -96,7 +96,7 @@ public class Inventory : MonoBehaviour
     }
 
 
-    public void AddItem(int id, Item item, int count)
+    public void AddItem(int id, Item item, int count)   //Обновление информации о предмете
     {
         items[id].id = item.id;
         items[id].count = count;
@@ -104,7 +104,7 @@ public class Inventory : MonoBehaviour
 
         if (count > 1 && item.id != 0)
         {
-            items[id].itemGameObj.GetComponentInChildren<Text>().text = count.ToString();
+            items[id].itemGameObj.GetComponentInChildren<Text>().text = count.ToString();   
         }
         else
         {
@@ -112,13 +112,13 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    public void AddInventoryItem(int id, ItemInventory invItem)
+    public void AddInventoryItem(int id, ItemInventory invItem) //Добавление предмета в инвентарь
     {
         items[id].id = invItem.id;
         items[id].count = invItem.count;
         items[id].itemGameObj.GetComponent<Image>().sprite = data.items[invItem.id].img;
 
-        if (invItem.count > 1 && invItem.id != 0)
+        if (invItem.count > 1 && invItem.id != 0)//Пишет количество предметов в слоте, если это не пустой слот и предметов больше 1
         {
             items[id].itemGameObj.GetComponentInChildren<Text>().text = invItem.count.ToString();
         }
@@ -129,27 +129,27 @@ public class Inventory : MonoBehaviour
     }
 
 
-    public void AddGraphics()
+    public void AddGraphics()   //Отвечает за изображение в каждой ячейке
     {
         for (int i = 0; i < maxCount; i++)
         {
-            GameObject newItem = Instantiate(gameObjShow, InventoryMainObject.transform) as GameObject;
+            GameObject newItem = Instantiate(gameObjShow, InventoryMainObject.transform) as GameObject; //Отвечает за перемещение игрового объекта в инвентаре
 
-            newItem.name = i.ToString();
+            newItem.name = i.ToString();    //Имя объекта
 
-            ItemInventory ii = new ItemInventory();
-            ii.itemGameObj = newItem;
+            ItemInventory ii = new ItemInventory(); //Создание объекта класса ItemInventory
+            ii.itemGameObj = newItem;   //ii как игровой объект является newItem
 
-            RectTransform rt = newItem.GetComponent<RectTransform>();
-            rt.localPosition = new Vector3(0, 0, 0);
-            rt.localScale = new Vector3(1, 1, 1);
-            newItem.GetComponentInChildren<RectTransform>().localScale = new Vector3(1, 1, 1);
+            RectTransform rt = newItem.GetComponent<RectTransform>(); //Информация о положении объекта, привязке,повороте, размере объекта как прямоугольника
+            rt.localPosition = new Vector3(0, 0, 0);    //Айтем находится в своих локальных координатах
+            rt.localScale = new Vector3(1, 1, 1);   //Айтем имеет 100% размеры по  всем осям
+            newItem.GetComponentInChildren<RectTransform>().localScale = new Vector3(1, 1, 1);  //Когда добавляем элемент или берём его курсором - размер не меняется
 
-            Button tempButton = newItem.GetComponent<Button>();
+            Button tempButton = newItem.GetComponent<Button>(); //Каждый пункт в инвентаре это кнопка
 
             tempButton.onClick.AddListener(delegate { SelectObject(); });
 
-            items.Add(ii);
+            items.Add(ii);  //В список items добавляем ii
         }
     }
 
@@ -216,12 +216,12 @@ public class Inventory : MonoBehaviour
 
     public void MoveObject()
     {
-        Vector3 pos = Input.mousePosition + offset;
-        pos.z = InventoryMainObject.GetComponent<RectTransform>().position.z;
-        movingObject.position = cam.ScreenToWorldPoint(pos);
+        Vector3 pos = Input.mousePosition + offset; //Там где находится курсор идёт смещение на offset
+        pos.z = InventoryMainObject.GetComponent<RectTransform>().position.z; //Получили позицию предмета в инвентаре относительно координаты Z
+        movingObject.position = cam.ScreenToWorldPoint(pos);    //Перемещение объекта происходит относительно камеры
     }
 
-    public ItemInventory CopyInventoryItem(ItemInventory old)
+    public ItemInventory CopyInventoryItem(ItemInventory old)   //Функция, запоминает информацию о предмете, чтобы она сохранилась при переносе из ячейки в ячейку
     {
         ItemInventory New = new ItemInventory();
 
@@ -233,12 +233,12 @@ public class Inventory : MonoBehaviour
     }
 }
 
-[System.Serializable]
+[System.Serializable]   //Позволит видеть поля и сохранять их значения
 
-public class ItemInventory
+public class ItemInventory  //Предметы в инвентаре
 {
-    public int id;
-    public GameObject itemGameObj;
+    public int id;  //Айди предмета
+    public GameObject itemGameObj;  //Позволит работать с объектом и его компонентами
 
-    public int count;
+    public int count;       //Показывает сколько элементов в стаке
 }
