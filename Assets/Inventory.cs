@@ -14,64 +14,64 @@ public class Inventory : MonoBehaviour  //Наследуем класс Inventor
 
     public GameObject InventoryMainObject;  //Предмет в инвентаре
 
-    public int maxCount;    //Максимальное количество элементов в ячейке
+    public int maxCount;    //Максимальное количество ячеек
 
     public Camera cam;  //К этой переменной привязана камера
     public EventSystem es;  //Сюда привязали систему событий
 
-    public int currentID;
-    public ItemInventory currentItem;
+    public int currentID;   //Айди предмета в ячейке
+    public ItemInventory currentItem;   //Предмет в ячейке, у которого айди равен CurrentID
 
     public RectTransform movingObject;  //Позволит перемещать  объект и держать его на курсоре
     public Vector3 offset;  //Смещает объект, когда поднимаем его курсором
 
-    public GameObject backGround;
+    public GameObject backGround;   //Панель, на которой находится инвентарь
 
-    public void Start()
+    public void Start() //Начальная настройка сцены
     {
         if (items.Count == 0)
         {
             AddGraphics();
         }
 
-        for (int i = 0; i < maxCount; i++)    //Заполняет ячейки рандомными предметы с рандомным количеством
+        for (int i = 0; i < maxCount; i++)    //Заполняет ячейки рандомными предметы с рандомным количеством. По сути тест инвентаря (37-40)
         {
             AddItem(i, data.items[Random.Range(0, data.items.Count)], Random.Range(1, 99));
         }
-        UpdateInventory();
+        UpdateInventory();  //Обновляет информацию об инвентаре
     }
 
-    public void Update()
+    public void Update()    //Срабатывает каждый кадр
     {
         if (currentID != -1)
         {
-            MoveObject();
+            MoveObject(); //Если ID предмета = -1, то сейчас происходит перемещение предмета
         }
 
-        if (Input.GetKeyDown(KeyCode.I))
+        if (Input.GetKeyDown(KeyCode.I))    //Инвентарь открывается на кнопку I
         {
             backGround.SetActive(!backGround.activeSelf);
-            if (backGround.activeSelf)
+            if (backGround.activeSelf)  //Инвентарь обновляется даже когда закрыт
             {
                 UpdateInventory();
             }
         }
     }
 
-    public void SearchForSameItem(Item item, int count)
+    public void SearchForSameItem(Item item, int count) //Ищет одинаковые предметы
     {
         for (int i = 0; i < maxCount; i++)
         {
-            if (items[i].id == item.id)
+            if (items[i].id == item.id) //Если предметы совпадают
             {
-                if (items[0].count < 128)
+                if (items[i].count < 128) //Если количество предмета в ячейке меньше 128
                 {
-                    items[i].count += count;
+                    items[i].count += count; //Сложить их количества
 
                     if (items[i].count > 128)
                     {
                         count = items[i].count - 128;
-                        items[i].count = 64;
+                        items[i].count = 128;
                     }
                     else
                     {
@@ -82,7 +82,7 @@ public class Inventory : MonoBehaviour  //Наследуем класс Inventor
             }
         }
 
-        if (count > 0)
+        if (count > 0)  //Если count больше нуля, то  закинет остатки предметов  в первый пустой слот инвентаря.
         {
             for (int i = 0; i < maxCount; i++)
             {
@@ -147,13 +147,13 @@ public class Inventory : MonoBehaviour  //Наследуем класс Inventor
 
             Button tempButton = newItem.GetComponent<Button>(); //Каждый пункт в инвентаре это кнопка
 
-            tempButton.onClick.AddListener(delegate { SelectObject(); });
+            tempButton.onClick.AddListener(delegate { SelectObject(); });   //Когда кнопка нажата, происходит SelectObject
 
             items.Add(ii);  //В список items добавляем ii
         }
     }
 
-    public void UpdateInventory()
+    public void UpdateInventory()   //Обновляет информацию об объектах в инвентаре
     {
         for (int i = 0; i < maxCount; i++)
         {
@@ -172,14 +172,14 @@ public class Inventory : MonoBehaviour  //Наследуем класс Inventor
 
     public void SelectObject()
     {
-        if (currentID == -1)
+        if (currentID == -1)    //Если пустая ячейка
         {
-            currentID = int.Parse(es.currentSelectedGameObject.name);
+            currentID = int.Parse(es.currentSelectedGameObject.name);//Т.к. имя игрового объекта - число,  преобразует имя в int
             currentItem = CopyInventoryItem(items[currentID]);
-            movingObject.gameObject.SetActive(true);
-            movingObject.GetComponent<Image>().sprite = data.items[currentItem.id].img;
+            movingObject.gameObject.SetActive(true);    //Означает, что в данный момент что-то перемещается
+            movingObject.GetComponent<Image>().sprite = data.items[currentItem.id].img; //Отображение перемещаемого изображения
 
-            AddItem(currentID, data.items[0], 0);
+            AddItem(currentID, data.items[0], 0);   //Пустая ячейка
         }
         else
         {
