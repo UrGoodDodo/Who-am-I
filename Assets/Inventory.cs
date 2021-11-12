@@ -2,71 +2,71 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.EventSystems; //РџРѕРґРєР»СЋС‡Р°РµС‚ СЃРёСЃС‚РµРјСѓ СЃРѕР±С‹С‚РёР№. РЎРїРѕСЃРѕР± РѕС‚РїСЂР°РІРєРё СЃРѕР±С‹С‚РёР№ Рє РѕР±СЉРµРєС‚Р°Рј РІ РїСЂРёР»РѕР¶РµРЅРёРё
-//РЎРѕР±С‹С‚РёРµ РїСЂРѕРёСЃС…РѕРґРёС‚ РІ Р·Р°РІРёСЃРёРјРѕСЃС‚Рё РѕС‚  РґРµР№СЃС‚РІРёР№ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ, РЅР°РїСЂРёРјРµСЂ: РЎРѕР±С‹С‚РёСЏ РЅР°Р¶Р°С‚РёСЏ РєРЅРѕРїРєРё I, С‡С‚РѕР±С‹ РѕС‚РєСЂС‹С‚СЊ РёРЅРІРµРЅС‚Р°СЂСЊ. РР»Рё СЃРѕР±С‹С‚РёРµ РІР·СЏС‚РёРµ РїСЂРµРґРјРµС‚Р° РёР· РёРЅРІРµРЅС‚Р°СЂСЏ.
-public class Inventory : MonoBehaviour  //РќР°СЃР»РµРґСѓРµРј РєР»Р°СЃСЃ Inventory РѕС‚ РєР»Р°СЃСЃР° СЃРѕ СЃРєСЂРёРїС‚Р°РјРё
+using UnityEngine.EventSystems; //Подключает систему событий. Способ отправки событий к объектам в приложении
+//Событие происходит в зависимости от  действий пользователя, например: События нажатия кнопки I, чтобы открыть инвентарь. Или событие взятие предмета из инвентаря.
+public class Inventory : MonoBehaviour  //Наследуем класс Inventory от класса со скриптами
 {
-    public DataBase data;   //РРЅС„РѕСЂРјР°С†РёСЏ РёР· СЃРєСЂРёРїС‚Р° DataBase
+    public DataBase data;   //Информация из скрипта DataBase
 
-    public List<ItemInventory> items = new List<ItemInventory>();   //РЎРїРёСЃРѕРє РїСЂРµРґРјРµС‚РѕРІ РІ РёРЅРІРµРЅС‚Р°СЂРµ
+    public List<ItemInventory> items = new List<ItemInventory>();   //Список предметов в инвентаре
 
-    public GameObject gameObjShow;  //РРіСЂРѕРІС‹Рµ РѕР±СЉРµРєС‚С‹, РєРѕС‚РѕСЂС‹Рµ РґРѕР»Р¶РЅС‹ Р±С‹С‚СЊ РѕС‚РѕР±СЂР°Р¶РµРЅС‹
+    public GameObject gameObjShow;  //Игровые объекты, которые должны быть отображены
 
-    public GameObject InventoryMainObject;  //РџСЂРµРґРјРµС‚ РІ РёРЅРІРµРЅС‚Р°СЂРµ
+    public GameObject InventoryMainObject;  //Предмет в инвентаре
 
-    public int maxCount;    //РњР°РєСЃРёРјР°Р»СЊРЅРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЏС‡РµРµРє
+    public int maxCount;    //Максимальное количество ячеек
 
-    public Camera cam;  //Рљ СЌС‚РѕР№ РїРµСЂРµРјРµРЅРЅРѕР№ РїСЂРёРІСЏР·Р°РЅР° РєР°РјРµСЂР°
-    public EventSystem es;  //РЎСЋРґР° РїСЂРёРІСЏР·Р°Р»Рё СЃРёСЃС‚РµРјСѓ СЃРѕР±С‹С‚РёР№
+    public Camera cam;  //К этой переменной привязана камера
+    public EventSystem es;  //Сюда привязали систему событий
 
-    public int currentID;   //РђР№РґРё РїСЂРµРґРјРµС‚Р° РІ СЏС‡РµР№РєРµ
-    public ItemInventory currentItem;   //РџСЂРµРґРјРµС‚ РІ СЏС‡РµР№РєРµ, Сѓ РєРѕС‚РѕСЂРѕРіРѕ Р°Р№РґРё СЂР°РІРµРЅ CurrentID
+    public int currentID;   //Айди предмета в ячейке
+    public ItemInventory currentItem;   //Предмет в ячейке, у которого айди равен CurrentID
 
-    public RectTransform movingObject;  //РџРѕР·РІРѕР»РёС‚ РїРµСЂРµРјРµС‰Р°С‚СЊ  РѕР±СЉРµРєС‚ Рё РґРµСЂР¶Р°С‚СЊ РµРіРѕ РЅР° РєСѓСЂСЃРѕСЂРµ
-    public Vector3 offset;  //РЎРјРµС‰Р°РµС‚ РѕР±СЉРµРєС‚, РєРѕРіРґР° РїРѕРґРЅРёРјР°РµРј РµРіРѕ РєСѓСЂСЃРѕСЂРѕРј
+    public RectTransform movingObject;  //Позволит перемещать  объект и держать его на курсоре
+    public Vector3 offset;  //Смещает объект, когда поднимаем его курсором
 
-    public GameObject backGround;   //РџР°РЅРµР»СЊ, РЅР° РєРѕС‚РѕСЂРѕР№ РЅР°С…РѕРґРёС‚СЃСЏ РёРЅРІРµРЅС‚Р°СЂСЊ
+    public GameObject backGround;   //Панель, на которой находится инвентарь
 
-    public void Start() //РќР°С‡Р°Р»СЊРЅР°СЏ РЅР°СЃС‚СЂРѕР№РєР° СЃС†РµРЅС‹
+    public void Start() //Начальная настройка сцены
     {
         if (items.Count == 0)
         {
             AddGraphics();
         }
 
-        for (int i = 0; i < maxCount; i++)    //Р—Р°РїРѕР»РЅСЏРµС‚ СЏС‡РµР№РєРё СЂР°РЅРґРѕРјРЅС‹РјРё РїСЂРµРґРјРµС‚С‹ СЃ СЂР°РЅРґРѕРјРЅС‹Рј РєРѕР»РёС‡РµСЃС‚РІРѕРј. РџРѕ СЃСѓС‚Рё С‚РµСЃС‚ РёРЅРІРµРЅС‚Р°СЂСЏ (37-40)
+        for (int i = 0; i < maxCount; i++)    //Заполняет ячейки рандомными предметы с рандомным количеством. По сути тест инвентаря (37-40)
         {
             AddItem(i, data.items[Random.Range(0, data.items.Count)], Random.Range(1, 99));
         }
-        UpdateInventory();  //РћР±РЅРѕРІР»СЏРµС‚ РёРЅС„РѕСЂРјР°С†РёСЋ РѕР± РёРЅРІРµРЅС‚Р°СЂРµ
+        UpdateInventory();  //Обновляет информацию об инвентаре
     }
 
-    public void Update()    //РЎСЂР°Р±Р°С‚С‹РІР°РµС‚ РєР°Р¶РґС‹Р№ РєР°РґСЂ
+    public void Update()    //Срабатывает каждый кадр
     {
         if (currentID != -1)
         {
-            MoveObject(); //Р•СЃР»Рё ID РїСЂРµРґРјРµС‚Р° = -1, С‚Рѕ СЃРµР№С‡Р°СЃ РїСЂРѕРёСЃС…РѕРґРёС‚ РїРµСЂРµРјРµС‰РµРЅРёРµ РїСЂРµРґРјРµС‚Р°
+            MoveObject(); //Если ID предмета = -1, то сейчас происходит перемещение предмета
         }
 
-        if (Input.GetKeyDown(KeyCode.I))    //РРЅРІРµРЅС‚Р°СЂСЊ РѕС‚РєСЂС‹РІР°РµС‚СЃСЏ РЅР° РєРЅРѕРїРєСѓ I
+        if (Input.GetKeyDown(KeyCode.I))    //Инвентарь открывается на кнопку I
         {
             backGround.SetActive(!backGround.activeSelf);
-            if (backGround.activeSelf)  //РРЅРІРµРЅС‚Р°СЂСЊ РѕР±РЅРѕРІР»СЏРµС‚СЃСЏ РґР°Р¶Рµ РєРѕРіРґР° Р·Р°РєСЂС‹С‚
+            if (backGround.activeSelf)  //Инвентарь обновляется даже когда закрыт
             {
                 UpdateInventory();
             }
         }
     }
 
-    public void SearchForSameItem(Item item, int count) //РС‰РµС‚ РѕРґРёРЅР°РєРѕРІС‹Рµ РїСЂРµРґРјРµС‚С‹
+    public void SearchForSameItem(Item item, int count) //Ищет одинаковые предметы
     {
         for (int i = 0; i < maxCount; i++)
         {
-            if (items[i].id == item.id) //Р•СЃР»Рё РїСЂРµРґРјРµС‚С‹ СЃРѕРІРїР°РґР°СЋС‚
+            if (items[i].id == item.id) //Если предметы совпадают
             {
-                if (items[i].count < 128) //Р•СЃР»Рё РєРѕР»РёС‡РµСЃС‚РІРѕ РїСЂРµРґРјРµС‚Р° РІ СЏС‡РµР№РєРµ РјРµРЅСЊС€Рµ 128
+                if (items[i].count < 128) //Если количество предмета в ячейке меньше 128
                 {
-                    items[i].count += count; //РЎР»РѕР¶РёС‚СЊ РёС… РєРѕР»РёС‡РµСЃС‚РІР°
+                    items[i].count += count; //Сложить их количества
 
                     if (items[i].count > 128)
                     {
@@ -82,7 +82,7 @@ public class Inventory : MonoBehaviour  //РќР°СЃР»РµРґСѓРµРј РєР»Р°СЃСЃ Inventor
             }
         }
 
-        if (count > 0)  //Р•СЃР»Рё count Р±РѕР»СЊС€Рµ РЅСѓР»СЏ, С‚Рѕ  Р·Р°РєРёРЅРµС‚ РѕСЃС‚Р°С‚РєРё РїСЂРµРґРјРµС‚РѕРІ  РІ РїРµСЂРІС‹Р№ РїСѓСЃС‚РѕР№ СЃР»РѕС‚ РёРЅРІРµРЅС‚Р°СЂСЏ.
+        if (count > 0)  //Если count больше нуля, то  закинет остатки предметов  в первый пустой слот инвентаря.
         {
             for (int i = 0; i < maxCount; i++)
             {
@@ -96,7 +96,7 @@ public class Inventory : MonoBehaviour  //РќР°СЃР»РµРґСѓРµРј РєР»Р°СЃСЃ Inventor
     }
 
 
-    public void AddItem(int id, Item item, int count)   //РћР±РЅРѕРІР»РµРЅРёРµ РёРЅС„РѕСЂРјР°С†РёРё Рѕ РїСЂРµРґРјРµС‚Рµ
+    public void AddItem(int id, Item item, int count)   //Обновление информации о предмете
     {
         items[id].id = item.id;
         items[id].count = count;
@@ -104,7 +104,7 @@ public class Inventory : MonoBehaviour  //РќР°СЃР»РµРґСѓРµРј РєР»Р°СЃСЃ Inventor
 
         if (count > 1 && item.id != 0)
         {
-            items[id].itemGameObj.GetComponentInChildren<Text>().text = count.ToString();   
+            items[id].itemGameObj.GetComponentInChildren<Text>().text = count.ToString();
         }
         else
         {
@@ -112,13 +112,13 @@ public class Inventory : MonoBehaviour  //РќР°СЃР»РµРґСѓРµРј РєР»Р°СЃСЃ Inventor
         }
     }
 
-    public void AddInventoryItem(int id, ItemInventory invItem) //Р”РѕР±Р°РІР»РµРЅРёРµ РїСЂРµРґРјРµС‚Р° РІ РёРЅРІРµРЅС‚Р°СЂСЊ
+    public void AddInventoryItem(int id, ItemInventory invItem) //Добавление предмета в инвентарь
     {
         items[id].id = invItem.id;
         items[id].count = invItem.count;
         items[id].itemGameObj.GetComponent<Image>().sprite = data.items[invItem.id].img;
 
-        if (invItem.count > 1 && invItem.id != 0)//РџРёС€РµС‚ РєРѕР»РёС‡РµСЃС‚РІРѕ РїСЂРµРґРјРµС‚РѕРІ РІ СЃР»РѕС‚Рµ, РµСЃР»Рё СЌС‚Рѕ РЅРµ РїСѓСЃС‚РѕР№ СЃР»РѕС‚ Рё РїСЂРµРґРјРµС‚РѕРІ Р±РѕР»СЊС€Рµ 1
+        if (invItem.count > 1 && invItem.id != 0)//Пишет количество предметов в слоте, если это не пустой слот и предметов больше 1
         {
             items[id].itemGameObj.GetComponentInChildren<Text>().text = invItem.count.ToString();
         }
@@ -129,31 +129,31 @@ public class Inventory : MonoBehaviour  //РќР°СЃР»РµРґСѓРµРј РєР»Р°СЃСЃ Inventor
     }
 
 
-    public void AddGraphics()   //РћС‚РІРµС‡Р°РµС‚ Р·Р° РёР·РѕР±СЂР°Р¶РµРЅРёРµ РІ РєР°Р¶РґРѕР№ СЏС‡РµР№РєРµ
+    public void AddGraphics()   //Отвечает за изображение в каждой ячейке
     {
         for (int i = 0; i < maxCount; i++)
         {
-            GameObject newItem = Instantiate(gameObjShow, InventoryMainObject.transform) as GameObject; //РћС‚РІРµС‡Р°РµС‚ Р·Р° РїРµСЂРµРјРµС‰РµРЅРёРµ РёРіСЂРѕРІРѕРіРѕ РѕР±СЉРµРєС‚Р° РІ РёРЅРІРµРЅС‚Р°СЂРµ
+            GameObject newItem = Instantiate(gameObjShow, InventoryMainObject.transform) as GameObject; //Отвечает за перемещение игрового объекта в инвентаре
 
-            newItem.name = i.ToString();    //РРјСЏ РѕР±СЉРµРєС‚Р°
+            newItem.name = i.ToString();    //Имя объекта
 
-            ItemInventory ii = new ItemInventory(); //РЎРѕР·РґР°РЅРёРµ РѕР±СЉРµРєС‚Р° РєР»Р°СЃСЃР° ItemInventory
-            ii.itemGameObj = newItem;   //ii РєР°Рє РёРіСЂРѕРІРѕР№ РѕР±СЉРµРєС‚ СЏРІР»СЏРµС‚СЃСЏ newItem
+            ItemInventory ii = new ItemInventory(); //Создание объекта класса ItemInventory
+            ii.itemGameObj = newItem;   //ii как игровой объект является newItem
 
-            RectTransform rt = newItem.GetComponent<RectTransform>(); //РРЅС„РѕСЂРјР°С†РёСЏ Рѕ РїРѕР»РѕР¶РµРЅРёРё РѕР±СЉРµРєС‚Р°, РїСЂРёРІСЏР·РєРµ,РїРѕРІРѕСЂРѕС‚Рµ, СЂР°Р·РјРµСЂРµ РѕР±СЉРµРєС‚Р° РєР°Рє РїСЂСЏРјРѕСѓРіРѕР»СЊРЅРёРєР°
-            rt.localPosition = new Vector3(0, 0, 0);    //РђР№С‚РµРј РЅР°С…РѕРґРёС‚СЃСЏ РІ СЃРІРѕРёС… Р»РѕРєР°Р»СЊРЅС‹С… РєРѕРѕСЂРґРёРЅР°С‚Р°С…
-            rt.localScale = new Vector3(1, 1, 1);   //РђР№С‚РµРј РёРјРµРµС‚ 100% СЂР°Р·РјРµСЂС‹ РїРѕ  РІСЃРµРј РѕСЃСЏРј
-            newItem.GetComponentInChildren<RectTransform>().localScale = new Vector3(1, 1, 1);  //РљРѕРіРґР° РґРѕР±Р°РІР»СЏРµРј СЌР»РµРјРµРЅС‚ РёР»Рё Р±РµСЂС‘Рј РµРіРѕ РєСѓСЂСЃРѕСЂРѕРј - СЂР°Р·РјРµСЂ РЅРµ РјРµРЅСЏРµС‚СЃСЏ
+            RectTransform rt = newItem.GetComponent<RectTransform>(); //Информация о положении объекта, привязке,повороте, размере объекта как прямоугольника
+            rt.localPosition = new Vector3(0, 0, 0);    //Айтем находится в своих локальных координатах
+            rt.localScale = new Vector3(1, 1, 1);   //Айтем имеет 100% размеры по  всем осям
+            newItem.GetComponentInChildren<RectTransform>().localScale = new Vector3(1, 1, 1);  //Когда добавляем элемент или берём его курсором - размер не меняется
 
-            Button tempButton = newItem.GetComponent<Button>(); //РљР°Р¶РґС‹Р№ РїСѓРЅРєС‚ РІ РёРЅРІРµРЅС‚Р°СЂРµ СЌС‚Рѕ РєРЅРѕРїРєР°
+            Button tempButton = newItem.GetComponent<Button>(); //Каждый пункт в инвентаре это кнопка
 
-            tempButton.onClick.AddListener(delegate { SelectObject(); });   //РљРѕРіРґР° РєРЅРѕРїРєР° РЅР°Р¶Р°С‚Р°, РїСЂРѕРёСЃС…РѕРґРёС‚ SelectObject
+            tempButton.onClick.AddListener(delegate { SelectObject(); });   //Когда кнопка нажата, происходит SelectObject
 
-            items.Add(ii);  //Р’ СЃРїРёСЃРѕРє items РґРѕР±Р°РІР»СЏРµРј ii
+            items.Add(ii);  //В список items добавляем ii
         }
     }
 
-    public void UpdateInventory()   //РћР±РЅРѕРІР»СЏРµС‚ РёРЅС„РѕСЂРјР°С†РёСЋ РѕР± РѕР±СЉРµРєС‚Р°С… РІ РёРЅРІРµРЅС‚Р°СЂРµ
+    public void UpdateInventory()   //Обновляет информацию об объектах в инвентаре
     {
         for (int i = 0; i < maxCount; i++)
         {
@@ -172,21 +172,21 @@ public class Inventory : MonoBehaviour  //РќР°СЃР»РµРґСѓРµРј РєР»Р°СЃСЃ Inventor
 
     public void SelectObject()
     {
-        if (currentID == -1)    //Р•СЃР»Рё РїСѓСЃС‚Р°СЏ СЏС‡РµР№РєР°
+        if (currentID == -1)    //Если пустая ячейка
         {
-            currentID = int.Parse(es.currentSelectedGameObject.name);//Рў.Рє. РёРјСЏ РёРіСЂРѕРІРѕРіРѕ РѕР±СЉРµРєС‚Р° - С‡РёСЃР»Рѕ,  РїСЂРµРѕР±СЂР°Р·СѓРµС‚ РёРјСЏ РІ int
+            currentID = int.Parse(es.currentSelectedGameObject.name);//Т.к. имя игрового объекта - число,  преобразует имя в int
             currentItem = CopyInventoryItem(items[currentID]);
-            movingObject.gameObject.SetActive(true);    //РћР·РЅР°С‡Р°РµС‚, С‡С‚Рѕ РІ РґР°РЅРЅС‹Р№ РјРѕРјРµРЅС‚ С‡С‚Рѕ-С‚Рѕ РїРµСЂРµРјРµС‰Р°РµС‚СЃСЏ
-            movingObject.GetComponent<Image>().sprite = data.items[currentItem.id].img; //РћС‚РѕР±СЂР°Р¶РµРЅРёРµ РїРµСЂРµРјРµС‰Р°РµРјРѕРіРѕ РёР·РѕР±СЂР°Р¶РµРЅРёСЏ
+            movingObject.gameObject.SetActive(true);    //Означает, что в данный момент что-то перемещается
+            movingObject.GetComponent<Image>().sprite = data.items[currentItem.id].img; //Отображение перемещаемого изображения
 
-            AddItem(currentID, data.items[0], 0);   //РџСѓСЃС‚Р°СЏ СЏС‡РµР№РєР°
+            AddItem(currentID, data.items[0], 0);   //Пустая ячейка
         }
         else
         {
             ItemInventory II = items[int.Parse(es.currentSelectedGameObject.name)];
 
 
-                if (currentItem.id != II.id)
+            if (currentItem.id != II.id)
             {
                 AddInventoryItem(currentID, II);
 
@@ -216,12 +216,12 @@ public class Inventory : MonoBehaviour  //РќР°СЃР»РµРґСѓРµРј РєР»Р°СЃСЃ Inventor
 
     public void MoveObject()
     {
-        Vector3 pos = Input.mousePosition + offset; //РўР°Рј РіРґРµ РЅР°С…РѕРґРёС‚СЃСЏ РєСѓСЂСЃРѕСЂ РёРґС‘С‚ СЃРјРµС‰РµРЅРёРµ РЅР° offset
-        pos.z = InventoryMainObject.GetComponent<RectTransform>().position.z; //РџРѕР»СѓС‡РёР»Рё РїРѕР·РёС†РёСЋ РїСЂРµРґРјРµС‚Р° РІ РёРЅРІРµРЅС‚Р°СЂРµ РѕС‚РЅРѕСЃРёС‚РµР»СЊРЅРѕ РєРѕРѕСЂРґРёРЅР°С‚С‹ Z
-        movingObject.position = cam.ScreenToWorldPoint(pos);    //РџРµСЂРµРјРµС‰РµРЅРёРµ РѕР±СЉРµРєС‚Р° РїСЂРѕРёСЃС…РѕРґРёС‚ РѕС‚РЅРѕСЃРёС‚РµР»СЊРЅРѕ РєР°РјРµСЂС‹
+        Vector3 pos = Input.mousePosition + offset; //Там где находится курсор идёт смещение на offset
+        pos.z = InventoryMainObject.GetComponent<RectTransform>().position.z; //Получили позицию предмета в инвентаре относительно координаты Z
+        movingObject.position = cam.ScreenToWorldPoint(pos);    //Перемещение объекта происходит относительно камеры
     }
 
-    public ItemInventory CopyInventoryItem(ItemInventory old)   //Р¤СѓРЅРєС†РёСЏ, Р·Р°РїРѕРјРёРЅР°РµС‚ РёРЅС„РѕСЂРјР°С†РёСЋ Рѕ РїСЂРµРґРјРµС‚Рµ, С‡С‚РѕР±С‹ РѕРЅР° СЃРѕС…СЂР°РЅРёР»Р°СЃСЊ РїСЂРё РїРµСЂРµРЅРѕСЃРµ РёР· СЏС‡РµР№РєРё РІ СЏС‡РµР№РєСѓ
+    public ItemInventory CopyInventoryItem(ItemInventory old)   //Функция, запоминает информацию о предмете, чтобы она сохранилась при переносе из ячейки в ячейку
     {
         ItemInventory New = new ItemInventory();
 
@@ -233,12 +233,12 @@ public class Inventory : MonoBehaviour  //РќР°СЃР»РµРґСѓРµРј РєР»Р°СЃСЃ Inventor
     }
 }
 
-[System.Serializable]   //РџРѕР·РІРѕР»РёС‚ РІРёРґРµС‚СЊ РїРѕР»СЏ Рё СЃРѕС…СЂР°РЅСЏС‚СЊ РёС… Р·РЅР°С‡РµРЅРёСЏ
+[System.Serializable]   //Позволит видеть поля и сохранять их значения
 
-public class ItemInventory  //РџСЂРµРґРјРµС‚С‹ РІ РёРЅРІРµРЅС‚Р°СЂРµ
+public class ItemInventory  //Предметы в инвентаре
 {
-    public int id;  //РђР№РґРё РїСЂРµРґРјРµС‚Р°
-    public GameObject itemGameObj;  //РџРѕР·РІРѕР»РёС‚ СЂР°Р±РѕС‚Р°С‚СЊ СЃ РѕР±СЉРµРєС‚РѕРј Рё РµРіРѕ РєРѕРјРїРѕРЅРµРЅС‚Р°РјРё
+    public int id;  //Айди предмета
+    public GameObject itemGameObj;  //Позволит работать с объектом и его компонентами
 
-    public int count;       //РџРѕРєР°Р·С‹РІР°РµС‚ СЃРєРѕР»СЊРєРѕ СЌР»РµРјРµРЅС‚РѕРІ РІ СЃС‚Р°РєРµ
+    public int count;       //Показывает сколько элементов в стаке
 }

@@ -1,20 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI; //РџРѕРґРєР»СЋС‡Р°РµС‚ Р±РёР±Р»РёРѕС‚РµРєСѓ СЃРѕ СЃРєСЂРёРїС‚Р°РјРё РґР»СЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРѕРіРѕ РёРЅС‚РµСЂС„РµР№СЃР°
+using UnityEngine.UI; //Подключает библиотеку со скриптами для пользовательского интерфейса
 
-//РќР°СЃР»РµРґСѓРµРј РєР»Р°СЃСЃ DataBase РѕС‚ РєР»Р°СЃСЃР° MonoBehaviour
-public class DataBase : MonoBehaviour   //MonoBehaviour - Р±Р°Р·РѕРІС‹Р№ РєР»Р°СЃСЃ, РѕС‚ РєРѕС‚РѕСЂРѕРіРѕ РЅР°СЃР»РµРґСѓСЋС‚СЃСЏ РІСЃРµ СЃРєСЂРёРїС‚С‹ https://docs.unity3d.com/ru/530/ScriptReference/MonoBehaviour.html
+//Наследуем класс DataBase от класса MonoBehaviour
+public class DataBase : MonoBehaviour   //MonoBehaviour - базовый класс, от которого наследуются все скрипты https://docs.unity3d.com/ru/530/ScriptReference/MonoBehaviour.html
 {
-    public List<Item> items = new List<Item>(); //РЎРѕР·РґР°С‘Рј СЃРїРёСЃРѕРє РѕР±СЉРµРєС‚РѕРІ items РєР»Р°СЃСЃР° Item
+    public List<Item> items = new List<Item>(); //Создаём список объектов items класса Item
 }
 
-// РђС‚СЂРёР±СѓС‚ РґР»СЏ СЃРµСЂРёР°Р»РёР·Р°С†РёРё РєР»Р°СЃСЃР° Item
-[System.Serializable]   //РџРѕР·РІРѕР»СЏРµС‚ Unity СѓРІРёРґРµС‚СЊ РїРѕР»СЏ Рё СЃРѕС…СЂР°РЅРёС‚СЊ РёС… Р·РЅР°С‡РµРЅРёСЏ
-//Р•СЃР»Рё РµРіРѕ РЅРµ РЅР°РїРёСЃР°С‚СЊ, РёРЅСЃРїРµРєС‚РѕСЂ РЅРµ СѓРІРёРґРёС‚ РєР»Р°СЃСЃ Item Рё РЅРµ СЃРјРѕР¶РµС‚ Р·Р°РїРѕР»РЅРёС‚СЊ СЃРїРёСЃРѕРє РІ DataBase РµРіРѕ РѕР±СЉРµРєС‚Р°РјРё
+// Атрибут для сериализации класса Item
+[System.Serializable]   //Позволяет Unity увидеть поля и сохранить их значения
+//Если его не написать, инспектор не увидит класс Item и не сможет заполнить список в DataBase его объектами
 public class Item
 {
-    public int id;          //Р’РїРѕР»РЅРµ РїРѕРЅСЏС‚РЅС‹Рµ РїРѕР»СЏ, РєРѕС‚РѕСЂС‹Рµ СЃРѕРґРµСЂР¶РёС‚ РєР»Р°СЃСЃ Item
-    public string name;     //(РРЅС„РѕСЂРјР°С†РёСЏ РѕР± РѕР±СЉРµРєС‚Рµ)
-    public Sprite img;      //РРЅРёС†РёР°Р»РёР·Р°С†РёСЏ РѕР±СЉРµРєС‚Р° img РєР»Р°СЃСЃР°  Sprite
+    public int id;          //Вполне понятные поля, которые содержит класс Item
+    public string name;     //(Информация об объекте)
+    public Sprite img;      //Инициализация объекта img класса  Sprite
 }
