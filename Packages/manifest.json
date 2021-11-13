@@ -1,8 +1,8 @@
 {
   "dependencies": {
-    "com.unity.2d.animation": "5.0.8",
+    "com.unity.2d.animation": "5.0.9",
     "com.unity.2d.pixel-perfect": "4.0.1",
-    "com.unity.2d.psdimporter": "4.1.1",
+    "com.unity.2d.psdimporter": "4.1.2",
     "com.unity.2d.sprite": "1.0.0",
     "com.unity.2d.spriteshape": "5.1.5",
     "com.unity.2d.tilemap": "1.0.0",
