@@ -4,7 +4,7 @@ ScriptsOnlyBuild:
     - DataBase
     - Inventory
     - Move
-    - MoveRoom
+    - MoveCamera
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
@@ -240,7 +240,7 @@ ScriptsOnlyBuild:
       Hash: afc5b93a7b192de2dcb3832fe35a5c7e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: MoveRoom
+    className: MoveCamera
   - hash:
       serializedVersion: 2
       Hash: d902aede3e280ffe11e783063f0e0d40

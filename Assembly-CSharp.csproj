@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{8B3C9E16-6880-534D-8CDC-F9B366851C05}</ProjectGuid>
+    <ProjectGuid>{30FE66A0-800A-BE88-1A19-3D1B5CFAFC60}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -53,10 +53,10 @@
     <UnityVersion>2020.3.22f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\MoveCamera.cs" />
     <Compile Include="Assets\Inventory.cs" />
     <Compile Include="Assets\Move.cs" />
     <Compile Include="Assets\DataBase.cs" />
-    <Compile Include="Assets\MoveRoom.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
