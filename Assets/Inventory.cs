@@ -19,7 +19,7 @@ public class Inventory : MonoBehaviour  //Наследуем класс Inventory от класса со
     public Camera cam;  //К этой переменной привязана камера
     public EventSystem es;  //Сюда привязали систему событий
 
-    public int currentID;   //Айди предмета в ячейке
+    public int currentID;   //Номер ячейки
     public ItemInventory currentItem;   //Предмет в ячейке, у которого айди равен CurrentID
 
     public RectTransform movingObject;  //Позволит перемещать  объект и держать его на курсоре
@@ -39,11 +39,13 @@ public class Inventory : MonoBehaviour  //Наследуем класс Inventory от класса со
             AddItem(i, data.items[Random.Range(0, data.items.Count)], Random.Range(1, 99));
         }
         UpdateInventory();  //Обновляет информацию об инвентаре
+
+        backGround.SetActive(false);
     }
 
     public void Update()    //Срабатывает каждый кадр
     {
-        if (currentID != -1)
+        if (currentID != -1 && currentItem.id != 0)
         {
             MoveObject(); //Если ID предмета = -1, то сейчас происходит перемещение предмета
         }
@@ -99,7 +101,10 @@ public class Inventory : MonoBehaviour  //Наследуем класс Inventory от класса со
     public void AddItem(int id, Item item, int count)   //Обновление информации о предмете
     {
         items[id].id = item.id;
-        items[id].count = count;
+        if (items[id].id != 0)
+        {
+            items[id].count = count;
+        }
         items[id].itemGameObj.GetComponent<Image>().sprite = item.img;
 
         if (count > 1 && item.id != 0)
@@ -107,8 +112,8 @@ public class Inventory : MonoBehaviour  //Наследуем класс Inventory от класса со
             items[id].itemGameObj.GetComponentInChildren<Text>().text = count.ToString();
         }
         else
-        {
-            items[id].itemGameObj.GetComponentInChildren<Text>().text = "";
+        { 
+            items[id].itemGameObj.GetComponentInChildren<Text>().text = " ";
         }
     }
 
@@ -124,7 +129,7 @@ public class Inventory : MonoBehaviour  //Наследуем класс Inventory от класса со
         }
         else
         {
-            items[id].itemGameObj.GetComponentInChildren<Text>().text = "";
+            items[id].itemGameObj.GetComponentInChildren<Text>().text = " ";
         }
     }
 
@@ -144,11 +149,9 @@ public class Inventory : MonoBehaviour  //Наследуем класс Inventory от класса со
             rt.localPosition = new Vector3(0, 0, 0);    //Айтем находится в своих локальных координатах
             rt.localScale = new Vector3(1, 1, 1);   //Айтем имеет 100% размеры по  всем осям
             newItem.GetComponentInChildren<RectTransform>().localScale = new Vector3(1, 1, 1);  //Когда добавляем элемент или берём его курсором - размер не меняется
-
+             
             Button tempButton = newItem.GetComponent<Button>(); //Каждый пункт в инвентаре это кнопка
-
             tempButton.onClick.AddListener(delegate { SelectObject(); });   //Когда кнопка нажата, происходит SelectObject
-
             items.Add(ii);  //В список items добавляем ii
         }
     }
@@ -176,10 +179,13 @@ public class Inventory : MonoBehaviour  //Наследуем класс Inventory от класса со
         {
             currentID = int.Parse(es.currentSelectedGameObject.name);//Т.к. имя игрового объекта - число,  преобразует имя в int
             currentItem = CopyInventoryItem(items[currentID]);
-            movingObject.gameObject.SetActive(true);    //Означает, что в данный момент что-то перемещается
-            movingObject.GetComponent<Image>().sprite = data.items[currentItem.id].img; //Отображение перемещаемого изображения
-
-            AddItem(currentID, data.items[0], 0);   //Пустая ячейка
+            if (currentItem.id != 0)
+            {
+                
+                movingObject.gameObject.SetActive(true);    //Означает, что в данный момент что-то перемещается
+                movingObject.GetComponent<Image>().sprite = data.items[currentItem.id].img; //Отображение перемещаемого изображения
+                AddItem(currentID, data.items[0], 0);   //Пустая ячейка
+            }
         }
         else
         {
@@ -204,8 +210,11 @@ public class Inventory : MonoBehaviour  //Наследуем класс Inventory от класса со
                     II.count = 128;
                 }
 
-                II.itemGameObj.GetComponentInChildren<Text>().text = II.count.ToString();
-
+                II.itemGameObj.GetComponentInChildren<Text>().text = II.count.ToString(); //Помещает числовое значение в ячейку
+                if (II.id == 0)
+                {
+                    II.itemGameObj.GetComponentInChildren<Text>().text = "";
+                }
             }
 
             currentID = -1;
