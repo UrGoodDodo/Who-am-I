@@ -53,6 +53,7 @@
     <UnityVersion>2020.3.22f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
@@ -60,6 +61,13 @@
     <Compile Include="Assets\Inventory.cs" />
     <Compile Include="Assets\Move.cs" />
     <Compile Include="Assets\DataBase.cs" />
+=======
+    <Compile Include="Assets\Scripts\MainMenu.cs" />
+    <Compile Include="Assets\Scripts\MoveCamera.cs" />
+    <Compile Include="Assets\Scripts\Inventory.cs" />
+    <Compile Include="Assets\Scripts\Move.cs" />
+    <Compile Include="Assets\Scripts\DataBase.cs" />
+>>>>>>> 8c555b8472a4531e8833ecec7260ff2ec96ea5f7
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
