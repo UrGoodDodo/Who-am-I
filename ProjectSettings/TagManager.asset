@@ -5,6 +5,16 @@ TagManager:
   serializedVersion: 2
   tags:
   - Inventory
+  - Map
+  - LB
+  - RB
+  - LBC
+  - RBC
+  - DB
+  - TB
+  - Slot
+  - SlotLighter
+  - Lighter
   layers:
   - Default
   - TransparentFX
