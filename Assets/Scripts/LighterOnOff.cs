@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class LighterOnOff : MonoBehaviour
 {
-    // Start is called before the first frame update
     public int onoff = 1;
     private Transform lighting;
     private Transform slotLighter;
