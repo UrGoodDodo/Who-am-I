@@ -1,0 +1,960 @@
+fileFormatVersion: 2
+guid: f1dd808a2d00e8f48b16b3ef52d06fad
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 921992334745978259
+    second: bolshoepadeniesvysotyvliniyu_0
+  - first:
+      213: 2924876786922082258
+    second: bolshoepadeniesvysotyvliniyu_1
+  - first:
+      213: 311077209353770223
+    second: bolshoepadeniesvysotyvliniyu_2
+  - first:
+      213: 1468990918669771548
+    second: bolshoepadeniesvysotyvliniyu_3
+  - first:
+      213: -5273662773825784229
+    second: bolshoepadeniesvysotyvliniyu_4
+  - first:
+      213: 1542852587113929617
+    second: bolshoepadeniesvysotyvliniyu_5
+  - first:
+      213: -4893903154580325780
+    second: bolshoepadeniesvysotyvliniyu_6
+  - first:
+      213: -1815059298012657510
+    second: bolshoepadeniesvysotyvliniyu_7
+  - first:
+      213: 7752762377231185592
+    second: bolshoepadeniesvysotyvliniyu_8
+  - first:
+      213: -1102480731324008643
+    second: bolshoepadeniesvysotyvliniyu_9
+  - first:
+      213: -8569030299683867753
+    second: bolshoepadeniesvysotyvliniyu_10
+  - first:
+      213: 4613688578811604271
+    second: bolshoepadeniesvysotyvliniyu_11
+  - first:
+      213: -2782761148351122888
+    second: bolshoepadeniesvysotyvliniyu_12
+  - first:
+      213: -7929537001508046998
+    second: bolshoepadeniesvysotyvliniyu_13
+  - first:
+      213: -8338764307258336078
+    second: bolshoepadeniesvysotyvliniyu_14
+  - first:
+      213: 7866477887871723835
+    second: bolshoepadeniesvysotyvliniyu_15
+  - first:
+      213: 1008750336614203116
+    second: bolshoepadeniesvysotyvliniyu_16
+  - first:
+      213: 7482847898769000409
+    second: bolshoepadeniesvysotyvliniyu_17
+  - first:
+      213: 6135780961541600467
+    second: bolshoepadeniesvysotyvliniyu_18
+  - first:
+      213: -5704192965922103789
+    second: bolshoepadeniesvysotyvliniyu_19
+  - first:
+      213: -2381291714019161177
+    second: bolshoepadeniesvysotyvliniyu_20
+  - first:
+      213: -8659124528433753696
+    second: bolshoepadeniesvysotyvliniyu_21
+  - first:
+      213: 1331417116156905856
+    second: bolshoepadeniesvysotyvliniyu_22
+  - first:
+      213: -4206691780262373169
+    second: bolshoepadeniesvysotyvliniyu_23
+  - first:
+      213: 45512682827697941
+    second: bolshoepadeniesvysotyvliniyu_24
+  - first:
+      213: -2180734969279746133
+    second: bolshoepadeniesvysotyvliniyu_25
+  - first:
+      213: -8062676520424596186
+    second: bolshoepadeniesvysotyvliniyu_26
+  - first:
+      213: -7018296922141498875
+    second: bolshoepadeniesvysotyvliniyu_27
+  - first:
+      213: -7046387360723798168
+    second: bolshoepadeniesvysotyvliniyu_28
+  - first:
+      213: -2650307018958379468
+    second: bolshoepadeniesvysotyvliniyu_29
+  - first:
+      213: -5316674794481548533
+    second: bolshoepadeniesvysotyvliniyu_30
+  - first:
+      213: -4121694921801091775
+    second: bolshoepadeniesvysotyvliniyu_31
+  - first:
+      213: -5161837836100261407
+    second: bolshoepadeniesvysotyvliniyu_32
+  - first:
+      213: -4056298683654259377
+    second: bolshoepadeniesvysotyvliniyu_33
+  - first:
+      213: 3212797637268910028
+    second: bolshoepadeniesvysotyvliniyu_34
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bolshoepadeniesvysotyvliniyu_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 22
+        width: 60
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 395ca2eb4239bcc00800000000000000
+      internalID: 921992334745978259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bolshoepadeniesvysotyvliniyu_1
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 22
+        width: 60
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dfc648e0ff379820800000000000000
+      internalID: 2924876786922082258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bolshoepadeniesvysotyvliniyu_2
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 22
+        width: 60
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe45041e21b215400800000000000000
+      internalID: 311077209353770223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bolshoepadeniesvysotyvliniyu_3
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 22
+        width: 60
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c13269d1577e26410800000000000000
+      internalID: 1468990918669771548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bolshoepadeniesvysotyvliniyu_4
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 22
+        width: 60
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b56b9e4f5af20d6b0800000000000000
+      internalID: -5273662773825784229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bolshoepadeniesvysotyvliniyu_5
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 22
+        width: 60
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19bd7bbe040596510800000000000000
+      internalID: 1542852587113929617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bolshoepadeniesvysotyvliniyu_6
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 22
+        width: 60
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6a731a820d551cb0800000000000000
+      internalID: -4893903154580325780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bolshoepadeniesvysotyvliniyu_7
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 22
+        width: 60
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a988faf5f2d9fc6e0800000000000000
+      internalID: -1815059298012657510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bolshoepadeniesvysotyvliniyu_8
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 14
+        width: 62
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b6b0e26e48579b60800000000000000
+      internalID: 7752762377231185592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bolshoepadeniesvysotyvliniyu_9
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 8
+        width: 56
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3738b5bd9333b0f0800000000000000
+      internalID: -1102480731324008643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bolshoepadeniesvysotyvliniyu_10
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 8
+        width: 56
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 793b8c5d750b41980800000000000000
+      internalID: -8569030299683867753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bolshoepadeniesvysotyvliniyu_11
+      rect:
+        serializedVersion: 2
+        x: 746
+        y: 8
+        width: 56
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2da75c615d170040800000000000000
+      internalID: 4613688578811604271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bolshoepadeniesvysotyvliniyu_12
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 8
+        width: 56
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 832f5c1ba75a169d0800000000000000
+      internalID: -2782761148351122888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bolshoepadeniesvysotyvliniyu_13
+      rect:
+        serializedVersion: 2
+        x: 874
+        y: 8
+        width: 60
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a67fbcf0c10a4f190800000000000000
+      internalID: -7929537001508046998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bolshoepadeniesvysotyvliniyu_14
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 8
+        width: 60
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bc19201b02c64c80800000000000000
+      internalID: -8338764307258336078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bolshoepadeniesvysotyvliniyu_15
+      rect:
+        serializedVersion: 2
+        x: 1010
+        y: 8
+        width: 60
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b392f0ce5f75b2d60800000000000000
+      internalID: 7866477887871723835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bolshoepadeniesvysotyvliniyu_16
+      rect:
+        serializedVersion: 2
+        x: 1078
+        y: 8
+        width: 62
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ceef1f8261dcffd00800000000000000
+      internalID: 1008750336614203116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bolshoepadeniesvysotyvliniyu_17
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 8
+        width: 62
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d78762a48a68d760800000000000000
+      internalID: 7482847898769000409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bolshoepadeniesvysotyvliniyu_18
+      rect:
+        serializedVersion: 2
+        x: 1286
+        y: 8
+        width: 62
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d4ba48964ca62550800000000000000
+      internalID: 6135780961541600467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bolshoepadeniesvysotyvliniyu_19
+      rect:
+        serializedVersion: 2
+        x: 1356
+        y: 8
+        width: 50
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31e5ee738b2a6d0b0800000000000000
+      internalID: -5704192965922103789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bolshoepadeniesvysotyvliniyu_20
+      rect:
+        serializedVersion: 2
+        x: 1414
+        y: 8
+        width: 46
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ab8e4f7dc3f3fed0800000000000000
+      internalID: -2381291714019161177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bolshoepadeniesvysotyvliniyu_21
+      rect:
+        serializedVersion: 2
+        x: 1466
+        y: 8
+        width: 42
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a195d09e1c94d780800000000000000
+      internalID: -8659124528433753696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bolshoepadeniesvysotyvliniyu_22
+      rect:
+        serializedVersion: 2
+        x: 1516
+        y: 8
+        width: 34
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 089486020d42a7210800000000000000
+      internalID: 1331417116156905856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bolshoepadeniesvysotyvliniyu_23
+      rect:
+        serializedVersion: 2
+        x: 1558
+        y: 8
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc8d7e52d14de95c0800000000000000
+      internalID: -4206691780262373169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bolshoepadeniesvysotyvliniyu_24
+      rect:
+        serializedVersion: 2
+        x: 1604
+        y: 8
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51f48bc3b81b1a000800000000000000
+      internalID: 45512682827697941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bolshoepadeniesvysotyvliniyu_25
+      rect:
+        serializedVersion: 2
+        x: 1650
+        y: 8
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bafeec679197cb1e0800000000000000
+      internalID: -2180734969279746133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bolshoepadeniesvysotyvliniyu_26
+      rect:
+        serializedVersion: 2
+        x: 1696
+        y: 8
+        width: 32
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62d953d2c6e9b1090800000000000000
+      internalID: -8062676520424596186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bolshoepadeniesvysotyvliniyu_27
+      rect:
+        serializedVersion: 2
+        x: 1736
+        y: 8
+        width: 32
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 502e98342200a9e90800000000000000
+      internalID: -7018296922141498875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bolshoepadeniesvysotyvliniyu_28
+      rect:
+        serializedVersion: 2
+        x: 1774
+        y: 8
+        width: 30
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 867714e5704363e90800000000000000
+      internalID: -7046387360723798168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bolshoepadeniesvysotyvliniyu_29
+      rect:
+        serializedVersion: 2
+        x: 1812
+        y: 8
+        width: 30
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 436e245eec7383bd0800000000000000
+      internalID: -2650307018958379468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bolshoepadeniesvysotyvliniyu_30
+      rect:
+        serializedVersion: 2
+        x: 1850
+        y: 8
+        width: 28
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0387a081706736b0800000000000000
+      internalID: -5316674794481548533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bolshoepadeniesvysotyvliniyu_31
+      rect:
+        serializedVersion: 2
+        x: 1886
+        y: 8
+        width: 24
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 145b3896e4cccc6c0800000000000000
+      internalID: -4121694921801091775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bolshoepadeniesvysotyvliniyu_32
+      rect:
+        serializedVersion: 2
+        x: 1918
+        y: 8
+        width: 16
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e9a21f26d77d58b0800000000000000
+      internalID: -5161837836100261407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bolshoepadeniesvysotyvliniyu_33
+      rect:
+        serializedVersion: 2
+        x: 1948
+        y: 8
+        width: 18
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4d37e1a6d125b7c0800000000000000
+      internalID: -4056298683654259377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bolshoepadeniesvysotyvliniyu_34
+      rect:
+        serializedVersion: 2
+        x: 1148
+        y: 8
+        width: 62
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccfa0a0dd66269c20800000000000000
+      internalID: 3212797637268910028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
