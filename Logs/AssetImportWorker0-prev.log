@@ -1,0 +1,189 @@
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.22f1 (e1a7f79fd887) revision 14788599'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Enterprise LTSC 2019; OS build 17763.914; Version 1809; 64bit' Language: 'ru' Physical Memory: 8036 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.3.22f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/Orfeus/Desktop/Who am i V2
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+64097
+Successfully changed project path to: C:/Users/Orfeus/Desktop/Who am i V2
+C:/Users/Orfeus/Desktop/Who am i V2
+Using Asset Import Pipeline V2.
+Cannot open lmdb database Library/SourceAssetDB because another process has a lock on it. Will retry.
+Refreshing native plugins compatible for Editor in 46.43 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.22f1 (e1a7f79fd887)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.22f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/Orfeus/Desktop/Who am i V2/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1650 Ti with Max-Q Design (ID=0x1f95)
+    Vendor:   
+    VRAM:     3962 MB
+    Driver:   27.21.14.6589
+received signal from system: SIGSEGV
+Stack trace:
+0x00007ff70016cbac (Unity) 
+0x00007ff700175249 (Unity) 
+0x00007ff7016a319c (Unity) 
+0x00007ff70016c214 (Unity) 
+0x00007ff703564bd2 (Unity) 
+0x00007ff70393b419 (Unity) 
+0x00007ff7035327b8 (Unity) 
+0x00007ffa55cc477f (ntdll) 
+0x00007ffa55c24bef (ntdll) 
+0x00007ffa55cc34ee (ntdll) 
+0x00007ff6ff0cbb76 (Unity) 
+0x00007ff6ff0cb34a (Unity) 
+0x00007ff6ff0c0254 (Unity) 
+0x00007ff6ff0a6bd5 (Unity) 
+0x00007ff6ff0bccbc (Unity) 
+0x00007ff6fe6a6a5e (Unity) 
+0x00007ff6fe681d40 (Unity) 
+0x00007ff702852366 (Unity) 
+0x00007ff70285590b (Unity) 
+0x00007ff702852273 (Unity) 
+0x00007ff70282c3f1 (Unity) 
+0x00007ff70284c445 (Unity) 
+0x00007ff7000c24c2 (Unity) 
+0x00007ff700085806 (Unity) 
+0x00007ff700085d69 (Unity) 
+0x00007ff700085b1a (Unity) 
+0x00007ff6ffa44bcb (Unity) 
+0x00007ff7000f617f (Unity) 
+0x00007ff7000f6b42 (Unity) 
+0x00007ff7000f6cca (Unity) 
+0x00007ff700081bde (Unity) 
+0x00007ff70008272f (Unity) 
+0x00007ff700b533fd (Unity) 
+0x00007ff6ff8a65a7 (Unity) 
+0x00007ff700cfbfdd (Unity) 
+0x00007ff7016b0702 (Unity) 
+0x00007ff70350f716 (Unity) 
+0x00007ffa55b77974 (KERNEL32) 
+0x00007ffa55c8a271 (ntdll) 
+
+Crash!!!
+SymInit: Symbol-SearchPath: '.;C:\Users\Orfeus\Desktop\Who am i V2;C:\Program Files\Unity\Hub\Editor\2020.3.22f1\Editor;C:\Windows;C:\Windows\system32;SRV*C:\websymbols*http://msdl.microsoft.com/download/symbols;', symOptions: 534, UserName: 'Orfeus'
+OS-Version: 10.0.0
+C:\Program Files\Unity\Hub\Editor\2020.3.22f1\Editor\Unity.exe:Unity.exe (00007FF6FE410000), size: 135421952 (result: -529697949), SymType: '-deferred-', PDB: '', fileVersion: 2020.3.22.42999
+C:\Windows\SYSTEM32\ntdll.dll:ntdll.dll (00007FFA55C20000), size: 2019328 (result: 0), SymType: '-nosymbols-', PDB: 'C:\Windows\SYSTEM32\ntdll.dll', fileVersion: 10.0.17763.831
+C:\Program Files\Avast Software\Avast\aswhook.dll:aswhook.dll (00007FFA38DA0000), size: 90112 (result: 0), SymType: '-nosymbols-', PDB: 'C:\Program Files\Avast Software\Avast\aswhook.dll', fileVersion: 21.9.6698.0
+C:\Windows\System32\KERNEL32.DLL:KERNEL32.DLL (00007FFA55B60000), size: 733184 (result: 0), SymType: '-nosymbols-', PDB: 'C:\Windows\System32\KERNEL32.DLL', fileVersion: 10.0.17763.475
+C:\Windows\System32\KERNELBASE.dll:KERNELBASE.dll (00007FFA51D40000), size: 2699264 (result: 0), SymType: '-nosymbols-', PDB: 'C:\Windows\System32\KERNELBASE.dll', fileVersion: 10.0.17763.914
+C:\Windows\System32\CRYPT32.dll:CRYPT32.dll (00007FFA51FE0000), size: 1945600 (result: 0), SymType: '-nosymbols-', PDB: 'C:\Windows\System32\CRYPT32.dll', fileVersion: 10.0.17763.864
+C:\Windows\System32\ucrtbase.dll:ucrtbase.dll (00007FFA52220000), size: 1024000 (result: 0), SymType: '-nosymbols-', PDB: 'C:\Windows\System32\ucrtbase.dll', fileVersion: 10.0.17763.719
+C:\Windows\System32\MSASN1.dll:MSASN1.dll (00007FFA51C60000), size: 73728 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\MSASN1.dll', fileVersion: 10.0.17763.1
+C:\Windows\System32\USER32.dll:USER32.dll (00007FFA53390000), size: 1667072 (result: 0), SymType: '-nosymbols-', PDB: 'C:\Windows\System32\USER32.dll', fileVersion: 10.0.17763.914
+C:\Windows\System32\win32u.dll:win32u.dll (00007FFA52B60000), size: 131072 (result: 0), SymType: '-nosymbols-', PDB: 'C:\Windows\System32\win32u.dll', fileVersion: 10.0.17763.1
+C:\Program Files\Unity\Hub\Editor\2020.3.22f1\Editor\libfbxsdk.dll:libfbxsdk.dll (00007FFA10300000), size: 10215424 (result: 0), SymType: '-nosymbols-', PDB: 'C:\Program Files\Unity\Hub\Editor\2020.3.22f1\Editor\libfbxsdk.dll', fileVersion: 2020.2.0.0
+C:\Program Files\Unity\Hub\Editor\2020.3.22f1\Editor\optix.6.0.0.dll:optix.6.0.0.dll (00007FFA38090000), size: 208896 (result: 0), SymType: '-nosymbols-', PDB: 'C:\Program Files\Unity\Hub\Editor\2020.3.22f1\Editor\optix.6.0.0.dll', fileVersion: 6.0.0.0
+C:\Windows\System32\GDI32.dll:GDI32.dll (00007FFA537D0000), size: 167936 (result: 0), SymType: '-nosymbols-', PDB: 'C:\Windows\System32\GDI32.dll', fileVersion: 10.0.17763.592
+C:\Program Files\Unity\Hub\Editor\2020.3.22f1\Editor\OpenImageDenoise.dll:OpenImageDenoise.dll (00007FFA0B0A0000), size: 43806720 (result: 0), SymType: '-nosymbols-', PDB: 'C:\Program Files\Unity\Hub\Editor\2020.3.22f1\Editor\OpenImageDenoise.dll'
+C:\Windows\System32\gdi32full.dll:gdi32full.dll (00007FFA52B80000), size: 1675264 (result: 0), SymType: '-nosymbols-', PDB: 'C:\Windows\System32\gdi32full.dll', fileVersion: 10.0.17763.914
+C:\Windows\System32\msvcp_win.dll:msvcp_win.dll (00007FFA52D20000), size: 655360 (result: 0), SymType: '-nosymbols-', PDB: 'C:\Windows\System32\msvcp_win.dll', fileVersion: 10.0.17763.348
+C:\Windows\System32\ADVAPI32.dll:ADVAPI32.dll (00007FFA53720000), size: 667648 (result: 0), SymType: '-nosymbols-', PDB: 'C:\Windows\System32\ADVAPI32.dll', fileVersion: 10.0.17763.1
+C:\Windows\System32\msvcrt.dll:msvcrt.dll (00007FFA53270000), size: 647168 (result: 0), SymType: '-nosymbols-', PDB: 'C:\Windows\System32\msvcrt.dll', fileVersion: 7.0.17763.475
+C:\Windows\System32\sechost.dll:sechost.dll (00007FFA54F30000), size: 647168 (result: 0), SymType: '-nosymbols-', PDB: 'C:\Windows\System32\sechost.dll', fileVersion: 10.0.17763.1
+C:\Windows\System32\RPCRT4.dll:RPCRT4.dll (00007FFA55470000), size: 1187840 (result: 0), SymType: '-nosymbols-', PDB: 'C:\Windows\System32\RPCRT4.dll', fileVersion: 10.0.17763.864
+C:\Windows\System32\SHELL32.dll:SHELL32.dll (00007FFA538D0000), size: 21970944 (result: 0), SymType: '-nosymbols-', PDB: 'C:\Windows\System32\SHELL32.dll', fileVersion: 10.0.17763.831
+C:\Windows\System32\cfgmgr32.dll:cfgmgr32.dll (00007FFA52320000), size: 303104 (result: 0), SymType: '-nosymbols-', PDB: 'C:\Windows\System32\cfgmgr32.dll', fileVersion: 10.0.17763.1
+C:\Windows\System32\shcore.dll:shcore.dll (00007FFA555A0000), size: 688128 (result: 0), SymType: '-nosymbols-', PDB: 'C:\Windows\System32\shcore.dll', fileVersion: 10.0.17763.1
+C:\Windows\System32\combase.dll:combase.dll (00007FFA550E0000), size: 3325952 (result: 0), SymType: '-exported-', PDB: 'C:\Windows\System32\combase.dll', fileVersion: 10.0.17763.737
+C:\Windows\System32\bcryptPrimitives.dll:bcryptPrimitives.dll (00007FFA52370000), size: 516096 (result: 0), SymType: '-nosymbols-', PDB: 'C:\Windows\System32\bcryptPrimitives.dll', fileVersion: 10.0.17763.678
+C:\Windows\System32\windows.storage.dll:windows.storage.dll (00007FFA52410000), size: 7655424 (result: 0), SymType: '-nosymbols-', PDB: 'C:\Windows\System32\windows.storage.dll', fileVersion: 10.0.17763.831
+
+========== OUTPUTTING STACK TRACE ==================
+
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Unknown error [-529697949]' (Address: 00007FF700152CD8)
+0x00007FF700152CD8 (Unity) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Unknown error [-529697949]' (Address: 00007FF700152DF1)
+0x00007FF700152DF1 (Unity) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Unknown error [-529697949]' (Address: 00007FF70016C377)
+0x00007FF70016C377 (Unity) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Unknown error [-529697949]' (Address: 00007FF703564BD2)
+0x00007FF703564BD2 (Unity) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Unknown error [-529697949]' (Address: 00007FF70393B419)
+0x00007FF70393B419 (Unity) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Unknown error [-529697949]' (Address: 00007FF7035327B8)
+0x00007FF7035327B8 (Unity) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Попытка обращения к неверному адресу.' (Address: 00007FFA55CC477F)
+0x00007FFA55CC477F (ntdll) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Попытка обращения к неверному адресу.' (Address: 00007FFA55C24BEF)
+0x00007FFA55C24BEF (ntdll) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Попытка обращения к неверному адресу.' (Address: 00007FFA55CC34EE)
+0x00007FFA55CC34EE (ntdll) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Unknown error [-529697949]' (Address: 00007FF6FF0CBB76)
+0x00007FF6FF0CBB76 (Unity) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Unknown error [-529697949]' (Address: 00007FF6FF0CB34A)
+0x00007FF6FF0CB34A (Unity) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Unknown error [-529697949]' (Address: 00007FF6FF0C0254)
+0x00007FF6FF0C0254 (Unity) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Unknown error [-529697949]' (Address: 00007FF6FF0A6BD5)
+0x00007FF6FF0A6BD5 (Unity) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Unknown error [-529697949]' (Address: 00007FF6FF0BCCBC)
+0x00007FF6FF0BCCBC (Unity) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Unknown error [-529697949]' (Address: 00007FF6FE6A6A5E)
+0x00007FF6FE6A6A5E (Unity) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Unknown error [-529697949]' (Address: 00007FF6FE681D40)
+0x00007FF6FE681D40 (Unity) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Unknown error [-529697949]' (Address: 00007FF702852366)
+0x00007FF702852366 (Unity) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Не найден указанный модуль.' (Address: 00007FF70285590B)
+0x00007FF70285590B (Unity) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Не найден указанный модуль.' (Address: 00007FF702852273)
+0x00007FF702852273 (Unity) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Unknown error [-529697949]' (Address: 00007FF70282C3F1)
+0x00007FF70282C3F1 (Unity) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Unknown error [-529697949]' (Address: 00007FF70284C445)
+0x00007FF70284C445 (Unity) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Не найден указанный модуль.' (Address: 00007FF7000C24C2)
+0x00007FF7000C24C2 (Unity) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Не найден указанный модуль.' (Address: 00007FF700085806)
+0x00007FF700085806 (Unity) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Не найден указанный модуль.' (Address: 00007FF700085D69)
+0x00007FF700085D69 (Unity) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Не найден указанный модуль.' (Address: 00007FF700085B1A)
+0x00007FF700085B1A (Unity) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Не найден указанный модуль.' (Address: 00007FF6FFA44BCB)
+0x00007FF6FFA44BCB (Unity) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Не найден указанный модуль.' (Address: 00007FF7000F617F)
+0x00007FF7000F617F (Unity) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Не найден указанный модуль.' (Address: 00007FF7000F6B42)
+0x00007FF7000F6B42 (Unity) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Не найден указанный модуль.' (Address: 00007FF7000F6CCA)
+0x00007FF7000F6CCA (Unity) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Unknown error [-529697949]' (Address: 00007FF700081BDE)
+0x00007FF700081BDE (Unity) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Unknown error [-529697949]' (Address: 00007FF70008272F)
+0x00007FF70008272F (Unity) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Не найден указанный модуль.' (Address: 00007FF700B533FD)
+0x00007FF700B533FD (Unity) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Не найден указанный модуль.' (Address: 00007FF6FF8A65A7)
+0x00007FF6FF8A65A7 (Unity) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Не найден указанный модуль.' (Address: 00007FF700CFBFDD)
+0x00007FF700CFBFDD (Unity) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Не найден указанный модуль.' (Address: 00007FF7016B0702)
+0x00007FF7016B0702 (Unity) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Не найден указанный модуль.' (Address: 00007FF70350F716)
+0x00007FF70350F716 (Unity) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Попытка обращения к неверному адресу.' (Address: 00007FFA55B77974)
+0x00007FFA55B77974 (KERNEL32) (function-name not available)
+  ERROR: SymGetSymFromAddr64, GetLastError: 'Попытка обращения к неверному адресу.' (Address: 00007FFA55C8A271)
+0x00007FFA55C8A271 (ntdll) (function-name not available)
+
+========== END OF STACKTRACE ===========
+
+A crash has been intercepted by the crash handler. For call stack and other details, see the latest crash report generated in:
+ * C:/Temp/Unity/Editor/Crashes

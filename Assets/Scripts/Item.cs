@@ -41,6 +41,7 @@ public class Item : MonoBehaviour
                     slot.GetComponent<Image>().sprite = sprite;
                     slot.GetComponent<Slot>().itemid = 2;
                     Destroy(gameObject); //Удаление объекта с карты
+                    
                 }
             }
 

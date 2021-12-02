@@ -8,6 +8,7 @@ ScriptsOnlyBuild:
     - MainMenu
     - Move
     - MoveCamera
+    - PauseMenu
     - Slot
     - TestOnClick
     Unity.2D.Animation.Editor.dll:
@@ -31,6 +32,30 @@ ScriptsOnlyBuild:
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
     - TMPro.TextMeshProUGUI
+    Unity.Timeline.Editor.dll:
+    - TimelinePreferences
+    - TimelineProjectSettings
+    - UnityEditor.Timeline.AnimationPlayableAssetInspector
+    - UnityEditor.Timeline.ControlPlayableInspector
+    - UnityEditor.Timeline.SequenceHierarchy
+    - UnityEditor.Timeline.TimelineAssetViewModel
+    - UnityEditor.Timeline.TimelineWindow
+    Unity.Timeline.dll:
+    - UnityEngine.Timeline.ActivationPlayableAsset
+    - UnityEngine.Timeline.ActivationTrack
+    - UnityEngine.Timeline.AnimationPlayableAsset
+    - UnityEngine.Timeline.AnimationTrack
+    - UnityEngine.Timeline.ControlTrack
+    - UnityEngine.Timeline.MarkerTrack
+    - UnityEngine.Timeline.TimelineAsset
+    UnityEditor.Graphs.dll:
+    - UnityEditor.Graphs.AnimationBlendTree.Graph
+    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
+    - UnityEditor.Graphs.AnimationStateMachine.Graph
+    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
+    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -75,37 +100,53 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1484}
     - Class: 114
+      Script: {instanceID: 1528}
+    - Class: 114
       Script: {instanceID: 1796}
     - Class: 114
       Script: {instanceID: 1804}
     - Class: 114
       Script: {instanceID: 1866}
     - Class: 114
-      Script: {instanceID: 2702}
+      Script: {instanceID: 2002}
     - Class: 114
-      Script: {instanceID: 2732}
+      Script: {instanceID: 2704}
     - Class: 114
-      Script: {instanceID: 2878}
+      Script: {instanceID: 2734}
     - Class: 114
-      Script: {instanceID: 2928}
+      Script: {instanceID: 2880}
     - Class: 114
-      Script: {instanceID: 3050}
+      Script: {instanceID: 2904}
     - Class: 114
-      Script: {instanceID: 3112}
+      Script: {instanceID: 2930}
     - Class: 114
-      Script: {instanceID: 3360}
+      Script: {instanceID: 3052}
     - Class: 114
-      Script: {instanceID: 3476}
+      Script: {instanceID: 3114}
     - Class: 114
-      Script: {instanceID: 3518}
+      Script: {instanceID: 3362}
     - Class: 114
-      Script: {instanceID: 3996}
+      Script: {instanceID: 3392}
     - Class: 114
-      Script: {instanceID: 4170}
+      Script: {instanceID: 3478}
     - Class: 114
-      Script: {instanceID: 5028}
+      Script: {instanceID: 3520}
     - Class: 114
-      Script: {instanceID: 5748}
+      Script: {instanceID: 3998}
+    - Class: 114
+      Script: {instanceID: 4082}
+    - Class: 114
+      Script: {instanceID: 4172}
+    - Class: 114
+      Script: {instanceID: 4346}
+    - Class: 114
+      Script: {instanceID: 4670}
+    - Class: 114
+      Script: {instanceID: 5030}
+    - Class: 114
+      Script: {instanceID: 5710}
+    - Class: 114
+      Script: {instanceID: 5750}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -113,6 +154,10 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
       Script: {instanceID: 0}
     - Class: 212
       Script: {instanceID: 0}
@@ -125,6 +170,8 @@ ScriptsOnlyBuild:
     - Class: 224
       Script: {instanceID: 0}
     - Class: 258
+      Script: {instanceID: 0}
+    - Class: 320
       Script: {instanceID: 0}
     Assets/Scenes/MaimMenu.unity:
     - Class: 1
@@ -152,23 +199,23 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1866}
     - Class: 114
-      Script: {instanceID: 2268}
+      Script: {instanceID: 2270}
     - Class: 114
-      Script: {instanceID: 2276}
+      Script: {instanceID: 2278}
     - Class: 114
-      Script: {instanceID: 2702}
+      Script: {instanceID: 2704}
     - Class: 114
-      Script: {instanceID: 2878}
+      Script: {instanceID: 2880}
     - Class: 114
-      Script: {instanceID: 3112}
+      Script: {instanceID: 3114}
     - Class: 114
-      Script: {instanceID: 3360}
+      Script: {instanceID: 3362}
     - Class: 114
-      Script: {instanceID: 3476}
+      Script: {instanceID: 3478}
     - Class: 114
-      Script: {instanceID: 4874}
+      Script: {instanceID: 4876}
     - Class: 114
-      Script: {instanceID: 5274}
+      Script: {instanceID: 5276}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -272,7 +319,7 @@ ScriptsOnlyBuild:
     className: LighterOnOff
   - hash:
       serializedVersion: 2
-      Hash: 15f33b940e522eac8423e07ddf3b05ae
+      Hash: b2c2914f55bf9cd516bcf352b92e767e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Slot
@@ -282,6 +329,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_FontAsset
+  - hash:
+      serializedVersion: 2
+      Hash: c8c5e65e9fb858572516474d6e2102bc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PauseMenu
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb

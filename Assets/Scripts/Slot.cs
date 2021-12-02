@@ -8,6 +8,8 @@ public class Slot : MonoBehaviour
 {
     public int id;
     public int itemid;
+    public Sprite defaultMask;
+    public GameObject enemy;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,8 +23,18 @@ public class Slot : MonoBehaviour
         {
             GetComponent<Button>().enabled = true;
         }
-        
+
     }
-    
-    
+    public void BeforeUsePic()
+    {
+        if (itemid == 2)
+        {
+            Instantiate(enemy);
+            GetComponent<Image>().sprite = defaultMask;
+            itemid = 0;
+        }
+
+    }
+
+
 }
