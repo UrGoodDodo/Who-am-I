@@ -15,6 +15,7 @@ TagManager:
   - Slot
   - SlotLighter
   - Lighter
+  - Item
   layers:
   - Default
   - TransparentFX
