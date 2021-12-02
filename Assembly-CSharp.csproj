@@ -62,8 +62,12 @@
     <Compile Include="Assets\Scripts\TestOnClick.cs" />
     <Compile Include="Assets\Scripts\Item.cs" />
     <Compile Include="Assets\Scripts\Inventory.cs" />
-    <Compile Include="Assets\Scripts\Move.cs" />
     <Compile Include="Assets\Scripts\Tooltips.cs" />
+    <Compile Include="Assets\Scripts\Move.cs" />
+    <Compile Include="Assets\Scripts\Dialogues\Dialogue.cs" />
+    <Compile Include="Assets\Scripts\Dialogues\DialogueManager.cs" />
+    <Compile Include="Assets\Scripts\Dialogues\DialogueTriger.cs" />
+    <Compile Include="Assets\Scripts\Dialogues\DialogueAnimator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
