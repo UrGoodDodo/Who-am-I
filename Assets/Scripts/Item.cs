@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Item : MonoBehaviour
 {
     public Sprite sprite;
-    public int index = 0; //Номер предмета
+    public int index = 0; //РќРѕРјРµСЂ РїСЂРµРґРјРµС‚Р°
     private bool touch;
     private Transform player;
     private Transform slot;
@@ -38,7 +38,7 @@ public class Item : MonoBehaviour
                 {
                     slot.GetComponent<Image>().sprite = sprite;
                     slot.GetComponent<Slot>().itemid = 2;
-                    Destroy(gameObject); //Удаление объекта с карты
+                    Destroy(gameObject); //РЈРґР°Р»РµРЅРёРµ РѕР±СЉРµРєС‚Р° СЃ РєР°СЂС‚С‹
                     
                 }
             }

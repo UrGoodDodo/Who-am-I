@@ -8,15 +8,15 @@ public class Inventory : MonoBehaviour
 
 	void Start()
 	{
-		canvas = GetComponent<Canvas>(); //Получение компонента Canvas
-		canvas.enabled = false; //Отключение инвентаря при старте
+		canvas = GetComponent<Canvas>(); //РџРѕР»СѓС‡РµРЅРёРµ РєРѕРјРїРѕРЅРµРЅС‚Р° Canvas
+		canvas.enabled = false; //РћС‚РєР»СЋС‡РµРЅРёРµ РёРЅРІРµРЅС‚Р°СЂСЏ РїСЂРё СЃС‚Р°СЂС‚Рµ
 	}
 
 	void Update()
 	{
 		if (Input.GetKeyDown(KeyCode.I))
 		{
-			canvas.enabled = !canvas.enabled; //При нажатии на кнопку I окно будет отображаться или скрываться
+			canvas.enabled = !canvas.enabled; //РџСЂРё РЅР°Р¶Р°С‚РёРё РЅР° РєРЅРѕРїРєСѓ I РѕРєРЅРѕ Р±СѓРґРµС‚ РѕС‚РѕР±СЂР°Р¶Р°С‚СЊСЃСЏ РёР»Рё СЃРєСЂС‹РІР°С‚СЊСЃСЏ
 		}
 
 
