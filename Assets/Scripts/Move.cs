@@ -13,7 +13,7 @@ public class Move : MonoBehaviour
     private Transform DB;
     private void Start()
     {
-        LB = GameObject.FindGameObjectWithTag("LB").transform;
+        LB = GameObject.FindGameObjectWithTag("LB").transform;	//Получение границ карты
         RB = GameObject.FindGameObjectWithTag("RB").transform;
         TB = GameObject.FindGameObjectWithTag("TB").transform;
         DB = GameObject.FindGameObjectWithTag("DB").transform;

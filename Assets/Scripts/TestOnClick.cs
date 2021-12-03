@@ -7,7 +7,7 @@ using UnityEngine.EventSystems;
 
 public class TestOnClick : MonoBehaviour
 {
-    public GameObject enemy;
+    public GameObject enemy;    //Объект, который будет добавлен на сцену
     void Start()
     {
 

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class LighterOnOff : MonoBehaviour
 {
-    public int onoff = 1;
+    public int onoff = 1;	//Определяет, включена или выключена зажигалка
     private Transform lighting;
     private Transform slotLighter;
     public Sprite ON;

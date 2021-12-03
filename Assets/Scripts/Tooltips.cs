@@ -16,7 +16,7 @@ public class Tooltips : MonoBehaviour
 
     private Transform player;
     private Transform item;
-        
+    // Происходит при запуске  
     private void Start()
     {
         Tips = new GameObject[] { LightTip, PickupTip, InventoryTip };
@@ -26,7 +26,7 @@ public class Tooltips : MonoBehaviour
 
         StartCoroutine(ShowLightTip(11f));
     }
-
+    // Происходит каждый кадр
     void Update()
     {
       

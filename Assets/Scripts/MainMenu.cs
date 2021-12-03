@@ -14,8 +14,8 @@ public class MainMenu : MonoBehaviour
     {
         
     }
-    public void OpenScene(int index) // Публичная функция загрузки сцены по индексу
+    public void OpenScene(int index) // РїСѓР±Р»РёС‡РЅР°СЏ С„СѓРЅРєС†РёСЏ Р·Р°РіСЂСѓР·РєРё СЃС†РµРЅС‹ РїРѕ РёРЅРґРµРєСЃСѓ
     {
-        SceneManager.LoadScene(index); // Индекс сцены
+        SceneManager.LoadScene(index); // РёРЅРґРµРєСЃ СЃС†РµРЅС‹
     }
 }

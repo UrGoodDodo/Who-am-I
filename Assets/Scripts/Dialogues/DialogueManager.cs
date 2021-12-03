@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
-    public Text dialogueText;
+    public Text dialogueText;	//Текст в диалоге
 
     public Animator boxAnim;
     public Animator startAnim;

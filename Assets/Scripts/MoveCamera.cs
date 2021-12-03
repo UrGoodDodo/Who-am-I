@@ -11,7 +11,7 @@ public class MoveCamera : MonoBehaviour
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        LB = GameObject.FindGameObjectWithTag("LB").transform;
+        LB = GameObject.FindGameObjectWithTag("LB").transform;  //Получение границ, за которые камера не может выходить
         RB = GameObject.FindGameObjectWithTag("RB").transform;
         LBC = GameObject.FindGameObjectWithTag("LBC").transform;
         RBC = GameObject.FindGameObjectWithTag("RBC").transform;
@@ -27,7 +27,7 @@ public class MoveCamera : MonoBehaviour
         if (((RBC.position.x >= RB.position.x) && (player.position.x < GetComponent<Transform>().position.x)) ||
             ((LBC.position.x <= LB.position.x) && (player.position.x > GetComponent<Transform>().position.x)))
         {
-            transform.position = new Vector3(1, 0, 0) * player.position.x;
+            transform.position = new Vector3(1, 0, 0) * player.position.x; //Позиция центра камеры равна позиции игрока
         }
 
     }

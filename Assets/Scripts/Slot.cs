@@ -10,7 +10,7 @@ public class Slot : MonoBehaviour
     public int itemid;
     public Sprite defaultMask;
     public GameObject enemy;
-    // Start is called before the first frame update
+    // Событие происходит при старте скрипта
     void Start()
     {
         GetComponent<Button>().enabled = false;
