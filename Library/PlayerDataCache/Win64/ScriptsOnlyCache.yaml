@@ -1,6 +1,9 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - DialogueAnimator
+    - DialogueManager
+    - DialogueTriger
     - Inventory
     - Item
     - LightFollow
@@ -11,11 +14,11 @@ ScriptsOnlyBuild:
     - PauseMenu
     - Slot
     - TestOnClick
+    - Tooltips
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
     - UnityEditor.U2D.IK.IKEditorManager
-    - UnityEditor.U2D.IK.IKGizmos
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
@@ -31,14 +34,6 @@ ScriptsOnlyBuild:
     - TMPro.TMP_Settings
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
-    - TMPro.TextMeshProUGUI
-    Unity.Timeline.Editor.dll:
-    - TimelinePreferences
-    - TimelineProjectSettings
-    - UnityEditor.Timeline.EditorClip
-    - UnityEditor.Timeline.SequenceHierarchy
-    - UnityEditor.Timeline.TimelineAssetViewModel
-    - UnityEditor.Timeline.TimelineWindow
     Unity.Timeline.dll:
     - UnityEngine.Timeline.ActivationPlayableAsset
     - UnityEngine.Timeline.ActivationTrack
@@ -47,12 +42,6 @@ ScriptsOnlyBuild:
     - UnityEngine.Timeline.ControlTrack
     - UnityEngine.Timeline.MarkerTrack
     - UnityEngine.Timeline.TimelineAsset
-    UnityEditor.Graphs.dll:
-    - UnityEditor.Graphs.AnimationBlendTree.Graph
-    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.Graph
-    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -80,7 +69,13 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 50
+      Script: {instanceID: 0}
+    - Class: 58
+      Script: {instanceID: 0}
     - Class: 61
+      Script: {instanceID: 0}
+    - Class: 70
       Script: {instanceID: 0}
     - Class: 74
       Script: {instanceID: 0}
@@ -103,47 +98,53 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1804}
     - Class: 114
-      Script: {instanceID: 1866}
-    - Class: 114
       Script: {instanceID: 2002}
     - Class: 114
-      Script: {instanceID: 2704}
+      Script: {instanceID: 2278}
     - Class: 114
-      Script: {instanceID: 2734}
+      Script: {instanceID: 2466}
     - Class: 114
-      Script: {instanceID: 2880}
+      Script: {instanceID: 2706}
     - Class: 114
-      Script: {instanceID: 2904}
+      Script: {instanceID: 2736}
     - Class: 114
-      Script: {instanceID: 2930}
+      Script: {instanceID: 2812}
     - Class: 114
-      Script: {instanceID: 3052}
+      Script: {instanceID: 2884}
     - Class: 114
-      Script: {instanceID: 3114}
+      Script: {instanceID: 2908}
     - Class: 114
-      Script: {instanceID: 3362}
+      Script: {instanceID: 3056}
     - Class: 114
-      Script: {instanceID: 3392}
+      Script: {instanceID: 3118}
     - Class: 114
-      Script: {instanceID: 3478}
+      Script: {instanceID: 3366}
     - Class: 114
-      Script: {instanceID: 3520}
+      Script: {instanceID: 3396}
     - Class: 114
-      Script: {instanceID: 3998}
+      Script: {instanceID: 3482}
     - Class: 114
-      Script: {instanceID: 4082}
+      Script: {instanceID: 3524}
     - Class: 114
-      Script: {instanceID: 4172}
+      Script: {instanceID: 4002}
     - Class: 114
-      Script: {instanceID: 4346}
+      Script: {instanceID: 4086}
     - Class: 114
-      Script: {instanceID: 4670}
+      Script: {instanceID: 4176}
     - Class: 114
-      Script: {instanceID: 5030}
+      Script: {instanceID: 4178}
     - Class: 114
-      Script: {instanceID: 5710}
+      Script: {instanceID: 4352}
     - Class: 114
-      Script: {instanceID: 5750}
+      Script: {instanceID: 4676}
+    - Class: 114
+      Script: {instanceID: 5036}
+    - Class: 114
+      Script: {instanceID: 5718}
+    - Class: 114
+      Script: {instanceID: 5758}
+    - Class: 114
+      Script: {instanceID: 5802}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -200,19 +201,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2278}
     - Class: 114
-      Script: {instanceID: 2704}
+      Script: {instanceID: 2706}
     - Class: 114
-      Script: {instanceID: 2880}
+      Script: {instanceID: 2884}
     - Class: 114
-      Script: {instanceID: 3114}
+      Script: {instanceID: 3118}
     - Class: 114
-      Script: {instanceID: 3362}
+      Script: {instanceID: 3366}
     - Class: 114
-      Script: {instanceID: 3478}
+      Script: {instanceID: 3482}
     - Class: 114
-      Script: {instanceID: 4876}
+      Script: {instanceID: 4882}
     - Class: 114
-      Script: {instanceID: 5276}
+      Script: {instanceID: 5282}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -370,6 +371,12 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
+      Hash: 5600f0de9562188a498a8909dee800ed
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DialogueAnimator
+  - hash:
+      serializedVersion: 2
       Hash: cfdd0010efd7b54c2b7512656dbc9119
     assemblyName: Unity.2D.IK.Runtime.dll
     namespaceName: UnityEngine.U2D.IK
@@ -386,6 +393,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MoveCamera
+  - hash:
+      serializedVersion: 2
+      Hash: 5189850989996a592e471d9986cb12bb
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DialogueManager
   - hash:
       serializedVersion: 2
       Hash: cf9f5cf2c3145a37ac07f00e50e460f9
@@ -616,6 +629,12 @@ ScriptsOnlyBuild:
     className: Inventory
   - hash:
       serializedVersion: 2
+      Hash: dbd2b91a8065fc320d2b6ecd11c32b45
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Tooltips
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
@@ -794,6 +813,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: TouchInputModule
+  - hash:
+      serializedVersion: 2
+      Hash: 27c30076a5bc55c98768bb0208945c50
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DialogueTriger
   - hash:
       serializedVersion: 2
       Hash: 762a30c8d779b11af16ed9ce1f2d32fa

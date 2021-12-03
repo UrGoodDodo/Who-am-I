@@ -31,11 +31,9 @@ public class Item : MonoBehaviour
     {
         if (touch == true)
         {
-            GetComponent<SpriteRenderer>().color = Color.red;
             if ((Mathf.Abs(player.position.x - GetComponent<Transform>().position.x) <= 1.5f) &&
                 (Mathf.Abs(player.position.y - GetComponent<Transform>().position.y) <= 2.5f))
             {
-                GetComponent<SpriteRenderer>().color = Color.green;
                 if (Input.GetKey(KeyCode.Mouse0))
                 {
                     slot.GetComponent<Image>().sprite = sprite;
@@ -45,10 +43,6 @@ public class Item : MonoBehaviour
                 }
             }
 
-        }
-        else
-        {
-            GetComponent<SpriteRenderer>().color = Color.blue;
         }
     }
 

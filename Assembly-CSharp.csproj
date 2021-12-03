@@ -8,8 +8,9 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace></RootNamespace>
-    <ProjectGuid>{132252FC-38C9-4E55-255C-8FFA45CCE57A}</ProjectGuid>
+    <RootNamespace>
+    </RootNamespace>
+    <ProjectGuid>{68BB9AC2-F3DB-48A8-2AF6-FA77D1CF7DCF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -57,7 +58,9 @@
     <Compile Include="Assets\Scripts\LighterOnOff.cs" />
     <Compile Include="Assets\Scripts\Slot.cs" />
     <Compile Include="Assets\Scripts\PauseMenu.cs" />
+    <Compile Include="Assets\Scripts\Dialogues\DialogueAnimator.cs" />
     <Compile Include="Assets\Scripts\MoveCamera.cs" />
+    <Compile Include="Assets\Scripts\Dialogues\DialogueManager.cs" />
     <Compile Include="Assets\Scripts\LightFollow.cs" />
     <Compile Include="Assets\Scripts\TestOnClick.cs" />
     <Compile Include="Assets\Scripts\Item.cs" />
@@ -65,9 +68,7 @@
     <Compile Include="Assets\Scripts\Tooltips.cs" />
     <Compile Include="Assets\Scripts\Move.cs" />
     <Compile Include="Assets\Scripts\Dialogues\Dialogue.cs" />
-    <Compile Include="Assets\Scripts\Dialogues\DialogueManager.cs" />
     <Compile Include="Assets\Scripts\Dialogues\DialogueTriger.cs" />
-    <Compile Include="Assets\Scripts\Dialogues\DialogueAnimator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -24,13 +24,13 @@ public class LighterOnOff : MonoBehaviour
             {
                 lighting.GetComponent<Light>().enabled = true;
                 onoff = 2;
-                slotLighter.GetComponent<Image>().sprite = ON;
+                slotLighter.transform.GetChild(0).GetComponent<Image>().sprite = ON;
             }
             else
             {
                 lighting.GetComponent<Light>().enabled = false;
                 onoff = 1;
-                slotLighter.GetComponent<Image>().sprite = OFF;
+                slotLighter.transform.GetChild(0).GetComponent<Image>().sprite = OFF;
             }
         }
     }
@@ -40,13 +40,13 @@ public class LighterOnOff : MonoBehaviour
         {
             lighting.GetComponent<Light>().enabled = true;
             onoff = 2;
-            slotLighter.GetComponent<Image>().sprite = ON;
+            slotLighter.transform.GetChild(0).GetComponent<Image>().sprite = ON;
         }
         else
         {
             lighting.GetComponent<Light>().enabled = false;
             onoff = 1;
-            slotLighter.GetComponent<Image>().sprite = OFF;
+            slotLighter.transform.GetChild(0).GetComponent<Image>().sprite = OFF;
         }
     }
 }
