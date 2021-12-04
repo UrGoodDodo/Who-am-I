@@ -19,6 +19,7 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
     - UnityEditor.U2D.IK.IKEditorManager
+    - UnityEditor.U2D.IK.IKGizmos
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
@@ -34,6 +35,8 @@ ScriptsOnlyBuild:
     - TMPro.TMP_Settings
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
+    Unity.Timeline.Editor.dll:
+    - TimelineProjectSettings
     Unity.Timeline.dll:
     - UnityEngine.Timeline.ActivationPlayableAsset
     - UnityEngine.Timeline.ActivationTrack
@@ -92,59 +95,59 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1484}
     - Class: 114
-      Script: {instanceID: 1556}
+      Script: {instanceID: 1528}
     - Class: 114
-      Script: {instanceID: 1824}
+      Script: {instanceID: 1796}
     - Class: 114
-      Script: {instanceID: 1832}
+      Script: {instanceID: 1804}
     - Class: 114
-      Script: {instanceID: 2030}
+      Script: {instanceID: 2002}
     - Class: 114
-      Script: {instanceID: 2306}
+      Script: {instanceID: 2278}
     - Class: 114
-      Script: {instanceID: 2494}
+      Script: {instanceID: 2466}
     - Class: 114
-      Script: {instanceID: 2734}
+      Script: {instanceID: 2706}
     - Class: 114
-      Script: {instanceID: 2764}
+      Script: {instanceID: 2736}
     - Class: 114
-      Script: {instanceID: 2838}
+      Script: {instanceID: 2812}
     - Class: 114
-      Script: {instanceID: 2910}
+      Script: {instanceID: 2884}
     - Class: 114
-      Script: {instanceID: 2934}
+      Script: {instanceID: 2908}
     - Class: 114
-      Script: {instanceID: 3082}
+      Script: {instanceID: 3056}
     - Class: 114
-      Script: {instanceID: 3144}
+      Script: {instanceID: 3118}
     - Class: 114
-      Script: {instanceID: 3392}
+      Script: {instanceID: 3366}
     - Class: 114
-      Script: {instanceID: 3422}
+      Script: {instanceID: 3396}
     - Class: 114
-      Script: {instanceID: 3508}
+      Script: {instanceID: 3482}
     - Class: 114
-      Script: {instanceID: 3550}
+      Script: {instanceID: 3524}
     - Class: 114
-      Script: {instanceID: 4028}
+      Script: {instanceID: 4002}
     - Class: 114
-      Script: {instanceID: 4112}
+      Script: {instanceID: 4086}
     - Class: 114
-      Script: {instanceID: 4202}
+      Script: {instanceID: 4176}
     - Class: 114
-      Script: {instanceID: 4204}
+      Script: {instanceID: 4178}
     - Class: 114
-      Script: {instanceID: 4378}
+      Script: {instanceID: 4352}
     - Class: 114
-      Script: {instanceID: 4702}
+      Script: {instanceID: 4676}
     - Class: 114
-      Script: {instanceID: 5062}
+      Script: {instanceID: 5036}
     - Class: 114
-      Script: {instanceID: 5744}
+      Script: {instanceID: 5718}
     - Class: 114
-      Script: {instanceID: 5784}
+      Script: {instanceID: 5758}
     - Class: 114
-      Script: {instanceID: 5828}
+      Script: {instanceID: 5802}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -193,27 +196,25 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1484}
     - Class: 114
-      Script: {instanceID: 1560}
+      Script: {instanceID: 1532}
     - Class: 114
-      Script: {instanceID: 1894}
+      Script: {instanceID: 1866}
     - Class: 114
-      Script: {instanceID: 2298}
+      Script: {instanceID: 2270}
     - Class: 114
-      Script: {instanceID: 2306}
+      Script: {instanceID: 2706}
     - Class: 114
-      Script: {instanceID: 2734}
+      Script: {instanceID: 2884}
     - Class: 114
-      Script: {instanceID: 2910}
+      Script: {instanceID: 3118}
     - Class: 114
-      Script: {instanceID: 3144}
+      Script: {instanceID: 3366}
     - Class: 114
-      Script: {instanceID: 3392}
+      Script: {instanceID: 3482}
     - Class: 114
-      Script: {instanceID: 3508}
+      Script: {instanceID: 4882}
     - Class: 114
-      Script: {instanceID: 4908}
-    - Class: 114
-      Script: {instanceID: 5308}
+      Script: {instanceID: 5282}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -829,4 +830,5 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/MaimMenu.unity
   - Assets/Scenes/Level0.unity
-  playerPath: C:/Users/Orfeus/Desktop/Test/Who am i.exe
+  playerPath: "C:/Users/eliza/Desktop/\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430
+    (2)/Who am i.exe"

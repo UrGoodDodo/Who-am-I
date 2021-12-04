@@ -18,4 +18,8 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene(index); // индекс сцены
     }
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }
