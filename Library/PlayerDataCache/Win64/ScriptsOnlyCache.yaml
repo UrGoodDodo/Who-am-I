@@ -19,7 +19,6 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
     - UnityEditor.U2D.IK.IKEditorManager
-    - UnityEditor.U2D.IK.IKGizmos
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
@@ -96,7 +95,7 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1484}
+      Script: {instanceID: 1486}
     - Class: 114
       Script: {instanceID: 1534}
     - Class: 114
@@ -197,7 +196,7 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1484}
+      Script: {instanceID: 1486}
     - Class: 114
       Script: {instanceID: 1538}
     - Class: 114
@@ -833,5 +832,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/MaimMenu.unity
   - Assets/Scenes/Level0.unity
-  playerPath: "C:/Users/eliza/Desktop/\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430
-    (2)/Who am i.exe"
+  playerPath: C:/Users/eliza/Desktop/Who am I/Who am i.exe
