@@ -5,3 +5,5 @@
 <h2>Демо</h2>
 <h3>Анимация начала игры</h3>
 <img src="./Assets/ReadmeFiles/fall.gif" width="100%">
+<h3>Окно диалога</h3>
+<img src="./Assets/ReadmeFiles/dialog.jpg" width="100%">
