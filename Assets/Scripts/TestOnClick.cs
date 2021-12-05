@@ -14,7 +14,7 @@ public class TestOnClick : MonoBehaviour
     }
 
 
-
+    //Функции спавна объекта, весь скрипт создан как тест
     public void ChangeTransform()
     {
         GetComponent<Transform>().position = new Vector3(1, 1, 1);
