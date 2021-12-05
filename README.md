@@ -11,7 +11,7 @@
 <img src="./Assets/ReadmeFiles/fall.gif" width="100%">
 <h3>Окно диалога</h3>
 <img src="./Assets/ReadmeFiles/dialog.jpg" width="100%">
-<h2>Attention</h2>
+<h2>Attention!</h2>
 <ul>
 <li>Картина может неккоректно отображаться в соотношении сторон 16:10</li>
 </ul>
