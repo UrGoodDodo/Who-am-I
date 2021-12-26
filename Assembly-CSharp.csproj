@@ -1,16 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>8.0</LangVersion>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace>
-    </RootNamespace>
-    <ProjectGuid>{132252FC-38C9-4E55-255C-8FFA45CCE57A}</ProjectGuid>
+    <RootNamespace></RootNamespace>
+    <ProjectGuid>{68BB9AC2-F3DB-48A8-2AF6-FA77D1CF7DCF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -54,22 +53,19 @@
     <UnityVersion>2020.3.22f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Assets\Scripts\MainMenu.cs" />
-    <Compile Include="Assets\Scripts\LighterOnOff.cs" />
-    <Compile Include="Assets\Scripts\Slot.cs" />
-    <Compile Include="Assets\Scripts\PauseMenu.cs" />
+    <Compile Include="Assets\Scripts\Menu\MainMenu.cs" />
+    <Compile Include="Assets\Scripts\ItemsAndInventory\LighterOnOff.cs" />
+    <Compile Include="Assets\Scripts\ItemsAndInventory\Slot.cs" />
+    <Compile Include="Assets\Scripts\Menu\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\Dialogues\DialogueAnimator.cs" />
-    <Compile Include="Assets\Scripts\MoveCamera.cs" />
+    <Compile Include="Assets\Scripts\MovePlayerAndCamera\MoveCamera.cs" />
     <Compile Include="Assets\Scripts\Dialogues\DialogueManager.cs" />
-    <Compile Include="Assets\Scripts\LightFollow.cs" />
-    <Compile Include="Assets\Scripts\TestOnClick.cs" />
-    <Compile Include="Assets\Scripts\Item.cs" />
-    <Compile Include="Assets\Scripts\Inventory.cs" />
+    <Compile Include="Assets\Scripts\MovePlayerAndCamera\LightFollow.cs" />
+    <Compile Include="Assets\Scripts\ItemsAndInventory\TestOnClick.cs" />
+    <Compile Include="Assets\Scripts\ItemsAndInventory\Item.cs" />
+    <Compile Include="Assets\Scripts\ItemsAndInventory\Inventory.cs" />
     <Compile Include="Assets\Scripts\Tooltips.cs" />
-    <Compile Include="Assets\Scripts\Move.cs" />
+    <Compile Include="Assets\Scripts\MovePlayerAndCamera\Move.cs" />
     <Compile Include="Assets\Scripts\Dialogues\Dialogue.cs" />
     <Compile Include="Assets\Scripts\Dialogues\DialogueTriger.cs" />
   </ItemGroup>
