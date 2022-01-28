@@ -3,32 +3,33 @@ using System.Collections.Generic;
 using UnityEngine;
 public class MoveCamera : MonoBehaviour
 {
-    private Transform player;
-    private Transform LB;
-    private Transform RB;
-    private Transform LBC;
-    private Transform RBC;
-    private void Start()
-    {
-        player = GameObject.FindGameObjectWithTag("Player").transform;  //Получение объекта игрока по тегу
-        LB = GameObject.FindGameObjectWithTag("LB").transform;  //Получение границ, за которые камера не может выходить
-        RB = GameObject.FindGameObjectWithTag("RB").transform;
-        LBC = GameObject.FindGameObjectWithTag("LBC").transform;
-        RBC = GameObject.FindGameObjectWithTag("RBC").transform;
-    }
+    // Добавляем объект, за которым будет двигаться камера
+    public Transform target;
+    [Header("Camera position restrictions")]
+    public float minY;
+    public float maxY;
+    public float minX;
+    public float maxX;
+
     void Update()
     {
-        if ((GetComponent<Transform>().position.x != player.position.x) &&  //Камера двигается за игроком, но не выходит за границы карты
-            (RBC.position.x <= RB.position.x) && 
-            (LBC.position.x >= LB.position.x))
-        {
-            transform.position = new Vector3(1, 0,0) * player.position.x;
-        }
-        if (((RBC.position.x >= RB.position.x) && (player.position.x < GetComponent<Transform>().position.x)) || //Камера снова начинает движение, когда достигла границы карты,                                                                        
-            ((LBC.position.x <= LB.position.x) && (player.position.x > GetComponent<Transform>().position.x))) //но игрок прошёл середину камеры в противоположную от границы сторону
-        {
-            transform.position = new Vector3(1, 0, 0) * player.position.x; //Позиция центра камеры равна позиции игрока
-        }
-
+        UpdateCameraPosition();
     }
+
+    // Изменяем позицию камеры на экране
+    void UpdateCameraPosition()
+    {
+        transform.position = new Vector3(
+            // Положение игрового объекта, за которым мы двигаемся
+            Mathf.Clamp(target.position.x, minX, maxX),
+            Mathf.Clamp(target.position.y, minY, maxY),
+            // Положение камеры z должно оставаться неизменным 
+            transform.position.z // (если камеры куда-то проваливается, заменить на, например, -10)
+          );
+    }
+
+
+
+
+
 }
