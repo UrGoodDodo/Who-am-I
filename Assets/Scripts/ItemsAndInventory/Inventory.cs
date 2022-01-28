@@ -17,6 +17,7 @@ public class Inventory : MonoBehaviour
 		if (Input.GetKeyDown(KeyCode.I))
 		{
 			canvas.enabled = !canvas.enabled; //При нажатии на кнопку I окно будет отображаться или скрываться
+			GetComponent<AudioSource>().PlayOneShot(GetComponent<AudioSource>().clip);
 		}
 
 

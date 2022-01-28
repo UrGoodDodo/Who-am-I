@@ -27,11 +27,14 @@ public class Move : MonoBehaviour
         if ((Input.GetAxis("Horizontal") != 0) || (Input.GetAxis("Vertical") != 0))
         {
             GetComponent<Animator>().enabled = true;   //Включает анимацию при движении
+            GetComponent<AudioSource>().playOnAwake = true;
+            GetComponent<AudioSource>().enabled = true;
         }
         else
         {
             GetComponent<Animator>().enabled = false;
             GetComponent<SpriteRenderer>().sprite = stay;
+            GetComponent<AudioSource>().enabled = false;
         }
 
     }
