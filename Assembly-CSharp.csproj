@@ -70,6 +70,7 @@
     <Compile Include="Assets\Scripts\MovePlayerAndCamera\Move.cs" />
     <Compile Include="Assets\Scripts\Dialogues\Dialogue.cs" />
     <Compile Include="Assets\Scripts\Dialogues\DialogueTriger.cs" />
+    <Compile Include="Assets\Scripts\Characters\Move\Move_Chr_1.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Move : MonoBehaviour
 {
@@ -39,8 +40,15 @@ public class Move : MonoBehaviour
 
     }
 
-    public void MoveOutLobby()
+    public void MoveOutLobbyToLocation()
     {
         GetComponent<Transform>().position = new Vector3(43, -2, 1);
     }
+
+    public void MoveOutLobbyToScene(int index)
+    {
+        SceneManager.LoadScene(index);
+    }
+
+    
 }
