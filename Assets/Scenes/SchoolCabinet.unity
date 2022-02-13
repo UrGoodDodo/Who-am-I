@@ -1794,7 +1794,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 5
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
@@ -4087,7 +4087,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 437308704596746464, guid: ec3ad628bd5ad8147bcf881012fd5613, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.72
+      value: -7.17
       objectReference: {fileID: 0}
     - target: {fileID: 437308704596746464, guid: ec3ad628bd5ad8147bcf881012fd5613, type: 3}
       propertyPath: m_LocalPosition.y
