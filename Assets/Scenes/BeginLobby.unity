@@ -2358,7 +2358,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.013000686, y: 0.0026475468}
@@ -2491,7 +2491,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 728460105}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -11012,6 +11012,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Portal
       objectReference: {fileID: 0}
+    - target: {fileID: 4431729654724486833, guid: 8a26d9927afeb5f46b1441fdca8aca49, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4431729654724486834, guid: 8a26d9927afeb5f46b1441fdca8aca49, type: 3}
       propertyPath: On
       value: 
@@ -11035,7 +11039,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5754550022152256220, guid: ce39dbdea2f259f48a87dc216ce0e816, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5754550022152256221, guid: ce39dbdea2f259f48a87dc216ce0e816, type: 3}
       propertyPath: m_Pivot.x
@@ -11257,6 +11261,10 @@ PrefabInstance:
     - target: {fileID: 7498585261268170837, guid: 4415d6d6462210b4d8727e3e29f11c11, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7498585261268170838, guid: 4415d6d6462210b4d8727e3e29f11c11, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4415d6d6462210b4d8727e3e29f11c11, type: 3}
