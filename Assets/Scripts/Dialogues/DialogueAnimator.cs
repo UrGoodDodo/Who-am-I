@@ -9,8 +9,11 @@ public class DialogueAnimator : MonoBehaviour
 
 
     public void OnTriggerEnter2D(Collider2D collision)	//Происходит при срабатывании тригера коллайдера на объекте
-    {        
-        startAnim.SetBool("startOpen", true);
+    {
+        if (collision.tag == "Player")
+        {
+            startAnim.SetBool("startOpen", true);
+        }        
     }
 
     public void OnTriggerExit2D(Collider2D collision)
