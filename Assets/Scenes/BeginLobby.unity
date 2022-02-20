@@ -218,7 +218,7 @@ GameObject:
   - component: {fileID: 27028413}
   - component: {fileID: 27028412}
   m_Layer: 5
-  m_Name: OutLobby_To_Scene
+  m_Name: OutNextScene
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11183,7 +11183,7 @@ PrefabInstance:
       objectReference: {fileID: 728460110}
     - target: {fileID: 5754550023649795828, guid: ce39dbdea2f259f48a87dc216ce0e816, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5754550023649795829, guid: ce39dbdea2f259f48a87dc216ce0e816, type: 3}
       propertyPath: m_LocalScale.x

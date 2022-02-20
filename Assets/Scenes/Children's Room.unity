@@ -866,7 +866,7 @@ GameObject:
   - component: {fileID: 322270072}
   - component: {fileID: 322270071}
   m_Layer: 5
-  m_Name: OutLobby_To_Scene
+  m_Name: OutNextScene
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1010,8 +1010,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.013000688, y: 0.056591075}
-  m_Size: {x: 0.077586375, y: 0.18061218}
+  m_Offset: {x: -0.013000688, y: 0.08217531}
+  m_Size: {x: 0.077586375, y: 0.12944387}
   m_Direction: 0
 --- !u!50 &378472766
 Rigidbody2D:
@@ -3951,7 +3951,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u0414\u0440\u0443\u0433\u0430\u044F \u0441\u0446\u0435\u043D\u0430"
+  m_Text: "\u0417\u0430\u043B"
 --- !u!222 &1710605043
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4311,8 +4311,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.013000688, y: 0.0603671}
-  m_Size: {x: 0.077586375, y: 0.17306004}
+  m_Offset: {x: -0.013000688, y: 0.08125221}
+  m_Size: {x: 0.077586375, y: 0.13129006}
   m_Direction: 0
 --- !u!50 &1968165600
 Rigidbody2D:
@@ -4988,7 +4988,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1415757353359522466, guid: ec3ad628bd5ad8147bcf881012fd5613, type: 3}
       propertyPath: m_Name
-      value: Out
+      value: OutNext
       objectReference: {fileID: 0}
     - target: {fileID: 1660352468267899052, guid: ec3ad628bd5ad8147bcf881012fd5613, type: 3}
       propertyPath: On
