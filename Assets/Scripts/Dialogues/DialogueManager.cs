@@ -2,28 +2,47 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour
 {
-    public Text dialogueText;	//Текст в диалоге
+    public Text dialogueText;	//Текст в диалоге    
+    public Text playerText;
+    public Image playerSprite;
 
     public Animator boxAnim;
     public Animator startAnim;
 
-    private Queue<string> sentences;
+    public Sprite[] playerSprites;
+    public TextAsset[] dialogAssets;
+
+    private Queue<Node> sentences;
+
+    private int dialogueID;
 
     public void Start()
     {
-        sentences = new Queue<string>();
+        sentences = new Queue<Node>();
+        StartCoroutine(StartDialogWithTimer(0,11f));
     }
 
-    public void StartDialogue(Dialogue dialogue)
+    IEnumerator StartDialogWithTimer(int id, float seconds)
     {
+        yield return new WaitForSeconds(seconds);
+        StartDialogue(id);
+    }
+    public void StartDialogue(int dialogueID)
+    {
+        this.dialogueID = dialogueID;
+
         boxAnim.SetBool("boxOpen", true);
         startAnim.SetBool("startOpen", false);
 
+        Dialogue dialogue = Dialogue.Load(dialogAssets[dialogueID]);
+
         sentences.Clear();
-        foreach (string sentence in dialogue.sentences)
+
+        foreach (Node sentence in dialogue.nodes)
         {
             sentences.Enqueue(sentence);
         }
@@ -38,9 +57,11 @@ public class DialogueManager : MonoBehaviour
             EndDialogue();
             return;
         }
-        string sentence = sentences.Dequeue();
+        Node nod = sentences.Dequeue();
         StopAllCoroutines();
-        StartCoroutine(TypeSentence(sentence));
+        StartCoroutine(TypeSentence(nod.npctext));
+        playerText.text = nod.npcname;
+        playerSprite.sprite = playerSprites[nod.npclogo];
     }
 
     IEnumerator TypeSentence(string sentence)
@@ -50,11 +71,16 @@ public class DialogueManager : MonoBehaviour
         {
             dialogueText.text += letter;
             yield return null;
-        }       
+        }
     }
 
     public void EndDialogue()
     {
-        boxAnim.SetBool("boxOpen", false);        
-    }
+        boxAnim.SetBool("boxOpen", false);
+        if (dialogueID == 1)
+        {
+            StartDialogWithTimer(2, 2f);
+            SceneManager.LoadScene(2);            
+        }
+    }    
 }

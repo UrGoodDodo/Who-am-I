@@ -71,10 +71,11 @@
     <Compile Include="Assets\Scripts\ItemsAndInventory\Inventory.cs" />
     <Compile Include="Assets\Scripts\Tooltips.cs" />
     <Compile Include="Assets\Scripts\MovingBetweenRoom\LobbyOut.cs" />
+    <Compile Include="Assets\Scripts\SaveSerial.cs" />
     <Compile Include="Assets\Scripts\MovePlayerAndCamera\Move.cs" />
     <Compile Include="Assets\Scripts\Dialogues\Dialogue.cs" />
-    <Compile Include="Assets\Scripts\Dialogues\DialogueTriger.cs" />
     <Compile Include="Assets\Scripts\Menu\SettingMenu.cs" />
+    <Compile Include="Assets\Scripts\Dialogues\DialogueTriger.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -83,6 +84,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\Dialogs\secondRoom.xml" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
@@ -92,11 +94,13 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\Dialogs\arbitr1.xml" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+    <None Include="Assets\Dialogs\start.xml" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
   </ItemGroup>
   <ItemGroup>
