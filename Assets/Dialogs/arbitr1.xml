@@ -1,0 +1,72 @@
+<dialogue>
+    <node>
+        <npctext> Извините? </npctext>
+        <npclogo> 0 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+   <node>
+        <npctext> ... </npctext>
+        <npclogo> 1 </npclogo>
+        <npcname> Арбитр </npcname>
+    </node>
+    <node>
+        <npctext> Я прошу прощения? </npctext>
+        <npclogo> 0 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> ... </npctext>
+        <npclogo> 1 </npclogo>
+        <npcname> Арбитр </npcname>
+    </node>
+    <node>
+        <npctext> Эй! Вы меня слышите? Где я? </npctext>
+        <npclogo> 0 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> Слышать или слушать, друг мой. Но да, я тебя слышу.  </npctext>
+        <npclogo> 1 </npclogo>
+        <npcname> Арбитр </npcname>
+    </node>
+    <node>
+        <npctext> Где я? Не узнаю это место. </npctext>
+        <npclogo> 0 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> Место, хранящее твою жизнь, твои воспоминания.  </npctext>
+        <npclogo> 1 </npclogo>
+        <npcname> Арбитр </npcname>
+    </node>
+    <node>
+        <npctext> Хранящее жизнь? Воспоминания?  </npctext>
+        <npclogo> 0 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> Чего?  </npctext>
+        <npclogo> 0 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> Не моя цель рассказать.  </npctext>
+        <npclogo> 1 </npclogo>
+        <npcname> Арбитр </npcname>
+    </node>
+    <node>
+        <npctext> …  </npctext>
+        <npclogo> 1 </npclogo>
+        <npcname> Арбитр </npcname>
+    </node>
+    <node>
+        <npctext> Этого я не могу сказать.   </npctext>
+        <npclogo> 1 </npclogo>
+        <npcname> Арбитр </npcname>
+    </node>
+    <node>
+        <npctext> Ты сам должен узнать.  </npctext>
+        <npclogo> 1 </npclogo>
+        <npcname> Арбитр </npcname>
+    </node>
+</dialogue>

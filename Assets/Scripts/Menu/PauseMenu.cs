@@ -40,6 +40,15 @@ public class PauseMenu : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
+    public void ShowPanel(GameObject obj)
+    {
+        obj.SetActive(true);
+    }
+    public void HidePanel(GameObject obj)
+    {
+        obj.SetActive(false);
+    }
+
     public void QuitGame()
     {
         Application.Quit();

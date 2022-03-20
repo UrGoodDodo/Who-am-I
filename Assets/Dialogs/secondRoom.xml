@@ -1,0 +1,17 @@
+<dialogue>
+    <node>
+        <npctext> И что я должен узнать?  </npctext>
+        <npclogo> 0 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+   <node>
+        <npctext> Из одного незнакомого места переместился в другое и что теперь?   </npctext>
+        <npclogo> 0 </npclogo>
+        <npcname> Я </npcname>
+    </node> 
+    <node>
+        <npctext> Ребенок? Я что, раньше няней подрабатывал?    </npctext>
+        <npclogo> 0 </npclogo>
+        <npcname> Я </npcname>
+    </node>   
+</dialogue>
