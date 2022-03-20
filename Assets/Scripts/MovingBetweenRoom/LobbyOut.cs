@@ -6,6 +6,7 @@ public class LobbyOut : MonoBehaviour
 {
     public GameObject On;
     public GameObject Out;
+    
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")

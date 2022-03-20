@@ -24,6 +24,7 @@ public class DialogueManager : MonoBehaviour
     {
         sentences = new Queue<Node>();
         StartCoroutine(StartDialogWithTimer(0,11f));
+        
     }
 
     IEnumerator StartDialogWithTimer(int id, float seconds)
