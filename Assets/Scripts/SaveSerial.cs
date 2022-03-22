@@ -8,8 +8,7 @@ using UnityEngine.SceneManagement;
 
 public class SaveSerial : MonoBehaviour
 {
-    bool[] showedTips;
-    bool[] blockedTips;
+    public GameObject dm;
     int sceneIndex;
 
     public void SaveGame()
@@ -17,13 +16,14 @@ public class SaveSerial : MonoBehaviour
         BinaryFormatter bf = new BinaryFormatter();
         FileStream file = File.Create(Application.persistentDataPath + "/save.dat");
         SaveData data = new SaveData();
-        //data.showedTips = showedTips;
-        //data.blockedTips = blockedTips;
+        data.finishedDialogs = dm.GetComponent<DialogueManager>().finishedDialogs;
+        data.finishedFlags = dm.GetComponent<DialogueManager>().finishedFlags;
         data.sceneIndex = sceneIndex = SceneManager.GetActiveScene().buildIndex;
         bf.Serialize(file, data);
         file.Close();
         Debug.Log("Game data saved!");
     }
+     
 
     public void LoadGame()
     {
@@ -33,8 +33,8 @@ public class SaveSerial : MonoBehaviour
             FileStream file = File.Open(Application.persistentDataPath + "/save.dat", FileMode.Open);
             SaveData data = (SaveData)bf.Deserialize(file);
             file.Close();
-           // showedTips = data.showedTips;
-            //blockedTips = data.blockedTips;
+            dm.GetComponent<DialogueManager>().finishedDialogs = data.finishedDialogs;
+            dm.GetComponent<DialogueManager>().finishedFlags = data.finishedFlags;
             sceneIndex = data.sceneIndex;
             SceneManager.LoadScene(sceneIndex);
             Debug.Log("Game data loaded!");
@@ -43,14 +43,14 @@ public class SaveSerial : MonoBehaviour
         {
             Debug.LogError("There is no save data!");
             SceneManager.LoadScene(1);            
-        }
+        }        
     }
 }
 
 [Serializable]
 class SaveData
 {
-    //public bool[] showedTips;
-    //public bool[] blockedTips;
+    public bool[] finishedDialogs;
+    public bool[] finishedFlags;
     public int sceneIndex;
 }

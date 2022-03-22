@@ -1,0 +1,7 @@
+<dialogue>
+    <node>
+        <npctext> Что за шум?   </npctext>
+        <npclogo> 0 </npclogo>
+        <npcname> Я </npcname>
+    </node>     
+</dialogue>

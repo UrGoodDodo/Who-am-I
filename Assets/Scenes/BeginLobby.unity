@@ -2397,6 +2397,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46e383d7be04f934faeff5e588863d4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dm: {fileID: 923450693}
 --- !u!224 &397380545 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3281630065403224512, guid: 6ac36b6f983e06849987c680410143d1, type: 3}
@@ -3772,6 +3773,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 7
   stay: {fileID: 8076908385630270135, guid: 3fb8b7e5ae83cff458360fdfc10916a5, type: 3}
+  dm: {fileID: 0}
+  camera: {fileID: 0}
 --- !u!95 &728460110
 Animator:
   serializedVersion: 3
@@ -5446,6 +5449,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a1556a70729ad047b3bec71c39f7c0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  save: {fileID: 395708087}
   dialogueText: {fileID: 870021434}
   playerText: {fileID: 1468201833}
   playerSprite: {fileID: 1061781}
@@ -5458,6 +5462,8 @@ MonoBehaviour:
   - {fileID: 4900000, guid: 8fec1ec5ada60ff49a01cea94c9bb698, type: 3}
   - {fileID: 4900000, guid: 7be676cf6efff2e48b76da1d4cf45715, type: 3}
   - {fileID: 4900000, guid: 87cc838ef8345204390fb4106f5405d0, type: 3}
+  finishedDialogs: 00000000
+  finishedFlags: 00
 --- !u!4 &923450695
 Transform:
   m_ObjectHideFlags: 0
@@ -11759,7 +11765,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 74, y: 83.12}
+  m_AnchoredPosition: {x: 74.00003, y: 83.12}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1415155162

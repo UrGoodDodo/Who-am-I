@@ -4129,6 +4129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 7
   stay: {fileID: 8076908385630270135, guid: 3fb8b7e5ae83cff458360fdfc10916a5, type: 3}
+  dm: {fileID: 2033494610}
   camera: {fileID: 2102531952}
 --- !u!212 &427153917
 SpriteRenderer:
@@ -5239,7 +5240,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2033494611}
         m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
         m_MethodName: DisplayNextSentence
         m_Mode: 1
@@ -6134,6 +6135,78 @@ RectTransform:
   m_AnchoredPosition: {x: -79.72998, y: 63}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &725485037
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 725485038}
+  - component: {fileID: 725485039}
+  - component: {fileID: 725485040}
+  m_Layer: 0
+  m_Name: KitchenFlag
+  m_TagString: Untagged
+  m_Icon: {fileID: 4162164826716764455, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &725485038
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 725485037}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -303.99625, y: 14.161876, z: -3.5026932}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1004157919}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &725485039
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 725485037}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 1
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.06902313, y: 0.38611412}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 12.791428, y: 7.2525578}
+  m_EdgeRadius: 0
+--- !u!114 &725485040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 725485037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4639838952347194c9d3b497854a91fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dm: {fileID: 2033494610}
+  save: {fileID: 2102531952}
 --- !u!1 &751606610
 GameObject:
   m_ObjectHideFlags: 0
@@ -8197,6 +8270,7 @@ Transform:
   - {fileID: 1381394975}
   - {fileID: 1022090059}
   - {fileID: 1231125476}
+  - {fileID: 725485038}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14784,6 +14858,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a1556a70729ad047b3bec71c39f7c0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  save: {fileID: 2102531952}
   dialogueText: {fileID: 232890677}
   playerText: {fileID: 1837129673}
   playerSprite: {fileID: 1314343485}
@@ -14796,6 +14871,10 @@ MonoBehaviour:
   - {fileID: 4900000, guid: 8fec1ec5ada60ff49a01cea94c9bb698, type: 3}
   - {fileID: 4900000, guid: 7be676cf6efff2e48b76da1d4cf45715, type: 3}
   - {fileID: 4900000, guid: 87cc838ef8345204390fb4106f5405d0, type: 3}
+  - {fileID: 4900000, guid: e6f9713692c58e04a8f23426ea7c08f2, type: 3}
+  - {fileID: 4900000, guid: a010fa7f3b30b374e8f1adda6fdc591a, type: 3}
+  finishedDialogs: 
+  finishedFlags: 
 --- !u!4 &2033494612
 Transform:
   m_ObjectHideFlags: 0
@@ -15041,6 +15120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46e383d7be04f934faeff5e588863d4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dm: {fileID: 2033494610}
 --- !u!1 &2105639909
 GameObject:
   m_ObjectHideFlags: 0

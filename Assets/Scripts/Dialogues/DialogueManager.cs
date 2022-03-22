@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour
 {
+    public GameObject save;
+
     public Text dialogueText;	//Текст в диалоге    
     public Text playerText;
     public Image playerSprite;
@@ -16,18 +18,35 @@ public class DialogueManager : MonoBehaviour
     public Sprite[] playerSprites;
     public TextAsset[] dialogAssets;
 
-    private Queue<Node> sentences;
+    private Queue<Node> sentences = new Queue<Node>();
 
     private int dialogueID;
 
+    public bool[] finishedDialogs = new bool[]{ false, false, false, false };
+    public bool[] finishedFlags = new bool[]{ false };
+
     public void Start()
-    {
-        sentences = new Queue<Node>();
-        StartCoroutine(StartDialogWithTimer(0,11f));
-        
+    {  
+        finishedDialogs = new bool[]{ false, false, false, false };
+        finishedFlags = new bool[]{ false };        
+
+        if (!finishedDialogs[0])
+            StartCoroutine(StartDialogWithTimer(0,11f));        
     }
 
-    IEnumerator StartDialogWithTimer(int id, float seconds)
+    public void Update()
+    {
+        if (SceneManager.GetActiveScene().buildIndex == 2 && !finishedDialogs[2])
+        {
+            StartDialogue(2);
+            finishedDialogs[2] = true;
+        }
+
+        if (SceneManager.GetActiveScene().buildIndex == 1 && finishedFlags[0])
+            StartDialogWithTimer(4, 1f);
+    }
+
+    public IEnumerator StartDialogWithTimer(int id, float seconds)
     {
         yield return new WaitForSeconds(seconds);
         StartDialogue(id);
@@ -78,10 +97,15 @@ public class DialogueManager : MonoBehaviour
     public void EndDialogue()
     {
         boxAnim.SetBool("boxOpen", false);
+        finishedDialogs[dialogueID] = true;
         if (dialogueID == 1)
         {
             StartDialogWithTimer(2, 2f);
             SceneManager.LoadScene(2);            
+        }
+        if (dialogueID == 4)
+        {
+            SceneManager.LoadScene(2);
         }
     }    
 }

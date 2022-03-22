@@ -9,6 +9,8 @@ public class Move : MonoBehaviour
     public Sprite stay; //Отображение стоящего персонажа
     private float side; //Определяет сторону, в которую смотрит игрок
 
+    public GameObject dm; 
+
     private void Update()
     {
         transform.position += new Vector3(speed, 0, 0) * Input.GetAxis("Horizontal") * Time.deltaTime;  //Движение влево/вправо на стандартные клавиши
@@ -55,6 +57,7 @@ public class Move : MonoBehaviour
                 camera.GetComponent<Transform>().position = new Vector3(185, 0, -10);
                 camera.GetComponent<MoveCamera>().minX = 185.7f;
                 camera.GetComponent<MoveCamera>().maxX = 197.9f;
+                StartCoroutine(StartDialogWithTimer(3,1f));
                 break;
             case 2:
                 GetComponent<Transform>().position = new Vector3(393, -2, 1);
@@ -86,6 +89,13 @@ public class Move : MonoBehaviour
         }
 
     }
+
+    public IEnumerator StartDialogWithTimer(int id, float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        dm.GetComponent<DialogueManager>().StartDialogue(id);
+    }
+   
 
     public void MoveOutLobbyToScene(int index)
     {
