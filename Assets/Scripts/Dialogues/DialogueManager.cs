@@ -20,18 +20,22 @@ public class DialogueManager : MonoBehaviour
 
     private Queue<Node> sentences = new Queue<Node>();
 
+    public GameObject player;
+    public GameObject OutOfLobby;
+    public GameObject P_TimeLine;
+
     private int dialogueID;
 
-    public bool[] finishedDialogs = new bool[]{ false, false, false, false };
-    public bool[] finishedFlags = new bool[]{ false };
+    public bool[] finishedDialogs = new bool[] { false, false, false, false };
+    public bool[] finishedFlags = new bool[] { false };
 
     public void Start()
-    {  
-        finishedDialogs = new bool[]{ false, false, false, false };
-        finishedFlags = new bool[]{ false };        
+    {
+        finishedDialogs = new bool[] { false, false, false, false };
+        finishedFlags = new bool[] { false };
 
         if (!finishedDialogs[0])
-            StartCoroutine(StartDialogWithTimer(0,11f));        
+            StartCoroutine(StartDialogWithTimer(0, 11f));
     }
 
     public void Update()
@@ -44,6 +48,9 @@ public class DialogueManager : MonoBehaviour
 
         if (SceneManager.GetActiveScene().buildIndex == 1 && finishedFlags[0])
             StartDialogWithTimer(4, 1f);
+
+        if (finishedDialogs[dialogueID]) player.GetComponent<Move>().enabled = true;
+        else player.GetComponent<Move>().enabled = false;
     }
 
     public IEnumerator StartDialogWithTimer(int id, float seconds)
@@ -101,11 +108,14 @@ public class DialogueManager : MonoBehaviour
         if (dialogueID == 1)
         {
             StartDialogWithTimer(2, 2f);
-            SceneManager.LoadScene(2);            
+            //OutOfLobby.SetActive(true);
+            P_TimeLine.SetActive(true);
+            //player.GetComponent<Move>().MoveOutLobbyToLocation(0);
         }
         if (dialogueID == 4)
         {
-            SceneManager.LoadScene(2);
+            player.GetComponent<Move>().MoveOutLobbyToLocation(0);
+            OutOfLobby.SetActive(true);
         }
-    }    
+    }
 }

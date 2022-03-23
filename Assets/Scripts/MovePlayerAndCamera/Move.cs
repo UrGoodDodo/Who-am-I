@@ -47,42 +47,46 @@ public class Move : MonoBehaviour
         switch (index)
         {
             case 0:
-                GetComponent<Transform>().position = new Vector3(0, -2, 1);
-                camera.GetComponent<Transform>().position = new Vector3(0, 0, -10);
+                GetComponent<Transform>().position = new Vector3(0, -102, 1);
+                camera.GetComponent<Transform>().position = new Vector3(0, -100, -10);
                 camera.GetComponent<MoveCamera>().minX = -4.6f;
                 camera.GetComponent<MoveCamera>().maxX = 4.6f;
+                camera.GetComponent<MoveCamera>().minY = -100;
+                camera.GetComponent<MoveCamera>().maxY = -100;
                 break;
             case 1:
-                GetComponent<Transform>().position = new Vector3(190, -2, 1);
-                camera.GetComponent<Transform>().position = new Vector3(185, 0, -10);
+                GetComponent<Transform>().position = new Vector3(190, -102, 1);
+                camera.GetComponent<Transform>().position = new Vector3(185, -100, -10);
                 camera.GetComponent<MoveCamera>().minX = 185.7f;
                 camera.GetComponent<MoveCamera>().maxX = 197.9f;
+                camera.GetComponent<MoveCamera>().minY = -100;
+                camera.GetComponent<MoveCamera>().maxY = -100;
                 StartCoroutine(StartDialogWithTimer(3,1f));
                 break;
             case 2:
-                GetComponent<Transform>().position = new Vector3(393, -2, 1);
-                camera.GetComponent<Transform>().position = new Vector3(393, 0, -10);
+                GetComponent<Transform>().position = new Vector3(393, -102, 1);
+                camera.GetComponent<Transform>().position = new Vector3(393, -100, -10);
                 camera.GetComponent<MoveCamera>().minX = 392.9f;
                 camera.GetComponent<MoveCamera>().maxX = 407.1f;
-                camera.GetComponent<MoveCamera>().minY = 0;
-                camera.GetComponent<MoveCamera>().maxY = 0;
+                camera.GetComponent<MoveCamera>().minY = -100;
+                camera.GetComponent<MoveCamera>().maxY = -100;
                 break;
             case 3:
-                GetComponent<Transform>().position = new Vector3(-2, -108, 1);
-                camera.GetComponent<Transform>().position = new Vector3(-2.106f, -106.432f, -10);
+                GetComponent<Transform>().position = new Vector3(-2, -208, 1);
+                camera.GetComponent<Transform>().position = new Vector3(-2.106f, -206.432f, -10);
                 camera.GetComponent<MoveCamera>().minX = -2.106f;
                 camera.GetComponent<MoveCamera>().maxX = 0.108f;
-                camera.GetComponent<MoveCamera>().minY = -106.432f;
-                camera.GetComponent<MoveCamera>().maxY = -106.432f;
+                camera.GetComponent<MoveCamera>().minY = -206.432f;
+                camera.GetComponent<MoveCamera>().maxY = -206.432f;
 
                 break;
             case 4:
-                GetComponent<Transform>().position = new Vector3(187f, -108, 1);
-                camera.GetComponent<Transform>().position = new Vector3(186.64f, -10.432f, -10);
+                GetComponent<Transform>().position = new Vector3(187f, -208, 1);
+                camera.GetComponent<Transform>().position = new Vector3(186.64f, -110.432f, -10);
                 camera.GetComponent<MoveCamera>().minX = 186.65f;
                 camera.GetComponent<MoveCamera>().maxX = 188.85f;
-                camera.GetComponent<MoveCamera>().minY = -106.43f;
-                camera.GetComponent<MoveCamera>().maxY = -106.43f;
+                camera.GetComponent<MoveCamera>().minY = -206.43f;
+                camera.GetComponent<MoveCamera>().maxY = -206.43f;
                 break;
             default:
                 break;

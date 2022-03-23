@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{ECD553BF-8ECA-E4ED-DD8A-3F38904B78E5}</ProjectGuid>
+    <ProjectGuid>{68BB9AC2-F3DB-48A8-2AF6-FA77D1CF7DCF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -53,12 +53,13 @@
     <UnityVersion>2020.3.31f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Menu\MainMenu.cs" />
     <Compile Include="Assets\Scripts\ItemsAndInventory\LighterOnOff.cs" />
     <Compile Include="Assets\Scripts\ItemsAndInventory\Slot.cs" />
+    <Compile Include="Assets\kitchenFlag.cs" />
     <Compile Include="Assets\Scripts\Menu\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\MovingBetweenRoom\OffFon.cs" />
     <Compile Include="Assets\Scripts\Dialogues\DialogueAnimator.cs" />
@@ -77,7 +78,7 @@
     <Compile Include="Assets\Scripts\Dialogues\Dialogue.cs" />
     <Compile Include="Assets\Scripts\Menu\SettingMenu.cs" />
     <Compile Include="Assets\Scripts\Dialogues\DialogueTriger.cs" />
-    <Compile Include="Assets\kitchenFlag.cs" />
+    <Compile Include="Assets\Scripts\MovingBetweenRoom\Portal.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
