@@ -7,16 +7,18 @@ using UnityEngine.SceneManagement;
 public class kitchenFlag : MonoBehaviour
 {
     public GameObject dm;
-    public GameObject save;
-    private bool isFinished = false;
+    public GameObject player;    
 
     public void OnTriggerEnter2D(Collider2D collision)	//Происходит при срабатывании тригера коллайдера на объекте
     {
-        if (collision.tag == "Player" && !isFinished)
+        if (collision.tag == "Player" && !dm.GetComponent<DialogueManager>().finishedFlags[0])
         {
-            isFinished = true;
-            dm.GetComponent<DialogueManager>().finishedFlags[0] = true;            
-            SceneManager.LoadScene(1);           
+            dm.GetComponent<DialogueManager>().P_TimeLine.SetActive(false); ;
+            dm.GetComponent<DialogueManager>().finishedFlags[0] = true;
+            player.GetComponent<Move>().MoveOutLobbyToLocation(-1);
+            dm.GetComponent<DialogueManager>().StartDialogWithTimer(4, 3f);
         }
-    }    
+    }
+
+    
 }

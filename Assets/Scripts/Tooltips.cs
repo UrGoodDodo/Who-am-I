@@ -27,7 +27,7 @@ public class Tooltips : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
         item = GameObject.FindGameObjectWithTag("Item").transform;
 
-        StartCoroutine(ShowLightTip(15f));
+        StartCoroutine(ShowLightTip(13f));
     }
     // Происходит каждый кадр
     void Update()

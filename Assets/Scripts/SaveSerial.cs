@@ -38,6 +38,7 @@ public class SaveSerial : MonoBehaviour
             sceneIndex = data.sceneIndex;
             SceneManager.LoadScene(sceneIndex);
             Debug.Log("Game data loaded!");
+            Debug.Log(Application.persistentDataPath + "/save.dat");
         }
         else
         {

@@ -46,6 +46,14 @@ public class Move : MonoBehaviour
 
         switch (index)
         {
+            case -1:                
+                GetComponent<Transform>().position = new Vector3(-304, 14, 3.5f);
+                camera.GetComponent<Transform>().position = new Vector3(-304, 14, -10);
+                camera.GetComponent<MoveCamera>().minX = -4.6f;
+                camera.GetComponent<MoveCamera>().maxX = 4.6f;
+                camera.GetComponent<MoveCamera>().minY = 14;
+                camera.GetComponent<MoveCamera>().maxY = 14;
+                break;                
             case 0:
                 GetComponent<Transform>().position = new Vector3(0, -102, 1);
                 camera.GetComponent<Transform>().position = new Vector3(0, -100, -10);
@@ -53,6 +61,7 @@ public class Move : MonoBehaviour
                 camera.GetComponent<MoveCamera>().maxX = 4.6f;
                 camera.GetComponent<MoveCamera>().minY = -100;
                 camera.GetComponent<MoveCamera>().maxY = -100;
+                StartCoroutine(StartDialogWithTimer(2, 3f));
                 break;
             case 1:
                 GetComponent<Transform>().position = new Vector3(190, -102, 1);

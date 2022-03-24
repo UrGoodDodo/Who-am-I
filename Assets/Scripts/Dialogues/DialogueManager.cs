@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class DialogueManager : MonoBehaviour
 {
     public GameObject save;
+    public GameObject tip;
 
     public Text dialogueText;	//Текст в диалоге    
     public Text playerText;
@@ -26,31 +27,28 @@ public class DialogueManager : MonoBehaviour
 
     private int dialogueID;
 
-    public bool[] finishedDialogs = new bool[] { false, false, false, false };
-    public bool[] finishedFlags = new bool[] { false };
+    public bool[] finishedDialogs;
+    public bool[] finishedFlags;
 
     public void Start()
     {
-        finishedDialogs = new bool[] { false, false, false, false };
-        finishedFlags = new bool[] { false };
+        finishedDialogs = new bool[] { false, false, false, false,false };
+        finishedFlags = new bool[] { false,false };
 
-        if (!finishedDialogs[0])
-            StartCoroutine(StartDialogWithTimer(0, 11f));
+        StartCoroutine(StartDialogWithTimer(0, 11f));
     }
 
     public void Update()
-    {
-        if (SceneManager.GetActiveScene().buildIndex == 2 && !finishedDialogs[2])
+    {        
+
+       /* if (SceneManager.GetActiveScene().buildIndex == 2 && !finishedDialogs[2])
         {
             StartDialogue(2);
             finishedDialogs[2] = true;
         }
 
         if (SceneManager.GetActiveScene().buildIndex == 1 && finishedFlags[0])
-            StartDialogWithTimer(4, 1f);
-
-        if (finishedDialogs[dialogueID]) player.GetComponent<Move>().enabled = true;
-        else player.GetComponent<Move>().enabled = false;
+            StartDialogWithTimer(4, 1f);        */
     }
 
     public IEnumerator StartDialogWithTimer(int id, float seconds)
@@ -60,6 +58,8 @@ public class DialogueManager : MonoBehaviour
     }
     public void StartDialogue(int dialogueID)
     {
+        player.GetComponent<Move>().enabled = false;
+
         this.dialogueID = dialogueID;
 
         boxAnim.SetBool("boxOpen", true);
@@ -103,19 +103,24 @@ public class DialogueManager : MonoBehaviour
 
     public void EndDialogue()
     {
+        player.GetComponent<Move>().enabled = true;
         boxAnim.SetBool("boxOpen", false);
         finishedDialogs[dialogueID] = true;
-        if (dialogueID == 1)
-        {
-            StartDialogWithTimer(2, 2f);
-            //OutOfLobby.SetActive(true);
-            P_TimeLine.SetActive(true);
-            //player.GetComponent<Move>().MoveOutLobbyToLocation(0);
-        }
-        if (dialogueID == 4)
-        {
-            player.GetComponent<Move>().MoveOutLobbyToLocation(0);
-            OutOfLobby.SetActive(true);
-        }
+        switch (dialogueID)
+        {            
+            case 1:
+                {     
+                    P_TimeLine.SetActive(true);
+                    //player.GetComponent<Move>().MoveOutLobbyToLocation(0); 
+                    //OutOfLobby.SetActive(true);                   
+                    break;
+                }            
+            case 4:
+                {
+                    player.GetComponent<Move>().MoveOutLobbyToLocation(0);
+                    OutOfLobby.SetActive(true);                    
+                    break;
+                }
+        }        
     }
 }
