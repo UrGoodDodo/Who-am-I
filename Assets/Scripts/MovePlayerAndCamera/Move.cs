@@ -47,12 +47,12 @@ public class Move : MonoBehaviour
         switch (index)
         {
             case -1:                
-                GetComponent<Transform>().position = new Vector3(0, 0, 3.5f);
-                camera.GetComponent<Transform>().position = new Vector3(0, 0, -10);
+                GetComponent<Transform>().position = new Vector3(4.5f, -1, 3.5f);
+                camera.GetComponent<Transform>().position = new Vector3(4.5f, -1, -10);
                 camera.GetComponent<MoveCamera>().minX = -4.6f;
                 camera.GetComponent<MoveCamera>().maxX = 4.6f;
                 camera.GetComponent<MoveCamera>().minY = 0;
-                camera.GetComponent<MoveCamera>().maxY = 0;
+                camera.GetComponent<MoveCamera>().maxY = 0;                
                 break;                
             case 0:
                 GetComponent<Transform>().position = new Vector3(0, -102, 1);
@@ -61,7 +61,10 @@ public class Move : MonoBehaviour
                 camera.GetComponent<MoveCamera>().maxX = 4.6f;
                 camera.GetComponent<MoveCamera>().minY = -100;
                 camera.GetComponent<MoveCamera>().maxY = -100;
-                StartCoroutine(StartDialogWithTimer(2, 3f));
+                if (!dm.GetComponent<DialogueManager>().finishedDialogs[2])
+                    StartCoroutine(StartDialogWithTimer(2, 3f));
+                else
+                    StartCoroutine(StartDialogWithTimer(5, 3f));
                 break;
             case 1:
                 GetComponent<Transform>().position = new Vector3(190, -102, 1);

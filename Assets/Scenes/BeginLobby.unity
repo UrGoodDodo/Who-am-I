@@ -8958,12 +8958,14 @@ MonoBehaviour:
   playerSprites:
   - {fileID: 21300000, guid: a2cad4d1c3075fb448fbc3a7ee4dbe29, type: 3}
   - {fileID: 21300000, guid: 35ef52507c41d364f88219bbf962dde1, type: 3}
+  - {fileID: 21300000, guid: 92409e1796ec5674f9a2c059189c2c3f, type: 3}
   dialogAssets:
   - {fileID: 4900000, guid: 8fec1ec5ada60ff49a01cea94c9bb698, type: 3}
   - {fileID: 4900000, guid: 7be676cf6efff2e48b76da1d4cf45715, type: 3}
   - {fileID: 4900000, guid: 87cc838ef8345204390fb4106f5405d0, type: 3}
   - {fileID: 4900000, guid: e6f9713692c58e04a8f23426ea7c08f2, type: 3}
   - {fileID: 4900000, guid: a010fa7f3b30b374e8f1adda6fdc591a, type: 3}
+  - {fileID: 4900000, guid: 60f6566eeda07bf49849f425db8ce9e2, type: 3}
   player: {fileID: 728460105}
   OutOfLobby: {fileID: 1993373858}
   P_TimeLine: {fileID: 14314007}

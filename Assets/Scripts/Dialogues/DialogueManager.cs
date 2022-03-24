@@ -32,7 +32,7 @@ public class DialogueManager : MonoBehaviour
 
     public void Start()
     {
-        finishedDialogs = new bool[] { false, false, false, false,false };
+        finishedDialogs = new bool[] { false, false, false, false,false,false };
         finishedFlags = new bool[] { false,false };
 
         StartCoroutine(StartDialogWithTimer(0, 11f));
@@ -118,7 +118,7 @@ public class DialogueManager : MonoBehaviour
             case 4:
                 {
                     player.GetComponent<Move>().MoveOutLobbyToLocation(0);
-                    OutOfLobby.SetActive(true);                    
+                    OutOfLobby.SetActive(true);           // Переход на локацию 2ой главы        
                     break;
                 }
         }        
