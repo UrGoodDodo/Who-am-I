@@ -10,7 +10,7 @@ public class Portal : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            player.GetComponent<Move>().MoveOutLobbyToLocation(0);
+            if (player != null) player.GetComponent<Move>().MoveOutLobbyToLocation(0);
             foreach (var item in cutscene)
                 item.SetActive(false);
         }
@@ -19,7 +19,7 @@ public class Portal : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            player.GetComponent<Move>().MoveOutLobbyToLocation(0);
+            if (player != null)  player.GetComponent<Move>().MoveOutLobbyToLocation(0);
             foreach (var item in cutscene)
                 item.SetActive(false);
         }
