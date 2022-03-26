@@ -13,6 +13,7 @@ public class TestOnClick : MonoBehaviour
 
     }
 
+    public Quest quest;
 
     //Функции спавна объекта, весь скрипт создан как тест
     public void ChangeTransform()
@@ -29,7 +30,15 @@ public class TestOnClick : MonoBehaviour
             Instantiate(enemy);
             GetComponent<Transform>().localScale = new Vector3(6, 6, 1);
             GetComponent<Transform>().position = new Vector3(1, 2.5f, 1);
-
+        if (quest.IsActive)
+        {
+            //quest.goal.goal = true;
+            //if (quest.goal.goal) 
+            //{
+            //
+            //}
+            quest.Complete();
+        }
     }
 
 
