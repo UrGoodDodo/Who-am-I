@@ -1,14 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [System.Serializable]
 public class Quest
 {
+    public int questID;
+
     public bool IsActive;
 
     public string title;
-    //public 
+    //public string description;
+
+    public string[] termsText;
+    //public bool[] terms;
 
     public QuestGoal goal;
 
@@ -17,5 +23,4 @@ public class Quest
         IsActive = false;
         Debug.Log(title + "выполненно");
     }
-
 }

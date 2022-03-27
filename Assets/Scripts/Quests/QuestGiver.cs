@@ -5,17 +5,35 @@ using UnityEngine.UI;
 
 public class QuestGiver : MonoBehaviour
 {
-    public Quest quest;
+    int questID;
 
-    // public Player player;
+    public Quest[] mainQuests;
+    public Quest[] additionalQuests;
 
-    public GameObject questwindow;
-    public GameObject questprog;
-    public Text questname;
+    public Player player;
 
-    public void SetActiveQuestWindow() // Активация окна с квестом
+    public GameObject questWindow;
+    public Text title;
+    public Text[] termsText;
+    //public bool[] terms;
+
+
+    public void OpenQuestWindow(int questID) // Активация окна с квестом
     {
-        questwindow.SetActive(true);
-        questname.text = quest.title;
+        questWindow.SetActive(true);
+        player.mainQuest = mainQuests[questID];
+        player.mainQuest.IsActive = true;
+        title.text = mainQuests[questID].title;
+        for (int i = 0; i < mainQuests[questID].termsText.Length; i++)
+        {
+            termsText[i].text = mainQuests[questID].termsText[i];
+            //terms[i] = mainQuests[questID].terms[i];
+        }
+    }
+
+    public void CloseQuestWindow(int questID) // Закрытие окна с квестом
+    {
+        questWindow.SetActive(false);        
+        player.mainQuest.IsActive = false;        
     }
 }

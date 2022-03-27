@@ -1,57 +1,57 @@
 <dialogue>
     <node>
         <npctext> И куда ты меня отправил?  </npctext>
-        <npclogo> 0 </npclogo>
+        <npclogo> 1 </npclogo>
         <npcname> Я </npcname>
     </node>   
     <node>
         <npctext> Что я должен был узнать?  </npctext>
-        <npclogo> 0 </npclogo>
+        <npclogo> 1 </npclogo>
         <npcname> Я </npcname>
     </node>
     <node>
         <npctext> Не торопись, друг мой.  </npctext>
-        <npclogo> 1 </npclogo>
+        <npclogo> 2 </npclogo>
         <npcname> Арбитр </npcname>
     </node>    
     <node>
         <npctext> Время еще не пришло.   </npctext>
-        <npclogo> 1 </npclogo>
+        <npclogo> 2 </npclogo>
         <npcname> Арбитр </npcname>
     </node>
     <node>
         <npctext> И как мне понять, что оно пришло?  </npctext>
-        <npclogo> 0 </npclogo>
+        <npclogo> 1 </npclogo>
         <npcname> Я </npcname>
     </node>
      <node>
         <npctext> Ты послал меня искать ответы, но единственное, что я нашел, это маленького ребенка.  </npctext>
-        <npclogo> 0 </npclogo>
+        <npclogo> 1 </npclogo>
         <npcname> Я </npcname>
     </node>
      <node>
         <npctext> Что я должен был вынести из этого всего?  </npctext>
-        <npclogo> 0 </npclogo>
+        <npclogo> 1 </npclogo>
         <npcname> Я </npcname>
     </node>
     <node>
         <npctext> Время не любит спешки.   </npctext>
-        <npclogo> 1 </npclogo>
+        <npclogo> 2 </npclogo>
         <npcname> Арбитр </npcname>
     </node>
     <node>
         <npctext> Мы с тобой еще встретимся.    </npctext>
-        <npclogo> 1 </npclogo>
+        <npclogo> 2 </npclogo>
         <npcname> Арбитр </npcname>
     </node>
     <node>
         <npctext> Я буду ждать тебя…    </npctext>
-        <npclogo> 1 </npclogo>
+        <npclogo> 2 </npclogo>
         <npcname> Арбитр </npcname>
     </node>
     <node>
         <npctext> …с ответами, а не вопросами.   </npctext>
-        <npclogo> 1 </npclogo>
+        <npclogo> 2 </npclogo>
         <npcname> Арбитр </npcname>
     </node>
 </dialogue>

@@ -6,9 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour
 {
-    public GameObject save;
-    public GameObject tip;
-
+    public GameObject questGiver;
+   
     public Text dialogueText;	//Текст в диалоге    
     public Text playerText;
     public Image playerSprite;
@@ -39,16 +38,9 @@ public class DialogueManager : MonoBehaviour
     }
 
     public void Update()
-    {        
+    {    
 
-       /* if (SceneManager.GetActiveScene().buildIndex == 2 && !finishedDialogs[2])
-        {
-            StartDialogue(2);
-            finishedDialogs[2] = true;
-        }
-
-        if (SceneManager.GetActiveScene().buildIndex == 1 && finishedFlags[0])
-            StartDialogWithTimer(4, 1f);        */
+       
     }
 
     public IEnumerator StartDialogWithTimer(int id, float seconds)
@@ -119,6 +111,11 @@ public class DialogueManager : MonoBehaviour
                 {
                     player.GetComponent<Move>().MoveOutLobbyToLocation(0);
                     OutOfLobby.SetActive(true);           // Переход на локацию 2ой главы        
+                    break;
+                }
+            case 5:
+                {
+                    questGiver.GetComponent<QuestGiver>().OpenQuestWindow(0);
                     break;
                 }
         }        

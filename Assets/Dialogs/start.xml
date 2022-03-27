@@ -1,12 +1,12 @@
 <dialogue>
     <node>
         <npctext> Моя голова… </npctext>
-        <npclogo> 0 </npclogo>
+        <npclogo> 1 </npclogo>
         <npcname> Я </npcname>
     </node>
    <node>
         <npctext> Где это я?  </npctext>
-        <npclogo> 0 </npclogo>
+        <npclogo> 1 </npclogo>
         <npcname> Я </npcname>
     </node>    
 </dialogue>

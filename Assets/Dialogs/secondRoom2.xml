@@ -1,127 +1,127 @@
 <dialogue>
     <node>
         <npctext> Что значит с ответами? </npctext>
-        <npclogo> 0 </npclogo>
+        <npclogo> 1 </npclogo>
         <npcname>  </npcname>
     </node>
    <node>
         <npctext> И где я на этот раз?</npctext>
-        <npclogo> 0 </npclogo>
+        <npclogo> 1 </npclogo>
         <npcname>  </npcname>
     </node> 
     <node>
         <npctext> *звук звонка телефона*</npctext>
-        <npclogo> 2 </npclogo>
+        <npclogo> 0 </npclogo>
         <npcname>  </npcname>
     </node>   
     <node>
         <npctext> *просыпается* </npctext>
-        <npclogo> 0 </npclogo>
+        <npclogo> 1 </npclogo>
         <npcname> Я </npcname>
     </node>  
     <node>
         <npctext> Кого там принесло?  </npctext>
-        <npclogo> 0 </npclogo>
+        <npclogo> 1 </npclogo>
         <npcname> Я </npcname>
     </node> 
     <node>
         <npctext> *отвечает на звонок*  </npctext>
-        <npclogo> 0 </npclogo>
+        <npclogo> 1 </npclogo>
         <npcname> Я </npcname>
     </node> 
     <node>
         <npctext> Слушаю? </npctext>
-        <npclogo> 0 </npclogo>
+        <npclogo> 1 </npclogo>
         <npcname> Я </npcname>
     </node> 
     <node>
         <npctext> Почему я не слышу бодрость в голосе? Ты что, еще спишь?</npctext>
-        <npclogo> 2 </npclogo>
+        <npclogo> 0 </npclogo>
         <npcname> Друг </npcname>
     </node> 
     <node>
         <npctext> Конечно, время видел? </npctext>
-        <npclogo> 0 </npclogo>
+        <npclogo> 1 </npclogo>
         <npcname> Я </npcname>
     </node> 
     <node>
         <npctext> А ты время видел? Уже почти 8 утра.  </npctext>
-        <npclogo> 2 </npclogo>
+        <npclogo> 0 </npclogo>
         <npcname> Друг </npcname>
     </node> 
     <node>
         <npctext> Время 8 утра…  </npctext>
-        <npclogo> 0 </npclogo>
+        <npclogo> 1 </npclogo>
         <npcname> Я </npcname>
     </node> 
     <node>
         <npctext> В каком смысле 8 утра?!  </npctext>
-        <npclogo> 0 </npclogo>
+        <npclogo> 1 </npclogo>
         <npcname> Я </npcname>
     </node>     
     <node>
         <npctext> *резко встает с кровати и осматривается* </npctext>
-        <npclogo> 0 </npclogo>
+        <npclogo> 1 </npclogo>
         <npcname> Я </npcname>
     </node> 
     <node>
         <npctext> Я что, опаздываю? </npctext>
-        <npclogo> 0 </npclogo>
+        <npclogo> 1 </npclogo>
         <npcname> Я </npcname>
     </node> 
     <node>
         <npctext> Неплохо соображаешь.  </npctext>
-        <npclogo> 2 </npclogo>
+        <npclogo> 0 </npclogo>
         <npcname> Друг </npcname>
     </node> 
     <node>
         <npctext> Жду тебя через 10 минут в кабинете, иначе Оса тебя за опоздание опять после уроков оставит.  </npctext>
-        <npclogo> 2 </npclogo>
+        <npclogo> 0 </npclogo>
         <npcname> Друг </npcname>
     </node> 
     <node>
         <npctext> А то еще хуже, тете Алине позвонит.  </npctext>
-        <npclogo> 2 </npclogo>
+        <npclogo> 0 </npclogo>
         <npcname> Друг </npcname>
     </node> 
     <node>
         <npctext> Да бегу я, бегу. Жди. </npctext>
-        <npclogo> 0 </npclogo>
+        <npclogo> 1 </npclogo>
         <npcname> Я </npcname>
     </node> 
     <node>
         <npctext> *бросает трубку* </npctext>
-        <npclogo> 0 </npclogo>
+        <npclogo> 1 </npclogo>
         <npcname> Я </npcname>
     </node> 
     <node>
         <npctext> Интересно…</npctext>
-        <npclogo> 0 </npclogo>
+        <npclogo> 1 </npclogo>
         <npcname>  </npcname>
     </node>
     <node>
         <npctext> А он может меня слышать?</npctext>
-        <npclogo> 0 </npclogo>
+        <npclogo> 1 </npclogo>
         <npcname>  </npcname>
     </node>
     <node>
         <npctext> Ау, я здесь!</npctext>
-        <npclogo> 0 </npclogo>
+        <npclogo> 1 </npclogo>
         <npcname>  </npcname>
     </node>
     <node>
         <npctext> ... </npctext>
-        <npclogo> 0 </npclogo>
+        <npclogo> 1 </npclogo>
         <npcname> Я </npcname>
     </node> 
     <node>
         <npctext> Отлично.</npctext>
-        <npclogo> 0 </npclogo>
+        <npclogo> 1 </npclogo>
         <npcname>  </npcname>
     </node>
     <node>
         <npctext> Нужно хотя бы одеться прилично. </npctext>
-        <npclogo> 0 </npclogo>
+        <npclogo> 1 </npclogo>
         <npcname> Я </npcname>
     </node> 
 </dialogue>
