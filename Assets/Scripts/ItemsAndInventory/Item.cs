@@ -5,21 +5,19 @@ using UnityEngine.UI;
 
 public class Item : MonoBehaviour
 {
-    public Sprite sprite;   //Картинка предмета в слоте
+    public Sprite[] sprite;   //Картинка предмета в слоте
     public int index = 0; //Номер предмета
     private bool touch; //Проверяет наведение курсора на объект
-    private Transform player;
-    private Transform slot;
-  
-    void Start()
-    {
-        player = GameObject.FindGameObjectWithTag("Player").transform; //Ищем объекты по их тегам
-        slot = GameObject.FindGameObjectWithTag("Slot").transform;
-    }
-    
+    public GameObject player;
+    public GameObject item;
+    public GameObject slot;
+
+    public GameObject OutRoom;
+
     void OnMouseEnter()
     {
         touch = true;
+
     }
     void OnMouseExit()
     {
@@ -30,17 +28,34 @@ public class Item : MonoBehaviour
     {
         if (touch == true)
         {//Если игрок близко к предмету, то можно будет взаимодействовать с ним
-            if ((Mathf.Abs(player.position.x - GetComponent<Transform>().position.x) <= 1.5f) &&
-                (Mathf.Abs(player.position.y - GetComponent<Transform>().position.y) <= 2.5f))
-            {
-                if (Input.GetKey(KeyCode.Mouse0))
+            if (item != null)
+                if ((Mathf.Abs(player.GetComponent<Transform>().position.x - item.GetComponent<Transform>().position.x) <= 2.5f) &&
+            (Mathf.Abs(player.GetComponent<Transform>().position.y - item.GetComponent<Transform>().position.y) <= 2.5f))
                 {
-                    slot.GetComponent<Image>().sprite = sprite; // Меняем картинку на слоте
-                    slot.GetComponent<Slot>().itemid = 2;   //Меняем айди предмета в слоте
-                    Destroy(gameObject); //Удаление объекта с карты
-                    
+                    if (Input.GetKey(KeyCode.Mouse0))
+                    {
+                        if (index == 1)
+                        {
+                            slot.GetComponent<Image>().sprite = sprite[index]; // Меняем картинку на слоте
+                            slot.GetComponent<Slot>().itemid = 1;   //Меняем айди предмета в слоте
+                            Destroy(item); //Удаление объекта с карты
+                        }
+                        if (index == 2)
+                        {
+                            slot.GetComponent<Image>().sprite = sprite[index]; // Меняем картинку на слоте
+                            slot.GetComponent<Slot>().itemid = 2;   //Меняем айди предмета в слоте
+                            Destroy(item); //Удаление объекта с карты
+                        }
+                        if (index == 3)
+                        {
+                            slot.GetComponent<Image>().sprite = sprite[index]; // Меняем картинку на слоте
+                            slot.GetComponent<Slot>().itemid = 2;   //Меняем айди предмета в слоте
+                            Destroy(item); //Удаление объекта с карты
+                            OutRoom.SetActive(true);
+                        }
+
+                    }
                 }
-            }
 
         }
     }

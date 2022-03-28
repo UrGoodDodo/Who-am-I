@@ -12,7 +12,7 @@ public class Tooltips : MonoBehaviour
 
     public static bool[] IsTipsShowed;
     public static bool[] IsTipsBlocked;
-    public GameObject[] Tips;    
+    public GameObject[] Tips;
 
     private Transform player;
     private Transform item;
@@ -32,7 +32,7 @@ public class Tooltips : MonoBehaviour
     // Происходит каждый кадр
     void Update()
     {
-      
+
         if (Input.GetKeyDown(KeyCode.F) && IsTipsShowed[0] && !IsTipsBlocked[0])
             HideTip(0);
 
@@ -66,10 +66,11 @@ public class Tooltips : MonoBehaviour
 
     void CheckItemPosition()
     {
+        if(item != null)
         if ((Mathf.Abs(player.position.x - item.position.x) <= 1.5f) && (Mathf.Abs(player.position.y - item.position.y) <= 2.5f) && IsTipsBlocked[0])
             ShowTip(1);
     }
-    
+
     IEnumerator ShowLightTip(float timeInSec)
     {
         yield return new WaitForSeconds(timeInSec);

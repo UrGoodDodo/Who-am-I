@@ -16,6 +16,7 @@ TagManager:
   - SlotLighter
   - Lighter
   - Item
+  - SchoolBag
   layers:
   - Default
   - TransparentFX

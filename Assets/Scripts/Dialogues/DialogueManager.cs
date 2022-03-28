@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class DialogueManager : MonoBehaviour
 {
     public GameObject questGiver;
-   
+
     public Text dialogueText;	//Текст в диалоге    
     public Text playerText;
     public Image playerSprite;
@@ -22,7 +22,10 @@ public class DialogueManager : MonoBehaviour
 
     public GameObject player;
     public GameObject OutOfLobby;
+    public GameObject OutOfLobby2;
     public GameObject P_TimeLine;
+    public GameObject ChRoomACT1;
+    public GameObject ChRoomACT2;
 
     private int dialogueID;
 
@@ -31,16 +34,16 @@ public class DialogueManager : MonoBehaviour
 
     public void Start()
     {
-        finishedDialogs = new bool[] { false, false, false, false,false,false };
-        finishedFlags = new bool[] { false,false };
+        finishedDialogs = new bool[] { false, false, false, false, false, false };
+        finishedFlags = new bool[] { false, false };
 
         StartCoroutine(StartDialogWithTimer(0, 11f));
     }
 
     public void Update()
-    {    
+    {
 
-       
+
     }
 
     public IEnumerator StartDialogWithTimer(int id, float seconds)
@@ -99,18 +102,22 @@ public class DialogueManager : MonoBehaviour
         boxAnim.SetBool("boxOpen", false);
         finishedDialogs[dialogueID] = true;
         switch (dialogueID)
-        {            
+        {
             case 1:
-                {     
+                {
                     P_TimeLine.SetActive(true);
                     //player.GetComponent<Move>().MoveOutLobbyToLocation(0); 
                     //OutOfLobby.SetActive(true);                   
+                    finishedDialogs[3] = true;
                     break;
-                }            
+
+                }
             case 4:
                 {
                     player.GetComponent<Move>().MoveOutLobbyToLocation(0);
-                    OutOfLobby.SetActive(true);           // Переход на локацию 2ой главы        
+                    OutOfLobby2.SetActive(true);           // Переход на локацию 2ой главы
+                    ChRoomACT1.SetActive(false);
+                    ChRoomACT2.SetActive(true);
                     break;
                 }
             case 5:
@@ -118,6 +125,6 @@ public class DialogueManager : MonoBehaviour
                     questGiver.GetComponent<QuestGiver>().OpenQuestWindow(0);
                     break;
                 }
-        }        
+        }
     }
 }

@@ -9,7 +9,7 @@ public class Move : MonoBehaviour
     public Sprite stay; //Отображение стоящего персонажа
     private float side; //Определяет сторону, в которую смотрит игрок
 
-    public GameObject dm; 
+    public GameObject dm;
 
     private void Update()
     {
