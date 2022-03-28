@@ -8,5 +8,5 @@ public class Player : MonoBehaviour
     public GameObject questGiver;
 
     public Quest mainQuest;
-    public Quest addQuest;
+    public Quest extraQuest;
 }

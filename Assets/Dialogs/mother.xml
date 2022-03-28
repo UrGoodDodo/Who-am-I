@@ -1,0 +1,32 @@
+<dialogue>
+    <node>
+        <npctext> Доброе утро, мам. </npctext>
+        <npclogo> 4 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+   <node>
+        <npctext> Доброе утро. Завтракать будешь? </npctext>
+        <npclogo> 3 </npclogo>
+        <npcname> Мама </npcname>
+    </node>
+    <node>
+        <npctext> Нет, спасибо, мам. Не видела мои ключи?  </npctext>
+        <npclogo> 4 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> Когда ты уже запомнишь?  </npctext>
+        <npclogo> 3 </npclogo>
+        <npcname> Мама </npcname>
+    </node>
+    <node>
+        <npctext> Ключи висят на крючке возле входной двери.  </npctext>
+        <npclogo> 3 </npclogo>
+        <npcname> Мама </npcname>
+    </node>
+    <node>
+        <npctext> Точно, вспомнил. Спасибо.   </npctext>
+        <npclogo> 4 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+</dialogue>

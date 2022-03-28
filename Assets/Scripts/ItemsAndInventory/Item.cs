@@ -14,6 +14,11 @@ public class Item : MonoBehaviour
 
     public GameObject OutRoom;
 
+    public Player pl;
+    public QuestGiver qg;
+
+    public Text rucsack;
+
     void OnMouseEnter()
     {
         touch = true;
@@ -39,12 +44,17 @@ public class Item : MonoBehaviour
                             slot.GetComponent<Image>().sprite = sprite[index]; // Меняем картинку на слоте
                             slot.GetComponent<Slot>().itemid = 1;   //Меняем айди предмета в слоте
                             Destroy(item); //Удаление объекта с карты
+                            pl.mainQuest.numericGoal += 1;
+                            rucsack.color = new Color(128 / 255.0f, 128 / 255.0f, 128 / 255.0f);
+                            if (player.GetComponent<Player>().mainQuest.numericGoal == 2)
+                                qg.OpenExtraQuestWindow(0);
                         }
                         if (index == 2)
                         {
                             slot.GetComponent<Image>().sprite = sprite[index]; // Меняем картинку на слоте
                             slot.GetComponent<Slot>().itemid = 2;   //Меняем айди предмета в слоте
                             Destroy(item); //Удаление объекта с карты
+                            
                         }
                         if (index == 3)
                         {
@@ -52,6 +62,7 @@ public class Item : MonoBehaviour
                             slot.GetComponent<Slot>().itemid = 2;   //Меняем айди предмета в слоте
                             Destroy(item); //Удаление объекта с карты
                             OutRoom.SetActive(true);
+                            qg.CloseExtraQuestWindow(0);
                         }
 
                     }

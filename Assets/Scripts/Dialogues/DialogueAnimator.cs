@@ -6,13 +6,16 @@ public class DialogueAnimator : MonoBehaviour
 {
     public Animator startAnim;
     public DialogueManager dm;
-
+    public Player player;
 
     public void OnTriggerEnter2D(Collider2D collision)	//Происходит при срабатывании тригера коллайдера на объекте
     {
         if (collision.tag == "Player")
         {
-            startAnim.SetBool("startOpen", true);
+            if (!dm.finishedDialogs[1])
+                startAnim.SetBool("startOpen", true);      
+            else if (!dm.finishedDialogs[6] && dm.finishedDialogs[4] && player.extraQuest.IsActive)
+                startAnim.SetBool("startOpen", true);
         }        
     }
 

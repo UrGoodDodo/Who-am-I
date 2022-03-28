@@ -16,22 +16,22 @@
     </node>   
     <node>
         <npctext> *просыпается* </npctext>
-        <npclogo> 1 </npclogo>
+        <npclogo> 4 </npclogo>
         <npcname> Я </npcname>
     </node>  
     <node>
         <npctext> Кого там принесло?  </npctext>
-        <npclogo> 1 </npclogo>
+        <npclogo> 4 </npclogo>
         <npcname> Я </npcname>
     </node> 
     <node>
         <npctext> *отвечает на звонок*  </npctext>
-        <npclogo> 1 </npclogo>
+        <npclogo> 4 </npclogo>
         <npcname> Я </npcname>
     </node> 
     <node>
         <npctext> Слушаю? </npctext>
-        <npclogo> 1 </npclogo>
+        <npclogo> 4 </npclogo>
         <npcname> Я </npcname>
     </node> 
     <node>
@@ -41,7 +41,7 @@
     </node> 
     <node>
         <npctext> Конечно, время видел? </npctext>
-        <npclogo> 1 </npclogo>
+        <npclogo> 4 </npclogo>
         <npcname> Я </npcname>
     </node> 
     <node>
@@ -51,22 +51,22 @@
     </node> 
     <node>
         <npctext> Время 8 утра…  </npctext>
-        <npclogo> 1 </npclogo>
+        <npclogo> 4 </npclogo>
         <npcname> Я </npcname>
     </node> 
     <node>
         <npctext> В каком смысле 8 утра?!  </npctext>
-        <npclogo> 1 </npclogo>
+        <npclogo> 4 </npclogo>
         <npcname> Я </npcname>
     </node>     
     <node>
         <npctext> *резко встает с кровати и осматривается* </npctext>
-        <npclogo> 1 </npclogo>
+        <npclogo> 4 </npclogo>
         <npcname> Я </npcname>
     </node> 
     <node>
         <npctext> Я что, опаздываю? </npctext>
-        <npclogo> 1 </npclogo>
+        <npclogo> 4 </npclogo>
         <npcname> Я </npcname>
     </node> 
     <node>
@@ -86,12 +86,12 @@
     </node> 
     <node>
         <npctext> Да бегу я, бегу. Жди. </npctext>
-        <npclogo> 1 </npclogo>
+        <npclogo> 4 </npclogo>
         <npcname> Я </npcname>
     </node> 
     <node>
         <npctext> *бросает трубку* </npctext>
-        <npclogo> 1 </npclogo>
+        <npclogo> 4 </npclogo>
         <npcname> Я </npcname>
     </node> 
     <node>
@@ -111,7 +111,7 @@
     </node>
     <node>
         <npctext> ... </npctext>
-        <npclogo> 1 </npclogo>
+        <npclogo> 4 </npclogo>
         <npcname> Я </npcname>
     </node> 
     <node>
@@ -121,7 +121,7 @@
     </node>
     <node>
         <npctext> Нужно хотя бы одеться прилично. </npctext>
-        <npclogo> 1 </npclogo>
+        <npclogo> 4 </npclogo>
         <npcname> Я </npcname>
     </node> 
 </dialogue>

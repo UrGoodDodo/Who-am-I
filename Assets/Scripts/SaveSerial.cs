@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 
 public class SaveSerial : MonoBehaviour
 {
+    public GameObject player;
     public GameObject dm;
     int sceneIndex;
 
@@ -52,6 +53,6 @@ public class SaveSerial : MonoBehaviour
 class SaveData
 {
     public bool[] finishedDialogs;
-    public bool[] finishedFlags;
+    public bool[] finishedFlags;      
     public int sceneIndex;
 }

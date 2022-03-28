@@ -17,6 +17,7 @@ public class Quest
     //public bool[] terms;
 
     public QuestGoal goal;
+    public int numericGoal;
 
     public void Complete() 
     {

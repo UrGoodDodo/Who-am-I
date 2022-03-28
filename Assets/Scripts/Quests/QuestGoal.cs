@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class QuestGoal
 {
-    public bool goal;
+    public bool goal;    
 }
 
 

@@ -1,0 +1,27 @@
+<dialogue>
+    <node>
+        <npctext> Посмотрите, даже не опоздал. </npctext>
+        <npclogo> 5 </npclogo>
+        <npcname> Друг </npcname>
+    </node> 
+    <node>
+        <npctext> Торопился, как мог. Что у нас сегодня? </npctext>
+        <npclogo> 4 </npclogo>
+        <npcname> Я </npcname>
+    </node> 
+    <node>
+        <npctext> Биология, небольшой опрос. </npctext>
+        <npclogo> 5 </npclogo>
+        <npcname> Друг </npcname>
+    </node> 
+    <node>
+        <npctext> Понял, спасибо.  </npctext>
+        <npclogo> 4 </npclogo>
+        <npcname> Я </npcname>
+    </node> 
+    <node>
+        <npctext> Звонок уже прозвенел, достаём тетради.  </npctext>
+        <npclogo> 0 </npclogo>
+        <npcname> Ольга С-а </npcname>
+    </node>   
+</dialogue>

@@ -1,0 +1,7 @@
+<dialogue>
+    <node>
+        <npctext> Поторопись, урок скоро начнется. </npctext>
+        <npclogo> 5 </npclogo>
+        <npcname> Друг </npcname>
+    </node>   
+</dialogue>

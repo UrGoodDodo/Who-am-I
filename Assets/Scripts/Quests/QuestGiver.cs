@@ -8,7 +8,7 @@ public class QuestGiver : MonoBehaviour
     int questID;
 
     public Quest[] mainQuests;
-    public Quest[] additionalQuests;
+    public Quest[] extraQuests;
 
     public Player player;
 
@@ -16,6 +16,10 @@ public class QuestGiver : MonoBehaviour
     public Text title;
     public Text[] termsText;
     //public bool[] terms;
+
+    public GameObject extraQuestWindow;
+    public Text extraTitle;
+    public Text extraText;
 
 
     public void OpenQuestWindow(int questID) // Активация окна с квестом
@@ -31,9 +35,24 @@ public class QuestGiver : MonoBehaviour
         }
     }
 
+    public void OpenExtraQuestWindow(int questID) // Активация окна с квестом
+    {
+        extraQuestWindow.SetActive(true);
+        player.extraQuest = extraQuests[questID];
+        player.extraQuest.IsActive = true;
+        extraTitle.text = extraQuests[questID].title;
+        extraText.text = extraQuests[questID].termsText[0];        
+    }
+
     public void CloseQuestWindow(int questID) // Закрытие окна с квестом
     {
         questWindow.SetActive(false);        
         player.mainQuest.IsActive = false;        
+    }
+
+    public void CloseExtraQuestWindow(int questID) // Закрытие окна с квестом
+    {
+        extraQuestWindow.SetActive(false);
+        player.extraQuest.IsActive = false;       
     }
 }

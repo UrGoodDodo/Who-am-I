@@ -21,6 +21,7 @@ public class DialogueManager : MonoBehaviour
     private Queue<Node> sentences = new Queue<Node>();
 
     public GameObject player;
+    public GameObject babyPlayer;
     public GameObject OutOfLobby;
     public GameObject OutOfLobby2;
     public GameObject P_TimeLine;
@@ -34,8 +35,8 @@ public class DialogueManager : MonoBehaviour
 
     public void Start()
     {
-        finishedDialogs = new bool[] { false, false, false, false, false, false };
-        finishedFlags = new bool[] { false, false };
+        finishedDialogs = new bool[dialogAssets.Length];
+        finishedFlags = new bool[2];
 
         StartCoroutine(StartDialogWithTimer(0, 11f));
     }
@@ -54,6 +55,14 @@ public class DialogueManager : MonoBehaviour
     public void StartDialogue(int dialogueID)
     {
         player.GetComponent<Move>().enabled = false;
+        player.GetComponent<Animator>().enabled = false;
+        player.GetComponent<AudioSource>().enabled = false;
+        if (dialogueID == 2 || dialogueID == 3)
+        {
+            babyPlayer.GetComponent<Move>().enabled = false;
+            babyPlayer.GetComponent<Animator>().enabled = false;
+        }
+
 
         this.dialogueID = dialogueID;
 
@@ -99,6 +108,15 @@ public class DialogueManager : MonoBehaviour
     public void EndDialogue()
     {
         player.GetComponent<Move>().enabled = true;
+        player.GetComponent<Animator>().enabled = true;
+        player.GetComponent<AudioSource>().enabled = true;
+
+        if (dialogueID == 2 || dialogueID == 3)
+        {
+            babyPlayer.GetComponent<Move>().enabled = true;
+            babyPlayer.GetComponent<Animator>().enabled = true;
+        }
+
         boxAnim.SetBool("boxOpen", false);
         finishedDialogs[dialogueID] = true;
         switch (dialogueID)
@@ -107,8 +125,7 @@ public class DialogueManager : MonoBehaviour
                 {
                     P_TimeLine.SetActive(true);
                     //player.GetComponent<Move>().MoveOutLobbyToLocation(0); 
-                    //OutOfLobby.SetActive(true);                   
-                    finishedDialogs[3] = true;
+                    //OutOfLobby.SetActive(true);  
                     break;
 
                 }
@@ -117,8 +134,8 @@ public class DialogueManager : MonoBehaviour
                     player.GetComponent<Move>().MoveOutLobbyToLocation(0);
                     OutOfLobby2.SetActive(true);           // Переход на локацию 2ой главы
                     ChRoomACT1.SetActive(false);
-                    ChRoomACT2.SetActive(true);
-                    break;
+                    ChRoomACT2.SetActive(true);                    
+                    break;                    
                 }
             case 5:
                 {
