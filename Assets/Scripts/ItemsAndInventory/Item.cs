@@ -43,6 +43,7 @@ public class Item : MonoBehaviour
                         {
                             slot.GetComponent<Image>().sprite = sprite[index]; // Меняем картинку на слоте
                             slot.GetComponent<Slot>().itemid = 1;   //Меняем айди предмета в слоте
+                            OutRoom.SetActive(true);
                             Destroy(item); //Удаление объекта с карты
                             pl.mainQuest.numericGoal += 1;
                             rucsack.color = new Color(128 / 255.0f, 128 / 255.0f, 128 / 255.0f);
@@ -54,14 +55,14 @@ public class Item : MonoBehaviour
                             slot.GetComponent<Image>().sprite = sprite[index]; // Меняем картинку на слоте
                             slot.GetComponent<Slot>().itemid = 2;   //Меняем айди предмета в слоте
                             Destroy(item); //Удаление объекта с карты
-                            
+
                         }
                         if (index == 3)
                         {
                             slot.GetComponent<Image>().sprite = sprite[index]; // Меняем картинку на слоте
                             slot.GetComponent<Slot>().itemid = 2;   //Меняем айди предмета в слоте
-                            Destroy(item); //Удаление объекта с карты
                             OutRoom.SetActive(true);
+                            Destroy(item); //Удаление объекта с карты
                             qg.CloseExtraQuestWindow(0);
                         }
 

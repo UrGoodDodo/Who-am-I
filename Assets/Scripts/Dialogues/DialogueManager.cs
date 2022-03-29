@@ -25,8 +25,8 @@ public class DialogueManager : MonoBehaviour
     public GameObject OutOfLobby;
     public GameObject OutOfLobby2;
     public GameObject P_TimeLine;
-    public GameObject ChRoomACT1;
-    public GameObject ChRoomACT2;
+    public GameObject[] ChRoomACT1 = new GameObject[2];
+    public GameObject[] ChRoomACT2 = new GameObject[2];
 
     private int dialogueID;
 
@@ -133,9 +133,11 @@ public class DialogueManager : MonoBehaviour
                 {
                     player.GetComponent<Move>().MoveOutLobbyToLocation(0);
                     OutOfLobby2.SetActive(true);           // Переход на локацию 2ой главы
-                    ChRoomACT1.SetActive(false);
-                    ChRoomACT2.SetActive(true);                    
-                    break;                    
+                    foreach (var item in ChRoomACT1)
+                        item.SetActive(false);
+                    foreach (var item in ChRoomACT2)
+                        item.SetActive(true);
+                    break;
                 }
             case 5:
                 {
