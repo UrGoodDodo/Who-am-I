@@ -13,7 +13,7 @@ public class Portal : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            if (player != null) player.GetComponent<Move>().MoveOutLobbyToLocation(0);
+            if (player != null) player.GetComponent<Move>().MoveOutLobbyToLocation(101);
             foreach (var item in cutscene)
                 item.SetActive(false);
             foreach (var item in OnObj)
@@ -21,7 +21,7 @@ public class Portal : MonoBehaviour
             if (playcamera != null && newPlayer != null)
             {
                 playcamera.GetComponent<MoveCamera>().target = newPlayer.transform;
-                newPlayer.GetComponent<Move>().MoveOutLobbyToLocation(0);
+                newPlayer.GetComponent<Move>().MoveOutLobbyToLocation(101);
             }
 
         }
@@ -30,7 +30,7 @@ public class Portal : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            if (player != null) player.GetComponent<Move>().MoveOutLobbyToLocation(0);
+            if (player != null) player.GetComponent<Move>().MoveOutLobbyToLocation(101);
             foreach (var item in cutscene)
                 item.SetActive(false);
             foreach (var item in OnObj)
@@ -38,7 +38,7 @@ public class Portal : MonoBehaviour
             if (playcamera != null && newPlayer != null)
             {
                 playcamera.GetComponent<MoveCamera>().target = newPlayer.transform;
-                newPlayer.GetComponent<Move>().MoveOutLobbyToLocation(0);
+                newPlayer.GetComponent<Move>().MoveOutLobbyToLocation(101);
             }
         }
     }

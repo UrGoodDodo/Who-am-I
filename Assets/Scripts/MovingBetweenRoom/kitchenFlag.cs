@@ -21,7 +21,7 @@ public class kitchenFlag : MonoBehaviour
             player.SetActive(true);
             offplayer.SetActive(false);
             camera.GetComponent<MoveCamera>().target = player.transform;
-            player.GetComponent<Move>().MoveOutLobbyToLocation(-1); // Переход назад в лобби
+            player.GetComponent<Move>().MoveOutLobbyToLocation(-112); // Переход назад в лобби
             StartCoroutine(dm.GetComponent<DialogueManager>().StartDialogWithTimer(4, 1f));
         }
     }

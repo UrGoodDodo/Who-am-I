@@ -131,7 +131,7 @@ public class DialogueManager : MonoBehaviour
                 }
             case 4:
                 {
-                    player.GetComponent<Move>().MoveOutLobbyToLocation(0);
+                    player.GetComponent<Move>().MoveOutLobbyToLocation(101);
                     OutOfLobby2.SetActive(true);           // Переход на локацию 2ой главы
                     foreach (var item in ChRoomACT1)
                         item.SetActive(false);
