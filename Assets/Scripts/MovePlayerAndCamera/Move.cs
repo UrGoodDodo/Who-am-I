@@ -38,9 +38,7 @@ public class Move : MonoBehaviour
             GetComponent<Animator>().enabled = false;
             GetComponent<SpriteRenderer>().sprite = stay;
             GetComponent<AudioSource>().enabled = false;
-        }
-
-        
+        }              
     }
     public GameObject camera;
     public void MoveOutLobbyToLocation(int index)
@@ -66,7 +64,7 @@ public class Move : MonoBehaviour
                 break;                
             
             case 101:
-                GetComponent<Transform>().position = new Vector3(-10, -99.64906f, 1);
+                GetComponent<Transform>().position = new Vector3(-10, -102, 1);
                 camera.GetComponent<Transform>().position = new Vector3(0, -100, -10);
                 camera.GetComponent<MoveCamera>().minX = -4.6f;
                 camera.GetComponent<MoveCamera>().maxX = 4.6f;
@@ -83,11 +81,7 @@ public class Move : MonoBehaviour
                 camera.GetComponent<MoveCamera>().minX = -4.6f;
                 camera.GetComponent<MoveCamera>().maxX = 4.6f;
                 camera.GetComponent<MoveCamera>().minY = -100;
-                camera.GetComponent<MoveCamera>().maxY = -100;
-                if (!dm.GetComponent<DialogueManager>().finishedDialogs[2])
-                    StartCoroutine(StartDialogWithTimer(2, 2f));
-                else if (!dm.GetComponent<DialogueManager>().finishedDialogs[5])
-                    StartCoroutine(StartDialogWithTimer(5, 1f));
+                camera.GetComponent<MoveCamera>().maxY = -100;                
                 break;
             
             case 111:
@@ -106,19 +100,18 @@ public class Move : MonoBehaviour
                 camera.GetComponent<MoveCamera>().minX = 185.7f;
                 camera.GetComponent<MoveCamera>().maxX = 197.9f;
                 camera.GetComponent<MoveCamera>().minY = -100;
-                camera.GetComponent<MoveCamera>().maxY = -100;
-                if (!dm.GetComponent<DialogueManager>().finishedDialogs[3])
-                    StartCoroutine(StartDialogWithTimer(3,1f));
+                camera.GetComponent<MoveCamera>().maxY = -100;                
                 break;
             
             case 121:
+                if (qg.player.mainQuest.IsActive && qg.player.mainQuest.questID == 0 && (qg.player.mainQuest.numericGoal != 2 || qg.player.extraQuest.numericGoal != 1))
+                    break;
                 GetComponent<Transform>().position = new Vector3(386, -102, 1);
                 camera.GetComponent<Transform>().position = new Vector3(393, -100, -10);
                 camera.GetComponent<MoveCamera>().minX = 392.9f;
                 camera.GetComponent<MoveCamera>().maxX = 407.1f;
                 camera.GetComponent<MoveCamera>().minY = -100;
-                camera.GetComponent<MoveCamera>().maxY = -100;
-                qg.CloseQuestWindow(0);
+                camera.GetComponent<MoveCamera>().maxY = -100;                
                 break;
             case 122:
                 GetComponent<Transform>().position = new Vector3(413, -102, 1);
@@ -126,10 +119,8 @@ public class Move : MonoBehaviour
                 camera.GetComponent<MoveCamera>().minX = 392.9f;
                 camera.GetComponent<MoveCamera>().maxX = 407.1f;
                 camera.GetComponent<MoveCamera>().minY = -100;
-                camera.GetComponent<MoveCamera>().maxY = -100;
-                qg.CloseQuestWindow(0);
+                camera.GetComponent<MoveCamera>().maxY = -100;                
                 break;
-
             case 131:
                 GetComponent<Transform>().position = new Vector3(-9, -208, 1);
                 camera.GetComponent<Transform>().position = new Vector3(-2.106f, -206.432f, -10);
@@ -137,6 +128,8 @@ public class Move : MonoBehaviour
                 camera.GetComponent<MoveCamera>().maxX = 0.108f;
                 camera.GetComponent<MoveCamera>().minY = -206.432f;
                 camera.GetComponent<MoveCamera>().maxY = -206.432f;
+                if (qg.player.mainQuest.IsActive && qg.player.mainQuest.questID == 0)
+                    qg.CloseQuestWindow(0);
                 break;
             case 132:
                 GetComponent<Transform>().position = new Vector3(2, -206.5f, 1);
@@ -164,8 +157,7 @@ public class Move : MonoBehaviour
                 camera.GetComponent<MoveCamera>().maxX = 188.85f;
                 camera.GetComponent<MoveCamera>().minY = -206.43f;
                 camera.GetComponent<MoveCamera>().maxY = -206.43f;
-                if (!dm.GetComponent<DialogueManager>().finishedDialogs[8])
-                    StartCoroutine(StartDialogWithTimer(8, 1f));
+                
                 break;
             default:
                 break;

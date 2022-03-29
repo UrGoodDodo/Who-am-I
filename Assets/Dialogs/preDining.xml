@@ -1,0 +1,12 @@
+<dialogue>
+    <node>
+        <npctext> Хороший человек попался, помог.  </npctext>
+        <npclogo> 1 </npclogo>
+        <npcname> Я </npcname>
+    </node>   
+    <node>
+        <npctext> Ну что, теперь в столовую?   </npctext>
+        <npclogo> 5 </npclogo>
+        <npcname> Друг </npcname>
+    </node>  
+</dialogue>

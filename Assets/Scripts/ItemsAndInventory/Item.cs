@@ -63,6 +63,7 @@ public class Item : MonoBehaviour
                             slot.GetComponent<Slot>().itemid = 2;   //Меняем айди предмета в слоте
                             OutRoom.SetActive(true);
                             Destroy(item); //Удаление объекта с карты
+                            pl.extraQuest.numericGoal += 1;
                             qg.CloseExtraQuestWindow(0);
                         }
 

@@ -33,6 +33,8 @@ public class DialogueManager : MonoBehaviour
     public bool[] finishedDialogs;
     public bool[] finishedFlags;
 
+    public ClassTest test;
+    public Choiser choiser;
     public void Start()
     {
         finishedDialogs = new bool[dialogAssets.Length];
@@ -142,6 +144,16 @@ public class DialogueManager : MonoBehaviour
             case 5:
                 {
                     questGiver.GetComponent<QuestGiver>().OpenQuestWindow(0);
+                    break;
+                }
+            case 8:
+                {
+                    test.ShowTest(0);
+                    break;
+                }
+            case 10:
+                {
+                    choiser.ShowChoiser(0);
                     break;
                 }
         }

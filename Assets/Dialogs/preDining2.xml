@@ -1,0 +1,17 @@
+<dialogue>
+    <node>
+        <npctext> Иди в столовую, я тебя догоню.   </npctext>
+        <npclogo> 1 </npclogo>
+        <npcname> Я </npcname>
+    </node>     
+     <node>
+        <npctext> Нужно еще кое-что сделать.   </npctext>
+        <npclogo> 1 </npclogo>
+        <npcname> Я </npcname>
+    </node>  
+     <node>
+        <npctext> Договорились, жду тебя на месте.    </npctext>
+        <npclogo> 5 </npclogo>
+        <npcname> Друг </npcname>
+    </node>    
+</dialogue>

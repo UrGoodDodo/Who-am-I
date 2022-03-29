@@ -1,0 +1,7 @@
+<dialogue>
+    <node>
+        <npctext> Да, пошли  </npctext>
+        <npclogo> 1 </npclogo>
+        <npcname> Я </npcname>
+    </node>       
+</dialogue>
