@@ -81,13 +81,13 @@
     <Compile Include="Assets\Scripts\Choiser\Choiser.cs" />
     <Compile Include="Assets\Scripts\ItemsAndInventory\Inventory.cs" />
     <Compile Include="Assets\Scripts\Tooltips.cs" />
+    <Compile Include="Assets\Scripts\Menu\MainMenuSettings.cs" />
     <Compile Include="Assets\Scripts\MovingBetweenRoom\LobbyOut.cs" />
     <Compile Include="Assets\Scripts\SaveSerial.cs" />
     <Compile Include="Assets\Scripts\MovePlayerAndCamera\Move.cs" />
     <Compile Include="Assets\Scripts\Dialogues\Dialogue.cs" />
     <Compile Include="Assets\Scripts\Menu\SettingMenu.cs" />
     <Compile Include="Assets\Scripts\Dialogues\DialogueTriger.cs" />
-    <Compile Include="Assets\Scripts\Menu\MainMenuSettings.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
