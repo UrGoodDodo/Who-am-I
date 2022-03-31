@@ -11,6 +11,7 @@ public class Move : MonoBehaviour
 
     public GameObject dm;
     public QuestGiver qg;
+    public ClassTest ct;    
 
     private void Update()
     {
@@ -100,12 +101,15 @@ public class Move : MonoBehaviour
                 camera.GetComponent<MoveCamera>().minX = 185.7f;
                 camera.GetComponent<MoveCamera>().maxX = 197.9f;
                 camera.GetComponent<MoveCamera>().minY = -100;
-                camera.GetComponent<MoveCamera>().maxY = -100;                
-                break;
-            
+                camera.GetComponent<MoveCamera>().maxY = -100;
+                if (qg.player.mainQuest.IsActive && qg.player.mainQuest.questID == 3)
+                    qg.CloseQuestWindow(3);
+                break;            
             case 121:
                 if (qg.player.mainQuest.IsActive && qg.player.mainQuest.questID == 0 && (qg.player.mainQuest.numericGoal != 2 || qg.player.extraQuest.numericGoal != 1))
                     break;
+                if (!dm.GetComponent<DialogueManager>().finishedDialogs[6])
+                    dm.GetComponent<DialogueManager>().finishedDialogs[6] = true;
                 GetComponent<Transform>().position = new Vector3(386, -102, 1);
                 camera.GetComponent<Transform>().position = new Vector3(393, -100, -10);
                 camera.GetComponent<MoveCamera>().minX = 392.9f;
@@ -148,7 +152,16 @@ public class Move : MonoBehaviour
                 camera.GetComponent<MoveCamera>().minY = -206.43f;
                 camera.GetComponent<MoveCamera>().maxY = -206.43f;
                 if (!dm.GetComponent<DialogueManager>().finishedDialogs[8])
+                {
                     StartCoroutine(StartDialogWithTimer(8, 1f));
+                    ct.finishedTest[0] = true;
+                }
+                else if (!ct.finishedTest[1])
+                {
+                    ct.ShowTest(1);
+                }
+                if (qg.player.mainQuest.questID == 1 && qg.player.mainQuest.IsActive)
+                    qg.CloseQuestWindow(1);
                 break;
             case 142:
                 GetComponent<Transform>().position = new Vector3(197, -208, 1);

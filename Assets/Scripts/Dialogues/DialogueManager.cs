@@ -11,6 +11,7 @@ public class DialogueManager : MonoBehaviour
     public Text dialogueText;	//Текст в диалоге    
     public Text playerText;
     public Image playerSprite;
+    public GameObject blackScreen;
 
     public Animator boxAnim;
     public Animator startAnim;
@@ -35,6 +36,11 @@ public class DialogueManager : MonoBehaviour
 
     public ClassTest test;
     public Choiser choiser;
+
+    public GameObject stranger;
+    public GameObject streetStranger;
+    public GameObject mother;
+
     public void Start()
     {
         finishedDialogs = new bool[dialogAssets.Length];
@@ -154,6 +160,86 @@ public class DialogueManager : MonoBehaviour
             case 10:
                 {
                     choiser.ShowChoiser(0);
+                    break;
+                }
+            case 11:
+                {
+                    blackScreen.SetActive(true);
+                    StartCoroutine(StartDialogWithTimer(13, 0.5f));
+                    break;
+                }
+            case 12:
+                {
+                    questGiver.GetComponent<QuestGiver>().FixColor();                    
+                    questGiver.GetComponent<QuestGiver>().OpenQuestWindow(5);                    
+                    break;
+                }
+            case 13:
+                {
+                    blackScreen.SetActive(false);
+                    player.GetComponent<Move>().MoveOutLobbyToLocation(131);
+                    questGiver.GetComponent<QuestGiver>().FixColor();
+                    questGiver.GetComponent<QuestGiver>().OpenQuestWindow(1);
+                    stranger.SetActive(false);
+                    break;
+                }
+            case 15:
+                {
+                    questGiver.GetComponent<QuestGiver>().CloseQuestWindow(2);
+                    test.ShowTest(2);
+                    break;
+                }
+            case 16:
+                {                   
+                    questGiver.GetComponent<QuestGiver>().OpenQuestWindow(3);
+                    break;
+                }
+            case 17:
+                {
+                    questGiver.GetComponent<QuestGiver>().OpenQuestWindow(4);
+                    questGiver.GetComponent<QuestGiver>().OpenExtraQuestWindow(1);
+                    break;
+                }
+            case 18:
+                {
+                    choiser.ShowChoiser(1);
+                    break;
+                }
+            case 19:
+                {
+                    blackScreen.SetActive(true);
+                    StartCoroutine(StartDialogWithTimer(13, 0.5f));
+                    break;
+                }
+            case 20:
+                {
+                    questGiver.GetComponent<QuestGiver>().OpenQuestWindow(6);
+                    streetStranger.SetActive(true);
+                    stranger.SetActive(false);
+                    break;
+                }
+            case 21:
+                {
+                    questGiver.GetComponent<QuestGiver>().CloseQuestWindow(6);
+                    blackScreen.SetActive(true);
+                    StartCoroutine(StartDialogWithTimer(22, 0.5f));                    
+                    break;
+                }
+            case 22:
+                {
+                    blackScreen.SetActive(false);
+                    streetStranger.SetActive(false);
+                    questGiver.GetComponent<QuestGiver>().OpenExtraQuestWindow(1);
+                    player.GetComponent<Move>().MoveOutLobbyToLocation(112);
+                    mother.SetActive(false);
+                    break;
+                }
+            case 23:            
+            case 24:             
+            case 25:
+                {
+                    player.GetComponent<Move>().MoveOutLobbyToLocation(-112);
+                    StartCoroutine(StartDialogWithTimer(26, 0.5f));
                     break;
                 }
         }

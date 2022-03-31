@@ -1,0 +1,92 @@
+<dialogue>
+    <node>
+        <npctext> Спасибо за помощь.   </npctext>
+        <npclogo> 4 </npclogo>
+        <npcname> Я </npcname>
+    </node>     
+    <node>
+        <npctext> Не за что.    </npctext>
+        <npclogo> 6 </npclogo>
+        <npcname> ??? </npcname>
+    </node> 
+    <node>
+        <npctext> Слушай, я раньше тебя не замечал.  </npctext>
+        <npclogo> 4 </npclogo>
+        <npcname> Я </npcname>
+    </node>     
+    <node>
+        <npctext> Как тебя зовут? </npctext>
+        <npclogo> 4 </npclogo>
+        <npcname> Я </npcname>
+    </node>   
+    <node>
+        <npctext> Андрей. </npctext>
+        <npclogo> 6 </npclogo>
+        <npcname> Андрей </npcname>
+    </node> 
+    <node>
+        <npctext> Приятно познакомиться. </npctext>
+        <npclogo> 4 </npclogo>
+        <npcname> Я </npcname>
+    </node>   
+    <node>
+        <npctext> Меня зовут *имя, представленное игроком*.   </npctext>
+        <npclogo> 4 </npclogo>
+        <npcname> Я </npcname>
+    </node>   
+    <node>
+        <npctext> ... </npctext>
+        <npclogo> 6 </npclogo>
+        <npcname> Андрей </npcname>
+    </node> 
+    <node>
+        <npctext> Могу я спросить, почему ты помог мне? </npctext>
+        <npclogo> 4 </npclogo>
+        <npcname> Я </npcname>
+    </node> 
+    <node>
+        <npctext> Мы вроде раньше не общались. </npctext>
+        <npclogo> 4 </npclogo>
+        <npcname> Я </npcname>
+    </node> 
+    <node>
+        <npctext> Просто захотел.    </npctext>
+        <npclogo> 6 </npclogo>
+        <npcname> Андрей </npcname>
+    </node> 
+    <node>
+        <npctext> Но не бывает же вот так просто.  </npctext>
+        <npclogo> 4 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> Видимо бывает. </npctext>
+        <npclogo> 6 </npclogo>
+        <npcname> Андрей </npcname>
+    </node>
+    <node>
+        <npctext> Как скажешь, спорить не буду. </npctext>
+        <npclogo> 4 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> Спасибо еще раз за помощь, я тогда пойду. </npctext>
+        <npclogo> 4 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> Подожди. </npctext>
+        <npclogo> 6 </npclogo>
+        <npcname> Андрей </npcname>
+    </node>
+    <node>
+        <npctext> Не хочешь прогулять пару уроков? </npctext>
+        <npclogo> 6 </npclogo>
+        <npcname> Андрей </npcname>
+    </node>
+    <node>
+        <npctext> Я могу предложить тебе более интересное занятие. </npctext>
+        <npclogo> 6 </npclogo>
+        <npcname> Андрей </npcname>
+    </node>
+</dialogue>

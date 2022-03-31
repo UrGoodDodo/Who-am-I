@@ -1,0 +1,32 @@
+<dialogue>    
+   <node>
+        <npctext> Как день прошел?  </npctext>
+        <npclogo> 3 </npclogo>
+        <npcname> Мама </npcname>
+    </node>
+    <node>
+        <npctext> Да ничего нового. </npctext>
+        <npclogo> 4 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> Ужинать будешь? </npctext>
+        <npclogo> 3 </npclogo>
+        <npcname> Мама </npcname>
+    </node>
+    <node>
+        <npctext> Я в столовой перекусил. </npctext>
+        <npclogo> 4 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> Хорошо. Не забудь уроки сделать. </npctext>
+        <npclogo> 3 </npclogo>
+        <npcname> Мама </npcname>
+    </node>
+    <node>
+        <npctext> Разумеется. </npctext>
+        <npclogo> 4 </npclogo>
+        <npcname> Я </npcname>
+    </node>   
+</dialogue>

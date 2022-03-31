@@ -55,4 +55,13 @@ public class QuestGiver : MonoBehaviour
         extraQuestWindow.SetActive(false);
         player.extraQuest.IsActive = false;       
     }
+
+    public void FixColor()
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            termsText[i].text = "";
+            termsText[i].color = Color.white;
+        }
+    }       
 }

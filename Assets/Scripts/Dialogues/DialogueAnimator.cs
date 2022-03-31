@@ -14,7 +14,15 @@ public class DialogueAnimator : MonoBehaviour
         {
             if (!dm.finishedDialogs[1])
                 startAnim.SetBool("startOpen", true);      
-            else if (!dm.finishedDialogs[6] && dm.finishedDialogs[4] && player.extraQuest.IsActive)
+            else if (!dm.finishedDialogs[6] && dm.finishedDialogs[4] && player.extraQuest.IsActive && player.extraQuest.questID == 0)
+                startAnim.SetBool("startOpen", true);
+            else if (player.mainQuest.IsActive && player.mainQuest.questID == 2)
+                startAnim.SetBool("startOpen", true);
+            else if (player.mainQuest.IsActive && player.mainQuest.questID == 5)
+                startAnim.SetBool("startOpen", true);
+            else if (player.mainQuest.IsActive && player.mainQuest.questID == 6)
+                startAnim.SetBool("startOpen", true);
+            else if (dm.finishedDialogs[26])
                 startAnim.SetBool("startOpen", true);
         }        
     }

@@ -1,0 +1,27 @@
+<dialogue>
+    <node>
+        <npctext> Пожалуй, откажусь.  </npctext>
+        <npclogo> 4 </npclogo>
+        <npcname> Я </npcname>
+    </node>  
+    <node>
+        <npctext> Меня друг ждет, так что я пойду. </npctext>
+        <npclogo> 4 </npclogo>
+        <npcname> Я </npcname>
+    </node>        
+    <node>
+        <npctext> Дело твое.  </npctext>
+        <npclogo> 6 </npclogo>
+        <npcname> Андрей </npcname>
+    </node> 
+    <node>
+        <npctext> Еще раз спасибо, пока. </npctext>
+        <npclogo> 4 </npclogo>
+        <npcname> Я </npcname>
+    </node>   
+    <node>
+        <npctext> … </npctext>
+        <npclogo> 6 </npclogo>
+        <npcname> Андрей </npcname>
+    </node>       
+</dialogue>

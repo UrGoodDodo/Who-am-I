@@ -1,0 +1,32 @@
+<dialogue>
+    <node>
+        <npctext> *друзья идут в столовую и берут себе еду* </npctext>
+        <npclogo> 0 </npclogo>
+        <npcname>  </npcname>
+    </node>
+   <node>
+        <npctext> Что у нас сейчас? </npctext>
+        <npclogo> 4 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> Математика вроде. </npctext>
+        <npclogo> 5 </npclogo>
+        <npcname> Друг </npcname>
+    </node>
+    <node>
+        <npctext> А вроде и не математика. </npctext>
+        <npclogo> 5 </npclogo>
+        <npcname> Друг </npcname>
+    </node>
+    <node>
+        <npctext> Если «вроде и не математика», то что? </npctext>
+        <npclogo> 4 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> Нет, точно математика.  </npctext>
+        <npclogo> 5 </npclogo>
+        <npcname> Друг </npcname>
+    </node>    
+</dialogue>

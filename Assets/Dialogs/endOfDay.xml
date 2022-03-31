@@ -1,0 +1,27 @@
+<dialogue>
+    <node>
+        <npctext> Могу тебя поздравить, мы пережили этот день.  </npctext>
+        <npclogo> 5 </npclogo>
+        <npcname> Друг </npcname>
+    </node>   
+    <node>
+        <npctext> Взаимно.  </npctext>
+        <npclogo> 4 </npclogo>
+        <npcname> Я </npcname>
+    </node>    
+    <node>
+        <npctext> Если ты не против, я пойду. Мама попросила встретить ее на вокзале. </npctext>
+        <npclogo> 5 </npclogo>
+        <npcname> Друг </npcname>
+    </node>
+    <node>
+        <npctext> Да, конечно. Тогда до завтра.   </npctext>
+        <npclogo> 4 </npclogo>
+        <npcname> Я </npcname>
+    </node>  
+    <node>
+        <npctext> До завтра.  </npctext>
+        <npclogo> 5 </npclogo>
+        <npcname> Друг </npcname>
+    </node>  
+</dialogue>

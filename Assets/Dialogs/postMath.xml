@@ -1,0 +1,37 @@
+<dialogue>
+    <node>
+        <npctext> Что-то ты в этот раз долго соображал.  </npctext>
+        <npclogo> 5 </npclogo>
+        <npcname> Друг </npcname>
+    </node>
+   <node>
+        <npctext> Обычно щелкаешь задачки, как орешки. </npctext>
+        <npclogo> 5 </npclogo>
+        <npcname> Друг </npcname>
+    </node>
+    <node>
+        <npctext> Да что-то не пошло в этот раз.  </npctext>
+        <npclogo> 4 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> Ладно, а дальше что? </npctext>
+        <npclogo> 4 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> Твое «любимое». </npctext>
+        <npclogo> 5 </npclogo>
+        <npcname> Друг </npcname>
+    </node>
+    <node>
+        <npctext> О нет.  </npctext>
+        <npclogo> 4 </npclogo>
+        <npcname> Я </npcname>
+    </node>  
+    <node>
+        <npctext> Да, да. История.  </npctext>
+        <npclogo> 5 </npclogo>
+        <npcname> Друг </npcname>
+    </node>  
+</dialogue>

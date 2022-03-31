@@ -1,0 +1,132 @@
+<dialogue>    
+    <node>
+        <npctext> Что за «более интересное занятие»? </npctext>
+        <npclogo> 4 </npclogo>
+        <npcname> Я </npcname>
+    </node>     
+    <node>
+        <npctext> Я слышал, ты хорошо разбираешься во всякой там технике. </npctext>
+        <npclogo> 6 </npclogo>
+        <npcname> Андрей </npcname>
+    </node>     
+     <node>
+        <npctext> Да, есть такое. </npctext>
+        <npclogo> 4 </npclogo>
+        <npcname> Я </npcname>
+    </node>     
+    <node>
+        <npctext> В общем, дельце одно есть. </npctext>
+        <npclogo> 6 </npclogo>
+        <npcname> Андрей </npcname>
+    </node>  
+     <node>
+        <npctext> Слушаю. </npctext>
+        <npclogo> 4 </npclogo>
+        <npcname> Я </npcname>
+    </node>     
+    <node>
+        <npctext> Один человек не очень хорошо себя повел.  </npctext>
+        <npclogo> 6 </npclogo>
+        <npcname> Андрей </npcname>
+    </node>   
+    <node>
+        <npctext> Я бы хотел, чтобы ты взломал его страницу в одной соцсети.  </npctext>
+        <npclogo> 6 </npclogo>
+        <npcname> Андрей </npcname>
+    </node>  
+     <node>
+        <npctext> Что за соцсеть?  </npctext>
+        <npclogo> 4 </npclogo>
+        <npcname> Я </npcname>
+    </node>  
+    <node>
+        <npctext> «Fortify». </npctext>
+        <npclogo> 6 </npclogo>
+        <npcname> Андрей </npcname>
+    </node>  
+   <node>
+        <npctext> Так, притормози. </npctext>
+        <npclogo> 4 </npclogo>
+        <npcname> Я </npcname>
+    </node> 
+    <node>
+        <npctext> Ты хочешь, чтобы я взломал чью-то личную страницу? </npctext>
+        <npclogo> 4 </npclogo>
+        <npcname> Я </npcname>
+    </node>   
+    <node>
+        <npctext> Именно. </npctext>
+        <npclogo> 6 </npclogo>
+        <npcname> Андрей </npcname>
+    </node>  
+    <node>
+        <npctext> Надеюсь, подобное для тебя не проблема.  </npctext>
+        <npclogo> 6 </npclogo>
+        <npcname> Андрей </npcname>
+    </node>  
+    <node>
+        <npctext> Я ведь помог тебе с опросом, рассчитываю на ответную помощь. </npctext>
+        <npclogo> 6 </npclogo>
+        <npcname> Андрей </npcname>
+    </node>   
+    <node>
+        <npctext> В любом случае, я в долгу не останусь. </npctext>
+        <npclogo> 6 </npclogo>
+        <npcname> Андрей </npcname>
+    </node> 
+    <node>
+        <npctext> Не проблема, но…  </npctext>
+        <npclogo> 4 </npclogo>
+        <npcname> Я </npcname>
+    </node> 
+    <node>
+        <npctext> Не думаешь, что это слишком? </npctext>
+        <npclogo> 4 </npclogo>
+        <npcname> Я </npcname>
+    </node> 
+     <node>
+        <npctext> Не думаю. </npctext>
+        <npclogo> 6 </npclogo>
+        <npcname> Андрей </npcname>
+    </node> 
+    <node>
+        <npctext> Ну хорошо. </npctext>
+        <npclogo> 4 </npclogo>
+        <npcname> Я </npcname>
+    </node> 
+    <node>
+        <npctext> Тогда можешь дать свои контакты для связи? </npctext>
+        <npclogo> 4 </npclogo>
+        <npcname> Я </npcname>
+    </node> 
+     <node>
+        <npctext> Мы можем пойти ко мне. </npctext>
+        <npclogo> 6 </npclogo>
+        <npcname> Андрей </npcname>
+    </node> 
+     <node>
+        <npctext> Уж компьютер дома имеется. Он же нужен для этого? </npctext>
+        <npclogo> 6 </npclogo>
+        <npcname> Андрей </npcname>
+    </node> 
+    <node>
+        <npctext> Да, нужен. </npctext>
+        <npclogo> 4 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> А твои родители не будут против? Мы, вроде как, уроки прогуливаем. </npctext>
+        <npclogo> 4 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> Не будут. Они сейчас в отъезде. </npctext>
+        <npclogo> 6 </npclogo>
+        <npcname> Андрей </npcname>
+    </node> 
+    <node>
+        <npctext> Хорошо, тогда пошли. </npctext>
+        <npclogo> 4 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+</dialogue>

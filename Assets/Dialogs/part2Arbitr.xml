@@ -1,0 +1,17 @@
+<dialogue>
+    <node>
+        <npctext> И снова я здесь. </npctext>
+        <npclogo> 1 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> ... </npctext>
+        <npclogo> 1 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> Мне кажется, или это место изменилось? </npctext>
+        <npclogo> 1 </npclogo>
+        <npcname> Я </npcname>
+    </node>   
+</dialogue>

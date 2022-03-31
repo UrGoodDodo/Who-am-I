@@ -1,0 +1,122 @@
+<dialogue>
+    <node>
+        <npctext> Извини, но я опять к тебе с вопросами.  </npctext>
+        <npclogo> 1 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> Куда ты послал меня на этот раз? </npctext>
+        <npclogo> 1 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> За ответами, друг мой.  </npctext>
+        <npclogo> 2 </npclogo>
+        <npcname> Арбитр </npcname>
+    </node>   
+     <node>
+        <npctext> Так почему ты снова задаешь вопросы? </npctext>
+        <npclogo> 2 </npclogo>
+        <npcname> Арбитр </npcname>
+    </node> 
+    <node>
+        <npctext> Задавал бы я вопросы, будь у меня на них ответы?  </npctext>
+        <npclogo> 1 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> …  </npctext>
+        <npclogo> 2 </npclogo>
+        <npcname> Арбитр </npcname>
+    </node>  
+    <node>
+        <npctext> Вот-вот. </npctext>
+        <npclogo> 1 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> Я честно наблюдал за каждым миллиметром происходящего, но это ничего мне не дало.  </npctext>
+        <npclogo> 1 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> Неизвестные люди, незнакомые места.  </npctext>
+        <npclogo> 1 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> Мальчишка, который просто ходит в школу, общается с друзьями и неплохо проводит время. </npctext>
+        <npclogo> 1 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> Я ведь был точно таким же.  </npctext>
+        <npclogo> 1 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> Наверное. </npctext>
+        <npclogo> 1 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> Слышу в твоем голосе неуверенность, друг мой.   </npctext>
+        <npclogo> 2 </npclogo>
+        <npcname> Арбитр </npcname>
+    </node>
+    <node>
+        <npctext> Вспомнил что-то дурное?   </npctext>
+        <npclogo> 2 </npclogo>
+        <npcname> Арбитр </npcname>
+    </node>
+    <node>
+        <npctext> Не совсем.  </npctext>
+        <npclogo> 1 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> Точнее, я совсем ничего не помню.  </npctext>
+        <npclogo> 1 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> Наконец-то я дождался твоих ответов. </npctext>
+        <npclogo> 2 </npclogo>
+        <npcname> Арбитр </npcname>
+    </node>
+    <node>
+        <npctext> Я стараюсь изо всех сил, но ничего не могу вспомнить. </npctext>
+        <npclogo> 1 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext>Ты ведь наверняка знаешь, что происходит. Почему не можешь рассказать? </npctext>
+        <npclogo> 1 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> Все, что происходит, происходит не случайно, друг мой.  </npctext>
+        <npclogo> 2 </npclogo>
+        <npcname> Арбитр </npcname>
+    </node>
+    <node>
+        <npctext> Люди оказываются в определенном месте для достижения определенных целей.   </npctext>
+        <npclogo> 2 </npclogo>
+        <npcname> Арбитр </npcname>
+    </node>
+    <node>
+        <npctext> Хочешь сказать, что все происходящее – это не бред? </npctext>
+        <npclogo> 1 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> Я попадаю туда, куда должен попасть? </npctext>
+        <npclogo> 1 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> Возможно.   </npctext>
+        <npclogo> 2 </npclogo>
+        <npcname> Арбитр </npcname>
+    </node>
+</dialogue>

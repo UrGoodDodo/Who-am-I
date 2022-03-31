@@ -1,0 +1,47 @@
+<dialogue>
+    <node>
+        <npctext> *утро, уведомление от Андрея* </npctext>
+        <npclogo> 0 </npclogo>
+        <npcname>  </npcname>
+    </node>
+   <node>
+        <npctext> Все получилось лучше, чем я думал. </npctext>
+        <npclogo> 6 </npclogo>
+        <npcname> Андрей </npcname>
+    </node>
+    <node>
+        <npctext> Теперь могу сказать спасибо. </npctext>
+        <npclogo> 6 </npclogo>
+        <npcname> Андрей </npcname>
+    </node>
+    <node>
+        <npctext> Хорошо, если все получилось. </npctext>
+        <npclogo> 4 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> Но это не все. </npctext>
+        <npclogo> 6 </npclogo>
+        <npcname> Андрей </npcname>
+    </node>
+    <node>
+        <npctext> Мой знакомый был бы не против твоих услуг. </npctext>
+        <npclogo> 6 </npclogo>
+        <npcname> Андрей </npcname>
+    </node>
+    <node>
+        <npctext> Что ты думаешь об этом? </npctext>
+        <npclogo> 6 </npclogo>
+        <npcname> Андрей </npcname>
+    </node>
+    <node>
+        <npctext> Я понятия не имею, во что ты хочешь ввязаться, но не думаю, что это хорошая идея.  </npctext>
+        <npclogo> 0 </npclogo>
+        <npcname>  </npcname>
+    </node>
+    <node>
+        <npctext> Если хочет попросить об услуге, пусть напишет мне. </npctext>
+        <npclogo> 4 </npclogo>
+        <npcname> Я </npcname>
+    </node>    
+</dialogue>

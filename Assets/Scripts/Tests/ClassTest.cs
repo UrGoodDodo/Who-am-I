@@ -4,8 +4,13 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class ClassTest : MonoBehaviour
-{    
-    public TextAsset[] Test;
+{
+    public bool[] finishedTest;
+    
+    TextAsset[] Test;
+    public TextAsset[] biologyTest;
+    public TextAsset[] mathTest;
+    public TextAsset[] historyTest;
 
     int rightAnswer;
     int testID;
@@ -19,10 +24,12 @@ public class ClassTest : MonoBehaviour
     public Button[] answersButton;
 
     public GameObject dm;
+    public GameObject qg;
 
+    public int rightAnswers;
     private void Start()
     {
-        ShowTest(0);
+        finishedTest = new bool[3] { false,false,false };
     }
 
     public void ShowTest(int testID)
@@ -30,7 +37,20 @@ public class ClassTest : MonoBehaviour
         TestWindow.SetActive(true);
 
         qstCount = 0;
-        this.testID = testID;        
+        this.testID = testID;
+
+        switch (testID) 
+        {
+            case 0:
+                Test = biologyTest;
+                break;
+            case 1:
+                Test = mathTest;
+                break;
+            case 2:
+                Test = historyTest;
+                break;
+        }
 
         string curQst = Test[qstCount].text;
         var parse = curQst.Split('/');
@@ -49,15 +69,21 @@ public class ClassTest : MonoBehaviour
 
         if (testID == 0)
             StartCoroutine(dm.GetComponent<DialogueManager>().StartDialogWithTimer(9,3f));
+        if (testID == 1)
+            StartCoroutine(dm.GetComponent<DialogueManager>().StartDialogWithTimer(14, 3f));
 
         StartCoroutine(ShowRightQuestion());
     }
 
-    public void ShowNextQuestion()
+    public void ShowNextQuestion(int answr)
     {
+        if (answr == rightAnswer) ++rightAnswers;
+
         StopCoroutine(ShowRightQuestion());
         answersButton[rightAnswer].GetComponent<Graphic>().color = Color.white;
-        ++qstCount; 
+        ++qstCount;
+        if (qstCount == 5)
+            CloseTestWindow();
 
         string curQst = Test[qstCount].text;
         var parse = curQst.Split('/');        
@@ -71,10 +97,7 @@ public class ClassTest : MonoBehaviour
         }
 
         rightAnswer = int.Parse(parse[2]);
-        if (qstCount < 4)
-            StartCoroutine(ShowRightQuestion());
-        else
-            CloseTestWindow();
+        StartCoroutine(ShowRightQuestion());        
     }
 
     IEnumerator ShowRightQuestion()
@@ -87,7 +110,11 @@ public class ClassTest : MonoBehaviour
     {
         StopCoroutine(ShowRightQuestion());
         if (testID == 0)
-            dm.GetComponent<DialogueManager>().StartDialogue(10);        
+            dm.GetComponent<DialogueManager>().StartDialogue(10);
+        else if (testID == 1)
+            qg.GetComponent<QuestGiver>().OpenQuestWindow(2);
+        else
+            dm.GetComponent<DialogueManager>().StartDialogue(16);
         TestWindow.SetActive(false);
     }
 }

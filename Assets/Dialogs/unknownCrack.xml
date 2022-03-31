@@ -1,0 +1,47 @@
+<dialogue>    
+    <node>
+        <npctext> Готово. </npctext>
+        <npclogo> 4 </npclogo>
+        <npcname> Я </npcname>
+    </node>     
+    <node>
+        <npctext> Уже?</npctext>
+        <npclogo> 6 </npclogo>
+        <npcname> Андрей </npcname>
+    </node>     
+     <node>
+        <npctext> Поиск информации, подбор пароля, аккуратный… </npctext>
+        <npclogo> 4 </npclogo>
+        <npcname> Я </npcname>
+    </node>     
+    <node>
+        <npctext> Да, круто, много лишних слов. </npctext>
+        <npclogo> 6 </npclogo>
+        <npcname> Андрей </npcname>
+    </node>  
+     <node>
+        <npctext> … </npctext>
+        <npclogo> 4 </npclogo>
+        <npcname> Я </npcname>
+    </node>     
+    <node>
+        <npctext> Завтра проверим. </npctext>
+        <npclogo> 6 </npclogo>
+        <npcname> Андрей </npcname>
+    </node>       
+     <node>
+        <npctext> Тогда я пойду? </npctext>
+        <npclogo> 4 </npclogo>
+        <npcname> Я </npcname>
+    </node>  
+    <node>
+        <npctext> Да, можешь идти.  </npctext>
+        <npclogo> 6 </npclogo>
+        <npcname> Андрей </npcname>
+    </node>      
+    <node>
+        <npctext> Спасибо. </npctext>
+        <npclogo> 6 </npclogo>
+        <npcname> Андрей </npcname>
+    </node>      
+</dialogue>

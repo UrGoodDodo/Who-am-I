@@ -9,6 +9,5 @@ public class Player : MonoBehaviour
 
     public Quest mainQuest;
     public Quest extraQuest;
-
-    public int[] choises = new int[1];
+           
 }

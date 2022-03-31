@@ -1,0 +1,62 @@
+<dialogue>
+    <node>
+        <npctext> *утро, звонок от друга* </npctext>
+        <npclogo> 0 </npclogo>
+        <npcname>  </npcname>
+    </node>
+   <node>
+        <npctext> Доброе утро. </npctext>
+        <npclogo> 5 </npclogo>
+        <npcname> Друг </npcname>
+    </node>
+    <node>
+        <npctext> Ты чего так рано?  </npctext>
+        <npclogo> 4 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> Доброе утро. </npctext>
+        <npclogo> 4 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> Я тут от старосты результаты узнал.  </npctext>
+        <npclogo> 5 </npclogo>
+        <npcname> Друг </npcname>
+    </node>
+    <node>
+        <npctext> Хочешь узнать?   </npctext>
+        <npclogo> 5 </npclogo>
+        <npcname> Друг </npcname>
+    </node>
+    <node>
+        <npctext> Не тяни. </npctext>
+        <npclogo> 4 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> В общем, все лучше, чем мне казалось, так что можно пойти прогуляться. </npctext>
+        <npclogo> 5 </npclogo>
+        <npcname> Друг </npcname>
+    </node>
+    <node>
+        <npctext> Не хочешь? </npctext>
+        <npclogo> 5 </npclogo>
+        <npcname> Друг </npcname>
+    </node>
+    <node>
+        <npctext> Твоя жизнь, конечно, интересная, но сколько еще я должен за ней наблюдать? </npctext>
+        <npclogo> 0 </npclogo>
+        <npcname>  </npcname>
+    </node>
+    <node>
+        <npctext> Думаю, что было бы неплохо. </npctext>
+        <npclogo> 4 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> Сегодня? </npctext>
+        <npclogo> 4 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+</dialogue>

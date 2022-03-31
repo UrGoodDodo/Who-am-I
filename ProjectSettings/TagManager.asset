@@ -17,6 +17,7 @@ TagManager:
   - Lighter
   - Item
   - SchoolBag
+  - BlackScreen
   layers:
   - Default
   - TransparentFX

@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class Choiser : MonoBehaviour
 {
+    public int[] choisess = new int[2]{0,0};
+
     public TextAsset[] choises;
 
     public Text btn1Text;
@@ -16,7 +18,7 @@ public class Choiser : MonoBehaviour
 
     public GameObject dm;
     public GameObject player;
-
+    public GameObject stranger;
     public void ShowChoiser(int choiseID)
     {        
         choiserWindow.SetActive(true);
@@ -42,12 +44,28 @@ public class Choiser : MonoBehaviour
                     if (choise == -1)
                     {
                         dm.GetComponent<DialogueManager>().StartDialogue(12);
-                        player.GetComponent<Player>().choises[choiseID] = choise;
+                        choisess[choiseID] = choise;
+                        stranger.SetActive(true);
                     }
                     else
                     {
                         dm.GetComponent<DialogueManager>().StartDialogue(11);
-                        player.GetComponent<Player>().choises[choiseID] = choise;
+                        choisess[choiseID] = choise;
+                    }
+                    CloseChoiser();
+                    break;
+                }
+            case 1:
+                {
+                    if (choise == -1)
+                    {
+                        dm.GetComponent<DialogueManager>().StartDialogue(20);
+                        choisess[choiseID] = choise;
+                    }
+                    else
+                    {
+                        dm.GetComponent<DialogueManager>().StartDialogue(19);
+                        choisess[choiseID] = choise;                        
                     }
                     CloseChoiser();
                     break;

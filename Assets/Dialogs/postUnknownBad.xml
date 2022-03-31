@@ -1,0 +1,22 @@
+<dialogue>
+    <node>
+        <npctext> Странное решение. </npctext>
+        <npclogo> 1 </npclogo>
+        <npcname>  </npcname>
+    </node>     
+    <node>
+        <npctext> Звучит не так уж плохо. </npctext>
+        <npclogo> 4 </npclogo>
+        <npcname> Я </npcname>
+    </node> 
+    <node>
+        <npctext> Я согласен. </npctext>
+        <npclogo> 4 </npclogo>
+        <npcname> Я </npcname>
+    </node>     
+    <node>
+        <npctext> Хорошо. Буду ждать тебя на улице. </npctext>
+        <npclogo> 6 </npclogo>
+        <npcname> Андрей </npcname>
+    </node>       
+</dialogue>
