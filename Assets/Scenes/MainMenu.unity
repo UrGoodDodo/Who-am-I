@@ -338,7 +338,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1854189535}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -350,10 +350,22 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1660010614}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 622084041}
+        m_TargetAssemblyTypeName: MainMenuSettings, Assembly-CSharp
+        m_MethodName: CancelButton
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1068,6 +1080,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: 4bc9379afb4f8d0488858d9c99ab2d42, type: 2}
   resolutionDropdown: {fileID: 1285348843}
+  qualityDropdowm: {fileID: 0}
+  fullscreenToggle: {fileID: 0}
+  volumeSlider: {fileID: 0}
 --- !u!1 &236821637
 GameObject:
   m_ObjectHideFlags: 0
@@ -1175,7 +1190,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 622084041}
         m_TargetAssemblyTypeName: MainMenuSettings, Assembly-CSharp
-        m_MethodName: SetQuality
+        m_MethodName: SetNewQuality
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1346,7 +1361,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 622084041}
         m_TargetAssemblyTypeName: MainMenuSettings, Assembly-CSharp
-        m_MethodName: SetFullScreen
+        m_MethodName: SetNewIsFullScreen
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1383,8 +1398,8 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 398779852}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 108.11793}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 622084042}
@@ -1392,7 +1407,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1.3091862, y: -0.18015718}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &398779854
@@ -1695,7 +1710,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 622084041}
         m_TargetAssemblyTypeName: MainMenuSettings, Assembly-CSharp
-        m_MethodName: SetVolume
+        m_MethodName: SetNewVolume
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1811,6 +1826,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: 4bc9379afb4f8d0488858d9c99ab2d42, type: 2}
   resolutionDropdown: {fileID: 1285348843}
+  qualityDropdowm: {fileID: 236821639}
+  fullscreenToggle: {fileID: 382786281}
+  volumeSlider: {fileID: 604466844}
 --- !u!4 &622084042
 Transform:
   m_ObjectHideFlags: 0
@@ -2883,6 +2901,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 622084041}
+        m_TargetAssemblyTypeName: MainMenuSettings, Assembly-CSharp
+        m_MethodName: SaveButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1172542524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3256,7 +3286,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 622084041}
         m_TargetAssemblyTypeName: MainMenuSettings, Assembly-CSharp
-        m_MethodName: SetResolution
+        m_MethodName: SetNewResolution
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4786,6 +4816,7 @@ MonoBehaviour:
   dialogueText: {fileID: 0}
   playerText: {fileID: 0}
   playerSprite: {fileID: 0}
+  blackScreen: {fileID: 0}
   boxAnim: {fileID: 0}
   startAnim: {fileID: 0}
   playerSprites:
@@ -4808,6 +4839,9 @@ MonoBehaviour:
   finishedFlags: 00
   test: {fileID: 0}
   choiser: {fileID: 0}
+  stranger: {fileID: 0}
+  streetStranger: {fileID: 0}
+  mother: {fileID: 0}
 --- !u!4 &2000792324
 Transform:
   m_ObjectHideFlags: 0

@@ -6,133 +6,205 @@ using UnityEngine.Audio;
 using UnityEngine.UI;
 
 public class MainMenuSettings : MonoBehaviour
-{
-    /*
-    void Start()
-    {
-        resolutionDropdown.ClearOptions(); //Удаление старых пунктов
-        resolutions = Screen.resolutions; //Получение доступных разрешений
-        List<string> options = new List<string>(); //Создание списка со строковыми значениями
-
-        for (int i = 0; i < resolutions.Length; i++) //Поочерёдная работа с каждым разрешением
-        {
-            string option = resolutions[i].width + " x " + resolutions[i].height; //Создание строки для списка
-            options.Add(option); //Добавление строки в список
-
-            if (resolutions[i].Equals(Screen.currentResolution)) //Если текущее разрешение равно проверяемому
-            {
-                currResolutionIndex = i; //То получается его индекс
-            }
-        }
-
-        resolutionDropdown.AddOptions(options); //Добавление элементов в выпадающий список
-        resolutionDropdown.value = currResolutionIndex; //Выделение пункта с текущим разрешением
-        resolutionDropdown.RefreshShownValue(); //Обновление отображаемого значения
-    }
-
-    void Update()
-    {
-        if (Input.GetKey(KeyCode.Escape))
-        {
-            ShowHideMenu();
-        }
-    }
-    
-    public bool isOpened = false; //Открыто ли меню
-                                  // public float volume = 0; //Громкость
-                                  // public int quality = 0; //Качество
-    public bool isFullscreen = false; //Полноэкранный режим
-                                      // public AudioMixer audioMixer; //Регулятор громкости
-    public Dropdown resolutionDropdown; //Список с разрешениями для игры
-    private Resolution[] resolutions; //Список доступных разрешений
-    private int currResolutionIndex = 0; //Текущее разрешение
-
-    
-    
-    public void ChangeVolume(float val) //Изменение звука
-    {
-        volume = val;
-    }
-    
-
-
-
-    
-    public void ChangeQuality(int index) //Изменение качества
-    {
-        quality = index;
-    }
-    
-    public void ShowHideMenu()
-    {
-        isOpened = !isOpened;
-        GetComponent<Canvas>().enabled = isOpened; //Включение или отключение Canvas. Ещё тут можно использовать метод SetActive()
-    }
-
-    public void ChangeResolution(int index) //Изменение разрешения
-    {
-        currResolutionIndex = index;
-    }
-
-    public void ChangeFullscreenMode(bool val) //Включение или отключение полноэкранного режима
-    {
-        isFullscreen = val;
-    }
-
-    public void SaveSettings()
-    {
-        //  audioMixer.SetFloat("MasterVolume", volume); //Изменение уровня громкости
-        // QualitySettings.SetQualityLevel(quality); //Изменение качества
-        Screen.fullScreen = isFullscreen; //Включение или отключение полноэкранного режима
-        Screen.SetResolution(Screen.resolutions[currResolutionIndex].width, Screen.resolutions[currResolutionIndex].height, isFullscreen); //Изменения разрешения
-    }
-    */
-
+{ 
     public AudioMixer audioMixer; // Пока не знаю но вроде как звук в игре
 
     Resolution[] resolutions; // массив разрешений экрана игрока
 
     public Dropdown resolutionDropdown; //Список из разрешений экрана игрока в меню настроек в кнопке
 
+    public Dropdown qualityDropdowm; // Список пресетов качеств в меню настроек в кнопке
+
+    public Toggle fullscreenToggle; // тогл для полноэкранного режима
+
+    public Slider volumeSlider; // слайдер звука в меню настроек
+
+    private float oldvolume; // значение параметра звук для старых настроек
+
+    private int oldqualityIndex; // индекс пресета качества для старых настроек
+
+    private bool oldIsFullScreen; // буул переменная для полноэкранного режима для старых настроек
+
+    private int oldresolutionIndex; // индекс разрешения для старых настроек
+
+    private float newvolume; // значение параметра звук для новых настроек
+
+    private int newqualityIndex; // индекс пресета качества для новых настроек
+
+    private bool newIsFullScreen; // буул переменная для полноэкранного режима дл новых настроек
+
+    private int newresolutionIndex; // индекс разрешения для новых настроек
+
+    private bool flag = true;
+
     void Start() 
     {
-        resolutions = Screen.resolutions; // Записываем разрешения экрана игрока в массив
-        resolutionDropdown.ClearOptions(); // очищаем разрешения которые были до этого момента в кнопке в настройках
-        List<string> options = new List<string>(); // создаем лист строк для разрешений
-        int currentResolutionIndex = 0; // текущее разрешение
-        for (int i = 0; i < resolutions.Length; i++) // цикл по массиву разрешений игрока
+        LoadFlag();
+        //1 старт игры
+        if (flag)
         {
-            string option = resolutions[i].width + " x " + resolutions[i].height; // создаем строковое наименование разрешения
-            options.Add(option); // добавляем строковое наименование разрешения в лист
+            oldvolume = -60;
+            SetVolume(oldvolume, volumeSlider);
 
-            if ((resolutions[i].width == Screen.currentResolution.width) && (resolutions[i].height == Screen.currentResolution.height))
+            oldqualityIndex = 6;
+            SetQuality(oldqualityIndex, qualityDropdowm);
+            qualityDropdowm.value = oldqualityIndex;
+
+            oldIsFullScreen = true;
+            SetFullScreen(oldIsFullScreen, fullscreenToggle);
+
+            resolutions = Screen.resolutions; // Записываем разрешения экрана игрока в массив
+            resolutionDropdown.ClearOptions(); // очищаем разрешения которые были до этого момента в кнопке в настройках
+            List<string> options = new List<string>(); // создаем лист строк для разрешений
+            int currentResolutionIndex = 0; // текущее разрешение
+            for (int i = 0; i < resolutions.Length; i++) // цикл по массиву разрешений игрока
             {
-                currentResolutionIndex = i;
+                string option = resolutions[i].width + " x " + resolutions[i].height; // создаем строковое наименование разрешения
+                options.Add(option); // добавляем строковое наименование разрешения в лист
+
+                if ((resolutions[i].width == Screen.currentResolution.width) && (resolutions[i].height == Screen.currentResolution.height))
+                {
+                    currentResolutionIndex = i;
+                }
             }
+            resolutionDropdown.AddOptions(options); // добавляем в кнопку разрешения экрана игрока
+            resolutionDropdown.value = currentResolutionIndex;
+            resolutionDropdown.RefreshShownValue();
+            oldresolutionIndex = currentResolutionIndex;
+            flag = false;
+            SaveFlag();
         }
-        resolutionDropdown.AddOptions(options); // добавляем в кнопку разрешения экрана игрока
-        resolutionDropdown.value = currentResolutionIndex; 
-        resolutionDropdown.RefreshShownValue();
+        else 
+        {
+            resolutions = Screen.resolutions;
+            resolutionDropdown.ClearOptions();
+            List<string> options = new List<string>();
+            for (int i = 0; i < resolutions.Length; i++) 
+            {
+                string option = resolutions[i].width + " x " + resolutions[i].height; 
+                options.Add(option); 
+            }
+            resolutionDropdown.AddOptions(options); 
+            LoadSettings();
+            
+        }
     }
 
-    public void SetVolume(float volume) // функция изменения звука
+    public void SetVolume(float volume, Slider volumeS) // функция изменения звука
     {
         audioMixer.SetFloat("Volume",volume);
+        volumeS.value = volume;
     }
 
-    public void SetQuality(int qualityIndex) // функция изменения качества
+    public void SetQuality(int qualityIndex,Dropdown qualityDd) // функция изменения качества
     {
         QualitySettings.SetQualityLevel(qualityIndex);
+        qualityDd.value = qualityIndex;
     }
 
-    public void SetFullScreen(bool IsFullScreen) // функция изменения полноэкранного режима
+    public void SetFullScreen(bool IsFullScreen, Toggle fullscreenT) // функция изменения полноэкранного режима
     {
         Screen.fullScreen = IsFullScreen;
+        fullscreenT.isOn = IsFullScreen;
     }
 
-    public void SetResolution(int resolutionIndex) // функция смены разрешения
+    public void SetResolution(int resolutionIndex,Dropdown resolutionDD) // функция смены разрешения
     {
         Resolution resolution = resolutions[resolutionIndex]; // для удобства создаем переменную разрешения в которую записываем то разрешение на которое меняем
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen); // меняем разрешение
+        resolutionDD.value = resolutionIndex;
+    }
+
+    public void SaveFlag() 
+    {
+        int temp;
+        if (flag)
+           temp = 1;
+        else
+            temp = 0;
+        PlayerPrefs.SetInt("Flag",temp);
+    }
+
+    public void LoadFlag() 
+    {
+        if (PlayerPrefs.GetInt("Flag", 4) != 4) 
+        { 
+        int temp = PlayerPrefs.GetInt("Flag");
+        if (temp == 1)
+            flag = true;
+        else
+            flag = false;
+        }
+    }
+    public void SaveSettings(float v, int indq, int indr, bool isfull) 
+    {
+        int isfullsreen;
+        if (isfull)
+            isfullsreen = 1;
+        else
+            isfullsreen = 0;
+        
+        PlayerPrefs.SetInt("IsFullScreen", isfullsreen);
+        PlayerPrefs.SetFloat("Volume",v);
+        PlayerPrefs.SetInt("QualityIndex",indq);
+        PlayerPrefs.SetInt("ResolutionIndex",indr);
+        PlayerPrefs.Save();
+    }
+
+    public void LoadSettings() 
+    {
+        oldvolume = PlayerPrefs.GetFloat("Volume");
+        int temp = PlayerPrefs.GetInt("IsFullScreen");
+        if (temp == 1)
+            oldIsFullScreen = true;
+        else
+            oldIsFullScreen = false;
+        oldresolutionIndex = PlayerPrefs.GetInt("ResolutionIndex");
+        oldqualityIndex = PlayerPrefs.GetInt("QualityIndex");
+        SetVolume(oldvolume, volumeSlider);
+        SetQuality(oldqualityIndex, qualityDropdowm);
+        SetFullScreen(oldIsFullScreen, fullscreenToggle);
+        SetResolution(oldresolutionIndex, resolutionDropdown);
+    }
+
+    public void SetNewResolution(int resolutionIndex) 
+    {
+        Resolution resolution = resolutions[resolutionIndex];
+        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
+        newresolutionIndex = resolutionIndex;
+    }
+
+    public void SetNewQuality(int qualityIndex) 
+    {
+        QualitySettings.SetQualityLevel(qualityIndex);
+        newqualityIndex = qualityIndex;
+    }
+
+    public void SetNewVolume(float volume) 
+    {
+        audioMixer.SetFloat("Volume", volume);
+        newvolume = volume;
+    }
+
+    public void SetNewIsFullScreen(bool IsFullScreen) 
+    {
+        Screen.fullScreen = IsFullScreen;
+        newIsFullScreen = IsFullScreen;
+    }
+    public void SaveButton() 
+    {
+        oldIsFullScreen = newIsFullScreen;
+        oldqualityIndex = newqualityIndex;
+        oldresolutionIndex = newresolutionIndex;
+        oldvolume = newvolume;
+        SaveSettings(oldvolume, oldqualityIndex, oldresolutionIndex, oldIsFullScreen);
+    }
+
+    public void CancelButton() 
+    {
+        SetVolume(oldvolume, volumeSlider);
+        SetQuality(oldqualityIndex, qualityDropdowm);
+        SetResolution(oldresolutionIndex, resolutionDropdown);
+        SetFullScreen(oldIsFullScreen, fullscreenToggle);
     }
 }
