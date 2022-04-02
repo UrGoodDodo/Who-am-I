@@ -50,6 +50,7 @@ public class DialogueManager : MonoBehaviour
     public GameObject babyPlayer;
     public GameObject PlayerPigama;
     public Sprite stayPigama;
+    public GameObject playerHudi;
 
     [Header("Change Sprites")]
     public GameObject lobby2;
@@ -273,6 +274,12 @@ public class DialogueManager : MonoBehaviour
                     }
                     slotimage.GetComponent<Image>().sprite = d_mask;
                     player.GetComponent<Move>().MoveOutLobbyToLocation(-112);
+                    player.GetComponent<Move>().stay = stay;
+                    player.GetComponent<Move>().player = player;
+                    player.GetComponent<Animator>().enabled = true;
+                    player.GetComponent<SpriteRenderer>().enabled = true;
+                    PlayerPigama.SetActive(false);
+                    playerHudi.SetActive(false);
                     StartCoroutine(StartDialogWithTimer(26, 0.5f));
 
                     break;
