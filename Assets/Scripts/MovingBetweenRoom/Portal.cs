@@ -9,6 +9,7 @@ public class Portal : MonoBehaviour
     public GameObject[] OnObj = new GameObject[3];
     public GameObject playcamera;
     public GameObject newPlayer;
+    public GameObject slot;
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
@@ -23,6 +24,7 @@ public class Portal : MonoBehaviour
                 playcamera.GetComponent<MoveCamera>().target = newPlayer.transform;
                 newPlayer.GetComponent<Move>().MoveOutLobbyToLocation(101);
             }
+            slot.GetComponent<LighterOnOff>().enabled = false;
 
         }
     }
@@ -40,6 +42,7 @@ public class Portal : MonoBehaviour
                 playcamera.GetComponent<MoveCamera>().target = newPlayer.transform;
                 newPlayer.GetComponent<Move>().MoveOutLobbyToLocation(101);
             }
+            slot.GetComponent<LighterOnOff>().enabled = false;
         }
     }
 

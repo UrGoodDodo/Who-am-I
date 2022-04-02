@@ -10,13 +10,17 @@ public class shkaf : MonoBehaviour
     public QuestGiver qg;
     public GameObject panel;
 
+    public Sprite hudistay;
+    public GameObject PlayerHudi;
+    public GameObject oldPlayer;
+
     public Text wear;
 
     bool isWeared = false;
 
     private void Update()
     {
-       if (Input.GetKey(KeyCode.F) && !isWeared && panel.active)
+        if (Input.GetKey(KeyCode.F) && !isWeared && panel.active)
         {
             isWeared = true;
             player.mainQuest.numericGoal += 1;
@@ -24,7 +28,12 @@ public class shkaf : MonoBehaviour
             if (player.mainQuest.numericGoal == 2)
                 qg.OpenExtraQuestWindow(0);
             panel.SetActive(false);
-        }        
+
+            PlayerHudi.SetActive(true);
+            player.GetComponent<Move>().player = PlayerHudi;
+            player.GetComponent<Move>().stay = hudistay;
+            oldPlayer.SetActive(false);
+        }
     }
 
     public void OnTriggerEnter2D(Collider2D collision)	//Происходит при срабатывании тригера коллайдера на объекте

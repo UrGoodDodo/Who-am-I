@@ -21,13 +21,16 @@ public class DialogueManager : MonoBehaviour
 
     private Queue<Node> sentences = new Queue<Node>();
 
-    public GameObject player;
-    public GameObject babyPlayer;
+
     public GameObject OutOfLobby;
     public GameObject OutOfLobby2;
     public GameObject P_TimeLine;
+    public Sprite phone;
+    public GameObject slotimage;
     public GameObject[] ChRoomACT1 = new GameObject[2];
     public GameObject[] ChRoomACT2 = new GameObject[2];
+
+
 
     private int dialogueID;
 
@@ -40,6 +43,20 @@ public class DialogueManager : MonoBehaviour
     public GameObject stranger;
     public GameObject streetStranger;
     public GameObject mother;
+
+    [Header("Player Settings")]
+    public GameObject player;
+    public Sprite stay;
+    public GameObject babyPlayer;
+    public GameObject PlayerPigama;
+    public Sprite stayPigama;
+
+    [Header("Change Sprites")]
+    public GameObject lobby2;
+    public GameObject lobby;
+    public GameObject fon;
+    public GameObject[] slots;
+    public Sprite d_mask;
 
     public void Start()
     {
@@ -145,6 +162,15 @@ public class DialogueManager : MonoBehaviour
                         item.SetActive(false);
                     foreach (var item in ChRoomACT2)
                         item.SetActive(true);
+                    slotimage.SetActive(true);
+                    slotimage.GetComponent<Image>().sprite = phone;
+
+                    player.GetComponent<Animator>().enabled = false;
+                    player.GetComponent<SpriteRenderer>().enabled = false;
+
+                    PlayerPigama.SetActive(true);
+                    player.GetComponent<Move>().player = PlayerPigama;
+                    player.GetComponent<Move>().stay = stayPigama;
                     break;
                 }
             case 5:
@@ -170,8 +196,8 @@ public class DialogueManager : MonoBehaviour
                 }
             case 12:
                 {
-                    questGiver.GetComponent<QuestGiver>().FixColor();                    
-                    questGiver.GetComponent<QuestGiver>().OpenQuestWindow(5);                    
+                    questGiver.GetComponent<QuestGiver>().FixColor();
+                    questGiver.GetComponent<QuestGiver>().OpenQuestWindow(5);
                     break;
                 }
             case 13:
@@ -190,7 +216,7 @@ public class DialogueManager : MonoBehaviour
                     break;
                 }
             case 16:
-                {                   
+                {
                     questGiver.GetComponent<QuestGiver>().OpenQuestWindow(3);
                     break;
                 }
@@ -222,7 +248,7 @@ public class DialogueManager : MonoBehaviour
                 {
                     questGiver.GetComponent<QuestGiver>().CloseQuestWindow(6);
                     blackScreen.SetActive(true);
-                    StartCoroutine(StartDialogWithTimer(22, 0.5f));                    
+                    StartCoroutine(StartDialogWithTimer(22, 0.5f));
                     break;
                 }
             case 22:
@@ -234,12 +260,28 @@ public class DialogueManager : MonoBehaviour
                     mother.SetActive(false);
                     break;
                 }
-            case 23:            
-            case 24:             
+            case 23:
+            case 24:
             case 25:
                 {
+                    lobby.SetActive(false);
+                    lobby2.SetActive(true);
+                    foreach (var item in slots)
+                    {
+                        item.GetComponent<Image>().sprite = d_mask;
+                        item.GetComponent<Slot>().itemid = 0;
+                    }
+                    slotimage.GetComponent<Image>().sprite = d_mask;
                     player.GetComponent<Move>().MoveOutLobbyToLocation(-112);
                     StartCoroutine(StartDialogWithTimer(26, 0.5f));
+
+                    break;
+                }
+            case 27:
+            case 28:
+                {
+                    fon.SetActive(true);
+
                     break;
                 }
         }

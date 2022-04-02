@@ -20,6 +20,10 @@ public class Slot : MonoBehaviour
         {
             GetComponent<Button>().enabled = true;
         }
+        if (itemid == 0)
+        {
+            GetComponent<Button>().enabled = false;
+        }
 
     }
     public void BeforeUsePic()

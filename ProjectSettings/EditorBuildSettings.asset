@@ -11,19 +11,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BeginLobby.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
-    path: Assets/Scenes/Children's Room.unity
-    guid: 7ea9938c7c08c864890d8accc5f71ea7
-  - enabled: 1
-    path: Assets/Scenes/LivingRoom.unity
-    guid: b94ca0c0196e971459c72cab7348737e
-  - enabled: 1
-    path: Assets/Scenes/Forest.unity
-    guid: b7640e5322c93714c9490ae2675d0a41
-  - enabled: 1
-    path: Assets/Scenes/SchoolLobby.unity
-    guid: 1082e1b846954464391c9a48cc4e1a45
-  - enabled: 1
-    path: Assets/Scenes/SchoolCabinet.unity
-    guid: 5ac354d510e26a74db76bfd99eb29f0b
   m_configObjects: {}
