@@ -111,7 +111,7 @@ public class MainMenuSettings : MonoBehaviour
     public void SetResolution(int resolutionIndex,Dropdown resolutionDD) // функция смены разрешения
     {
         Resolution resolution = resolutions[resolutionIndex]; // для удобства создаем переменную разрешения в которую записываем то разрешение на которое меняем
-        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen); // меняем разрешение
+        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen, resolution.refreshRate); // меняем разрешение
         resolutionDD.value = resolutionIndex;
     }
 
@@ -170,7 +170,7 @@ public class MainMenuSettings : MonoBehaviour
     public void SetNewResolution(int resolutionIndex) 
     {
         Resolution resolution = resolutions[resolutionIndex];
-        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
+        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen, resolution.refreshRate);
         newresolutionIndex = resolutionIndex;
     }
 
