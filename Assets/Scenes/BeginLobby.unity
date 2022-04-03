@@ -12303,7 +12303,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 50df0f891f4e80c4f8f14daba364c0d0, type: 3}
   - {fileID: 21300000, guid: bcc5294a6cf29c640ac6248c9a8975c7, type: 3}
   - {fileID: 21300000, guid: 15c5f5c9661f25548a202b92c10c38da, type: 3}
-  - {fileID: 21300000, guid: 638fd16c299d9d144bd68324986d42f1, type: 3}
+  - {fileID: 21300000, guid: 51cff43fd73863c458bcfbd622b853f6, type: 3}
   dialogAssets:
   - {fileID: 4900000, guid: 8fec1ec5ada60ff49a01cea94c9bb698, type: 3}
   - {fileID: 4900000, guid: 7be676cf6efff2e48b76da1d4cf45715, type: 3}
@@ -24683,7 +24683,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.07821799, y: 0.38551265}
   m_AnchorMax: {x: 0.397, y: 0.5}
-  m_AnchoredPosition: {x: 12.505371, y: -5.188202}
+  m_AnchoredPosition: {x: 12.505493, y: -5.188202}
   m_SizeDelta: {x: -20.1137, y: -10.3764}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1468201833
