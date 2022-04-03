@@ -245,7 +245,7 @@ public class DialogueManager : MonoBehaviour
                 {
                     blackScreen.SetActive(true);
                     StartCoroutine(StartDialogWithTimer(13, 0.5f));
-                    dt.currentDialog = 16;
+                    dt.currentDialog = 15;
                     dt.friend.enabled = true;
                     dt.stranger.enabled = false;
                     break;
