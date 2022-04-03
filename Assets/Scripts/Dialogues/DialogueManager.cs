@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class DialogueManager : MonoBehaviour
 {
     public GameObject questGiver;
+    public DialogueTriger dt;
 
     public Text dialogueText;	//Текст в диалоге    
     public Text playerText;
@@ -21,7 +22,6 @@ public class DialogueManager : MonoBehaviour
 
     private Queue<Node> sentences = new Queue<Node>();
 
-
     public GameObject OutOfLobby;
     public GameObject OutOfLobby2;
     public GameObject P_TimeLine;
@@ -29,8 +29,6 @@ public class DialogueManager : MonoBehaviour
     public GameObject slotimage;
     public GameObject[] ChRoomACT1 = new GameObject[2];
     public GameObject[] ChRoomACT2 = new GameObject[2];
-
-
 
     private int dialogueID;
 
@@ -82,7 +80,11 @@ public class DialogueManager : MonoBehaviour
     {
         player.GetComponent<Move>().enabled = false;
         player.GetComponent<Animator>().enabled = false;
+        playerHudi.GetComponent<Animator>().enabled = false;
+        PlayerPigama.GetComponent<Animator>().enabled = false;
         player.GetComponent<AudioSource>().enabled = false;
+        
+
         if (dialogueID == 2 || dialogueID == 3)
         {
             babyPlayer.GetComponent<Move>().enabled = false;
@@ -135,6 +137,8 @@ public class DialogueManager : MonoBehaviour
     {
         player.GetComponent<Move>().enabled = true;
         player.GetComponent<Animator>().enabled = true;
+        playerHudi.GetComponent<Animator>().enabled = true;
+        PlayerPigama.GetComponent<Animator>().enabled = true;
         player.GetComponent<AudioSource>().enabled = true;
 
         if (dialogueID == 2 || dialogueID == 3)
@@ -152,8 +156,10 @@ public class DialogueManager : MonoBehaviour
                     P_TimeLine.SetActive(true);
                     //player.GetComponent<Move>().MoveOutLobbyToLocation(0); 
                     //OutOfLobby.SetActive(true);  
+                    dt.currentDialog = 6;
+                    dt.arbitr.enabled = false;
+                    dt.mother.enabled = true;
                     break;
-
                 }
             case 4:
                 {
@@ -219,6 +225,9 @@ public class DialogueManager : MonoBehaviour
             case 16:
                 {
                     questGiver.GetComponent<QuestGiver>().OpenQuestWindow(3);
+                    dt.currentDialog = 17;
+                    dt.friend.enabled = false;
+                    dt.mother.enabled = true;
                     break;
                 }
             case 17:
@@ -236,6 +245,9 @@ public class DialogueManager : MonoBehaviour
                 {
                     blackScreen.SetActive(true);
                     StartCoroutine(StartDialogWithTimer(13, 0.5f));
+                    dt.currentDialog = 16;
+                    dt.friend.enabled = true;
+                    dt.stranger.enabled = false;
                     break;
                 }
             case 20:
@@ -243,6 +255,9 @@ public class DialogueManager : MonoBehaviour
                     questGiver.GetComponent<QuestGiver>().OpenQuestWindow(6);
                     streetStranger.SetActive(true);
                     stranger.SetActive(false);
+                    dt.currentDialog = 21;
+                    dt.stranger.enabled = false;
+                    dt.forestStranger.enabled = true;
                     break;
                 }
             case 21:
@@ -282,6 +297,12 @@ public class DialogueManager : MonoBehaviour
                     playerHudi.SetActive(false);
                     StartCoroutine(StartDialogWithTimer(26, 0.5f));
 
+                    dt.mother.enabled = false;
+                    dt.arbitr.enabled = true;
+
+                    if (dialogueID == 23 || dialogueID == 24)
+                        dt.currentDialog = 27;
+                    else dt.currentDialog = 28;
                     break;
                 }
             case 27:

@@ -1,12 +1,12 @@
 <dialogue>
     <node>
         <npctext> Иди в столовую, я тебя догоню.   </npctext>
-        <npclogo> 1 </npclogo>
+        <npclogo> 4 </npclogo>
         <npcname> Я </npcname>
     </node>     
      <node>
         <npctext> Нужно еще кое-что сделать.   </npctext>
-        <npclogo> 1 </npclogo>
+        <npclogo> 4 </npclogo>
         <npcname> Я </npcname>
     </node>  
      <node>

@@ -25,6 +25,7 @@ public class ClassTest : MonoBehaviour
 
     public GameObject dm;
     public GameObject qg;
+    public GameObject player;
 
     public int rightAnswers;
     private void Start()
@@ -33,7 +34,11 @@ public class ClassTest : MonoBehaviour
     }
 
     public void ShowTest(int testID)
-    {    
+    {
+        player.GetComponent<Move>().enabled = false;
+        player.GetComponent<Animator>().enabled = false;
+        player.GetComponent<AudioSource>().enabled = false;
+
         TestWindow.SetActive(true);
 
         qstCount = 0;
@@ -82,8 +87,11 @@ public class ClassTest : MonoBehaviour
         StopCoroutine(ShowRightQuestion());
         answersButton[rightAnswer].GetComponent<Graphic>().color = Color.white;
         ++qstCount;
-        if (qstCount == 5)
+        if (qstCount == Test.Length)
+        {
             CloseTestWindow();
+            return;
+        }
 
         string curQst = Test[qstCount].text;
         var parse = curQst.Split('/');        
@@ -108,6 +116,12 @@ public class ClassTest : MonoBehaviour
 
     void CloseTestWindow()
     {
+        player.GetComponent<Move>().enabled = true;
+        player.GetComponent<Animator>().enabled = true;
+        player.GetComponent<AudioSource>().enabled = true;
+
+
+
         StopCoroutine(ShowRightQuestion());
         if (testID == 0)
             dm.GetComponent<DialogueManager>().StartDialogue(10);

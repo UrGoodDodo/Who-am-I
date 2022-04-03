@@ -1,7 +1,7 @@
 <dialogue>
     <node>
         <npctext> Хороший человек попался, помог.  </npctext>
-        <npclogo> 1 </npclogo>
+        <npclogo> 4 </npclogo>
         <npcname> Я </npcname>
     </node>   
     <node>

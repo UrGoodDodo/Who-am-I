@@ -14,6 +14,7 @@ public class Move : MonoBehaviour
     public QuestGiver qg;
     public ClassTest ct;
 
+    public DialogueTriger dt;
     private void Update()
     {
         transform.position += new Vector3(speed, 0, 0) * Input.GetAxis("Horizontal") * Time.deltaTime;  //Движение влево/вправо на стандартные клавиши
@@ -111,6 +112,7 @@ public class Move : MonoBehaviour
                     break;
                 if (!dm.GetComponent<DialogueManager>().finishedDialogs[6])
                     dm.GetComponent<DialogueManager>().finishedDialogs[6] = true;
+                
                 GetComponent<Transform>().position = new Vector3(386, -102, 1);
                 camera.GetComponent<Transform>().position = new Vector3(393, -100, -10);
                 camera.GetComponent<MoveCamera>().minX = 392.9f;
@@ -135,6 +137,12 @@ public class Move : MonoBehaviour
                 camera.GetComponent<MoveCamera>().maxY = -206.432f;
                 if (qg.player.mainQuest.IsActive && qg.player.mainQuest.questID == 0)
                     qg.CloseQuestWindow(0);
+                if (!dm.GetComponent<DialogueManager>().finishedDialogs[10])
+                {
+                    dt.currentDialog = 15;
+                    dt.mother.enabled = false;
+                    dt.friend.enabled = true;
+                }
                 break;
             case 132:
                 GetComponent<Transform>().position = new Vector3(2, -206.5f, 1);

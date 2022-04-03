@@ -7,21 +7,28 @@ public class DialogueTriger : MonoBehaviour
     public DialogueManager dm;
     public Choiser choiser;
 
-    public void TriggerDialogue()
+    public BoxCollider2D mother;
+    public BoxCollider2D friend;
+    public CircleCollider2D arbitr;
+    public BoxCollider2D stranger;
+    public BoxCollider2D forestStranger;
+
+    public int currentDialog;
+    private void Start()
     {
-        if (!dm.finishedDialogs[1])
-            dm.StartDialogue(1);
-        else if (!dm.finishedDialogs[6])
-            dm.StartDialogue(6);
-        else if (!dm.finishedDialogs[18] && choiser.choisess[0] == -1)
-            dm.StartDialogue(18);
-        else if (!dm.finishedDialogs[15] && choiser.choisess[1] > -1)
-            dm.StartDialogue(15);       
-        else if (dm.finishedDialogs[26])
-            if (choiser.choisess[0] == 1 || choiser.choisess[1] == 1)
-                dm.StartDialogue(27);
-            else dm.StartDialogue(28); 
-        else if (!dm.finishedDialogs[21])
-            dm.StartDialogue(21);
+        mother.enabled = false;
+        friend.enabled = false;
+        stranger.enabled = false;
+        forestStranger.enabled = false;
+        mother.enabled = false;
+
+        arbitr.enabled = true;
+
+        currentDialog = 1;
+    }
+
+    public void TriggerDialogue()
+    {        
+        dm.StartDialogue(currentDialog);
     }
 }

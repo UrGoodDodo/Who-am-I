@@ -9,7 +9,7 @@ public class mother : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)	//Происходит при срабатывании тригера коллайдера на объекте
     {
-        if (collision.tag == "Player" && !dm.finishedDialogs[17] && dm.finishedDialogs[6])
+        if (collision.tag == "Player" && !dm.finishedDialogs[17] && dm.finishedDialogs[6] && dm.finishedDialogs[16])
         {
             dm.StartDialogue(17);
         }

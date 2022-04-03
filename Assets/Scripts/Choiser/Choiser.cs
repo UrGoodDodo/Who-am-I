@@ -19,6 +19,8 @@ public class Choiser : MonoBehaviour
     public GameObject dm;
     public GameObject player;
     public GameObject stranger;
+
+    public DialogueTriger dt;
     public void ShowChoiser(int choiseID)
     {        
         choiserWindow.SetActive(true);
@@ -46,11 +48,15 @@ public class Choiser : MonoBehaviour
                         dm.GetComponent<DialogueManager>().StartDialogue(12);
                         choisess[choiseID] = choise;
                         stranger.SetActive(true);
+
+                        dt.currentDialog = 18;
+                        dt.friend.enabled = false;
+                        dt.stranger.enabled = true;
                     }
                     else
                     {
                         dm.GetComponent<DialogueManager>().StartDialogue(11);
-                        choisess[choiseID] = choise;
+                        choisess[choiseID] = choise;                        
                     }
                     CloseChoiser();
                     break;

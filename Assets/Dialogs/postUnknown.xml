@@ -30,7 +30,7 @@
         <npcname> Я </npcname>
     </node>   
     <node>
-        <npctext> Меня зовут *имя, представленное игроком*.   </npctext>
+        <npctext> Меня зовут Женя.   </npctext>
         <npclogo> 4 </npclogo>
         <npcname> Я </npcname>
     </node>   

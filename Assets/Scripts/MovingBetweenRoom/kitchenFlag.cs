@@ -23,6 +23,10 @@ public class kitchenFlag : MonoBehaviour
             camera.GetComponent<MoveCamera>().target = player.transform;
             player.GetComponent<Move>().MoveOutLobbyToLocation(-112); // Переход назад в лобби
             StartCoroutine(dm.GetComponent<DialogueManager>().StartDialogWithTimer(4, 1f));
+
+            player.GetComponent<Move>().enabled = false;
+            player.GetComponent<Animator>().enabled = false;
+            player.GetComponent<AudioSource>().enabled = false; 
         }
     }
 
@@ -31,6 +35,4 @@ public class kitchenFlag : MonoBehaviour
         yield return new WaitForSeconds(seconds);
         dm.GetComponent<DialogueManager>().StartDialogue(id);
     }
-
-
 }
