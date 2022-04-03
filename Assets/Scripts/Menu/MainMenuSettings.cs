@@ -59,7 +59,7 @@ public class MainMenuSettings : MonoBehaviour
             int currentResolutionIndex = 0; // текущее разрешение
             for (int i = 0; i < resolutions.Length; i++) // цикл по массиву разрешений игрока
             {
-                string option = resolutions[i].width + " x " + resolutions[i].height; // создаем строковое наименование разрешения
+                string option = resolutions[i].width + " x " + resolutions[i].height + " " + resolutions[i].refreshRate + "hz"; // создаем строковое наименование разрешения
                 options.Add(option); // добавляем строковое наименование разрешения в лист
 
                 if ((resolutions[i].width == Screen.currentResolution.width) && (resolutions[i].height == Screen.currentResolution.height))
@@ -81,7 +81,7 @@ public class MainMenuSettings : MonoBehaviour
             List<string> options = new List<string>();
             for (int i = 0; i < resolutions.Length; i++) 
             {
-                string option = resolutions[i].width + " x " + resolutions[i].height; 
+                string option = resolutions[i].width + " x " + resolutions[i].height + " " + resolutions[i].refreshRate + "hz"; 
                 options.Add(option); 
             }
             resolutionDropdown.AddOptions(options); 
