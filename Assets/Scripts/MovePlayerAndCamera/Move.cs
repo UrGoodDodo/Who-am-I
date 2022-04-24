@@ -49,7 +49,7 @@ public class Move : MonoBehaviour
         //Первая цифра - номер главы, вторая цифра - номер комнаты, третья цифра: если 1, то левая сторона, если 2, то правая.
         switch (index)
         {
-            case -111:
+            case -111:  //Лобби слева
                 GetComponent<Transform>().position = new Vector3(-9, -1, 3.5f);
                 camera.GetComponent<Transform>().position = new Vector3(4.5f, -1, -10);
                 camera.GetComponent<MoveCamera>().minX = -4.6f;
@@ -57,7 +57,7 @@ public class Move : MonoBehaviour
                 camera.GetComponent<MoveCamera>().minY = 0;
                 camera.GetComponent<MoveCamera>().maxY = 0;
                 break;
-            case -112:
+            case -112: //Лобби справа
                 GetComponent<Transform>().position = new Vector3(4.5f, -1, 3.5f);
                 camera.GetComponent<Transform>().position = new Vector3(4.5f, -1, -10);
                 camera.GetComponent<MoveCamera>().minX = -4.6f;
@@ -66,7 +66,7 @@ public class Move : MonoBehaviour
                 camera.GetComponent<MoveCamera>().maxY = 0;
                 break;
 
-            case 101:
+            case 101: //Детская слева
                 GetComponent<Transform>().position = new Vector3(-10, -102, 1);
                 camera.GetComponent<Transform>().position = new Vector3(0, -100, -10);
                 camera.GetComponent<MoveCamera>().minX = -4.6f;
@@ -78,7 +78,7 @@ public class Move : MonoBehaviour
                 else if (!dm.GetComponent<DialogueManager>().finishedDialogs[5])
                     StartCoroutine(StartDialogWithTimer(5, 1f));
                 break;
-            case 102:
+            case 102: //Детская справа
                 GetComponent<Transform>().position = new Vector3(11, -102, 1);
                 camera.GetComponent<Transform>().position = new Vector3(0, -100, -10);
                 camera.GetComponent<MoveCamera>().minX = -4.6f;
@@ -87,7 +87,7 @@ public class Move : MonoBehaviour
                 camera.GetComponent<MoveCamera>().maxY = -100;
                 break;
 
-            case 111:
+            case 111: //Зал слева
                 GetComponent<Transform>().position = new Vector3(180, -102, 1);
                 camera.GetComponent<Transform>().position = new Vector3(185, -100, -10);
                 camera.GetComponent<MoveCamera>().minX = 185.7f;
@@ -97,7 +97,7 @@ public class Move : MonoBehaviour
                 if (!dm.GetComponent<DialogueManager>().finishedDialogs[3])
                     StartCoroutine(StartDialogWithTimer(3, 1f));
                 break;
-            case 112:
+            case 112://Зал справа
                 GetComponent<Transform>().position = new Vector3(205, -102, 1);
                 camera.GetComponent<Transform>().position = new Vector3(185, -100, -10);
                 camera.GetComponent<MoveCamera>().minX = 185.7f;
@@ -107,12 +107,12 @@ public class Move : MonoBehaviour
                 if (qg.player.mainQuest.IsActive && qg.player.mainQuest.questID == 3)
                     qg.CloseQuestWindow(3);
                 break;
-            case 121:
+            case 121://Улица слева
                 if (qg.player.mainQuest.IsActive && qg.player.mainQuest.questID == 0 && (qg.player.mainQuest.numericGoal != 2 || qg.player.extraQuest.numericGoal != 1))
                     break;
                 if (!dm.GetComponent<DialogueManager>().finishedDialogs[6])
                     dm.GetComponent<DialogueManager>().finishedDialogs[6] = true;
-                
+
                 GetComponent<Transform>().position = new Vector3(386, -102, 1);
                 camera.GetComponent<Transform>().position = new Vector3(393, -100, -10);
                 camera.GetComponent<MoveCamera>().minX = 392.9f;
@@ -120,7 +120,7 @@ public class Move : MonoBehaviour
                 camera.GetComponent<MoveCamera>().minY = -100;
                 camera.GetComponent<MoveCamera>().maxY = -100;
                 break;
-            case 122:
+            case 122://Улица справа
                 GetComponent<Transform>().position = new Vector3(413, -102, 1);
                 camera.GetComponent<Transform>().position = new Vector3(393, -100, -10);
                 camera.GetComponent<MoveCamera>().minX = 392.9f;
@@ -128,7 +128,7 @@ public class Move : MonoBehaviour
                 camera.GetComponent<MoveCamera>().minY = -100;
                 camera.GetComponent<MoveCamera>().maxY = -100;
                 break;
-            case 131:
+            case 131://Коридор школы слева
                 GetComponent<Transform>().position = new Vector3(-9, -208, 1);
                 camera.GetComponent<Transform>().position = new Vector3(-2.106f, -206.432f, -10);
                 camera.GetComponent<MoveCamera>().minX = -2.106f;
@@ -144,7 +144,7 @@ public class Move : MonoBehaviour
                     dt.friend.enabled = true;
                 }
                 break;
-            case 132:
+            case 132://Коридор школы справа
                 GetComponent<Transform>().position = new Vector3(2, -206.5f, 1);
                 camera.GetComponent<Transform>().position = new Vector3(-2.106f, -206.432f, -10);
                 camera.GetComponent<MoveCamera>().minX = -2.106f;
@@ -153,7 +153,7 @@ public class Move : MonoBehaviour
                 camera.GetComponent<MoveCamera>().maxY = -206.432f;
                 break;
 
-            case 141:
+            case 141://Кабинет школы слева
                 GetComponent<Transform>().position = new Vector3(180, -208, 1);
                 camera.GetComponent<Transform>().position = new Vector3(186.64f, -110.432f, -10);
                 camera.GetComponent<MoveCamera>().minX = 186.65f;
@@ -172,7 +172,7 @@ public class Move : MonoBehaviour
                 if (qg.player.mainQuest.questID == 1 && qg.player.mainQuest.IsActive)
                     qg.CloseQuestWindow(1);
                 break;
-            case 142:
+            case 142://Кабинет школы справа
                 GetComponent<Transform>().position = new Vector3(197, -208, 1);
                 camera.GetComponent<Transform>().position = new Vector3(186.64f, -110.432f, -10);
                 camera.GetComponent<MoveCamera>().minX = 186.65f;
@@ -181,6 +181,88 @@ public class Move : MonoBehaviour
                 camera.GetComponent<MoveCamera>().maxY = -206.43f;
 
                 break;
+
+            case 311://Комната в общаге слева
+                GetComponent<Transform>().position = new Vector3(-9.5f, -297, 1);
+                camera.GetComponent<Transform>().position = new Vector3(4.5f, -1, -10);
+                camera.GetComponent<MoveCamera>().minX = -2.15f;
+                camera.GetComponent<MoveCamera>().maxX = 2.1f;
+                camera.GetComponent<MoveCamera>().minY = -296;
+                camera.GetComponent<MoveCamera>().maxY = -296;
+                break;
+            case 312://Комната в общаге справа
+                GetComponent<Transform>().position = new Vector3(9.5f, -297, 1);
+                camera.GetComponent<Transform>().position = new Vector3(4.5f, -1, -10);
+                camera.GetComponent<MoveCamera>().minX = -2.15f;
+                camera.GetComponent<MoveCamera>().maxX = 2.1f;
+                camera.GetComponent<MoveCamera>().minY = -296;
+                camera.GetComponent<MoveCamera>().maxY = -296;
+                break;
+            case 321://Коридор в общаге слева
+                GetComponent<Transform>().position = new Vector3(165, -297, 1);
+                camera.GetComponent<Transform>().position = new Vector3(4.5f, -297, -10);
+                camera.GetComponent<MoveCamera>().minX = 172f;
+                camera.GetComponent<MoveCamera>().maxX = 177.67f;
+                camera.GetComponent<MoveCamera>().minY = -296;
+                camera.GetComponent<MoveCamera>().maxY = -296;
+                break;
+            case 322://Коридор в общаге справа
+                GetComponent<Transform>().position = new Vector3(185, -297, 1);
+                camera.GetComponent<Transform>().position = new Vector3(4.5f, -1, -10);
+                camera.GetComponent<MoveCamera>().minX = 172f;
+                camera.GetComponent<MoveCamera>().maxX = 177.67f;
+                camera.GetComponent<MoveCamera>().minY = -296;
+                camera.GetComponent<MoveCamera>().maxY = -296;
+                break;
+            case 331://Улица
+                GetComponent<Transform>().position = new Vector3(352, -297, 1);
+                camera.GetComponent<Transform>().position = new Vector3(4.5f, -1, -10);
+                camera.GetComponent<MoveCamera>().minX = 358.52f;
+                camera.GetComponent<MoveCamera>().maxX = 371.73f;
+                camera.GetComponent<MoveCamera>().minY = -296;
+                camera.GetComponent<MoveCamera>().maxY = -296;
+                break;
+            case 332://Улица
+                GetComponent<Transform>().position = new Vector3(379, -297, 1);
+                camera.GetComponent<Transform>().position = new Vector3(4.5f, -1, -10);
+                camera.GetComponent<MoveCamera>().minX = 358.52f;
+                camera.GetComponent<MoveCamera>().maxX = 371.73f;
+                camera.GetComponent<MoveCamera>().minY = -296;
+                camera.GetComponent<MoveCamera>().maxY = -296;
+                break;
+            case 341://Коридор Универа слева
+                GetComponent<Transform>().position = new Vector3(-13, -371, 1);
+                camera.GetComponent<Transform>().position = new Vector3(4.5f, -1, -10);
+                camera.GetComponent<MoveCamera>().minX = -5.79f;
+                camera.GetComponent<MoveCamera>().maxX = 5.72f;
+                camera.GetComponent<MoveCamera>().minY = -370;
+                camera.GetComponent<MoveCamera>().maxY = -370;
+                break;
+            case 342://Коридор Универа справа
+                GetComponent<Transform>().position = new Vector3(13, -371, 1);
+                camera.GetComponent<Transform>().position = new Vector3(4.5f, -1, -10);
+                camera.GetComponent<MoveCamera>().minX = -5.79f;
+                camera.GetComponent<MoveCamera>().maxX = 5.72f;
+                camera.GetComponent<MoveCamera>().minY = -370;
+                camera.GetComponent<MoveCamera>().maxY = -370;
+                break;
+            case 351://Коридор Универа слева
+                GetComponent<Transform>().position = new Vector3(166, -371, 1);
+                camera.GetComponent<Transform>().position = new Vector3(4.5f, -1, -10);
+                camera.GetComponent<MoveCamera>().minX = 172.76f;
+                camera.GetComponent<MoveCamera>().maxX = 176.84f;
+                camera.GetComponent<MoveCamera>().minY = -370;
+                camera.GetComponent<MoveCamera>().maxY = -370;
+                break;
+            case 352://Коридор Универа справа
+                GetComponent<Transform>().position = new Vector3(184, -371, 1);
+                camera.GetComponent<Transform>().position = new Vector3(4.5f, -1, -10);
+                camera.GetComponent<MoveCamera>().minX = 172.76f;
+                camera.GetComponent<MoveCamera>().maxX = 176.84f;
+                camera.GetComponent<MoveCamera>().minY = -370;
+                camera.GetComponent<MoveCamera>().maxY = -370;
+                break;
+
             default:
                 break;
         }
