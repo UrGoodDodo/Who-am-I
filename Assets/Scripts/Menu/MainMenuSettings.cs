@@ -25,23 +25,17 @@ public class MainMenuSettings : MonoBehaviour
 
     public Dropdown qualityDropdowm; // —писок пресетов качеств в меню настроек в кнопке
 
-    //public Toggle fullscreenToggle; // тогл дл€ полноэкранного режима
-
     public Slider volumeSlider; // слайдер звука в меню настроек
 
     private float oldvolume; // значение параметра звук дл€ старых настроек
 
     private int oldqualityIndex; // индекс пресета качества дл€ старых настроек
 
-    //private bool oldIsFullScreen; // буул переменна€ дл€ полноэкранного режима дл€ старых настроек
-
     private int oldresolutionIndex; // индекс разрешени€ дл€ старых настроек
 
     private float newvolume; // значение параметра звук дл€ новых настроек
 
     private int newqualityIndex; // индекс пресета качества дл€ новых настроек
-
-    //private bool newIsFullScreen; // буул переменна€ дл€ полноэкранного режима дл новых настроек
 
     private int newresolutionIndex; // индекс разрешени€ дл€ новых настроек
 
