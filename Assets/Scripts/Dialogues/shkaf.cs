@@ -16,7 +16,7 @@ public class shkaf : MonoBehaviour
 
     public Text wear;
 
-    bool isWeared = false;
+    public bool isWeared = false;
 
     private void Update()
     {

@@ -10,8 +10,8 @@ public class Tooltips : MonoBehaviour
 
     // First tip is light, second is pickup and last one is inventory
 
-    public static bool[] IsTipsShowed;
-    public static bool[] IsTipsBlocked;
+    public bool[] IsTipsShowed;
+    public bool[] IsTipsBlocked;
     public GameObject[] Tips;
 
     private Transform player;

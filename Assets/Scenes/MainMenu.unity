@@ -1065,7 +1065,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  dm: {fileID: 2000792322}
+  dm: {fileID: 0}
+  qg: {fileID: 0}
+  cutscene: {fileID: 0}
+  isLoaded: 0
 --- !u!114 &202801559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1844,7 +1847,7 @@ Transform:
   - {fileID: 1660010618}
   - {fileID: 398779853}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &662343300
 GameObject:
@@ -3990,7 +3993,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 202801558}
         m_TargetAssemblyTypeName: SaveSerial, Assembly-CSharp
-        m_MethodName: LoadGame
+        m_MethodName: loadGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4783,79 +4786,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1996134836}
   m_CullTransparentMesh: 1
---- !u!1 &2000792322
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2000792324}
-  - component: {fileID: 2000792323}
-  m_Layer: 0
-  m_Name: DialogueManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2000792323
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2000792322}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a1556a70729ad047b3bec71c39f7c0b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questGiver: {fileID: 0}
-  dialogueText: {fileID: 0}
-  playerText: {fileID: 0}
-  playerSprite: {fileID: 0}
-  blackScreen: {fileID: 0}
-  boxAnim: {fileID: 0}
-  startAnim: {fileID: 0}
-  playerSprites:
-  - {fileID: 21300000, guid: a2cad4d1c3075fb448fbc3a7ee4dbe29, type: 3}
-  - {fileID: 21300000, guid: 35ef52507c41d364f88219bbf962dde1, type: 3}
-  dialogAssets:
-  - {fileID: 4900000, guid: 8fec1ec5ada60ff49a01cea94c9bb698, type: 3}
-  - {fileID: 4900000, guid: 7be676cf6efff2e48b76da1d4cf45715, type: 3}
-  - {fileID: 4900000, guid: 87cc838ef8345204390fb4106f5405d0, type: 3}
-  player: {fileID: 0}
-  babyPlayer: {fileID: 0}
-  OutOfLobby: {fileID: 0}
-  OutOfLobby2: {fileID: 0}
-  P_TimeLine: {fileID: 0}
-  ChRoomACT1:
-  - {fileID: 0}
-  ChRoomACT2:
-  - {fileID: 0}
-  finishedDialogs: 00000000
-  finishedFlags: 00
-  test: {fileID: 0}
-  choiser: {fileID: 0}
-  stranger: {fileID: 0}
-  streetStranger: {fileID: 0}
-  mother: {fileID: 0}
---- !u!4 &2000792324
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2000792322}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.344235, y: 0.51706123, z: -0.14203724}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2126128688
 GameObject:
   m_ObjectHideFlags: 0

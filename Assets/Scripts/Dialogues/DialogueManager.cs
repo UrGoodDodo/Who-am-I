@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class DialogueManager : MonoBehaviour
 {
     public GameObject questGiver;
-    public DialogueTriger dt;
+    public DialogueTriger dt;   
 
     public Text dialogueText;	//Текст в диалоге    
     public Text playerText;
@@ -62,7 +62,7 @@ public class DialogueManager : MonoBehaviour
         finishedDialogs = new bool[dialogAssets.Length];
         finishedFlags = new bool[2];
 
-        StartCoroutine(StartDialogWithTimer(0, 11f));
+        StartCoroutine(StartDialogWithTimer(0, 11f));        
     }
 
     public void Update()
