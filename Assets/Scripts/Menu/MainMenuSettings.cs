@@ -11,11 +11,21 @@ public class MainMenuSettings : MonoBehaviour
 
     Resolution[] resolutions; // массив разрешений экрана игрока
 
+    FullScreenMode[] fullscreenmodes;
+
+    public Dropdown fullscreenDropdown;
+
+    private int fullscreenModeIndex;
+
+    private int oldfullscreenModeIndex;
+
+    private int newfullscreenModeIndex;
+
     public Dropdown resolutionDropdown; //Список из разрешений экрана игрока в меню настроек в кнопке
 
     public Dropdown qualityDropdowm; // Список пресетов качеств в меню настроек в кнопке
 
-    public Toggle fullscreenToggle; // тогл для полноэкранного режима
+    //public Toggle fullscreenToggle; // тогл для полноэкранного режима
 
     public Slider volumeSlider; // слайдер звука в меню настроек
 
@@ -23,7 +33,7 @@ public class MainMenuSettings : MonoBehaviour
 
     private int oldqualityIndex; // индекс пресета качества для старых настроек
 
-    private bool oldIsFullScreen; // буул переменная для полноэкранного режима для старых настроек
+    //private bool oldIsFullScreen; // буул переменная для полноэкранного режима для старых настроек
 
     private int oldresolutionIndex; // индекс разрешения для старых настроек
 
@@ -31,7 +41,7 @@ public class MainMenuSettings : MonoBehaviour
 
     private int newqualityIndex; // индекс пресета качества для новых настроек
 
-    private bool newIsFullScreen; // буул переменная для полноэкранного режима дл новых настроек
+    //private bool newIsFullScreen; // буул переменная для полноэкранного режима дл новых настроек
 
     private int newresolutionIndex; // индекс разрешения для новых настроек
 
@@ -40,7 +50,7 @@ public class MainMenuSettings : MonoBehaviour
     void Start() 
     {
         LoadFlag();
-        //1 старт игры
+        //Первый старт игры
         if (flag)
         {
             oldvolume = -60;
@@ -50,8 +60,20 @@ public class MainMenuSettings : MonoBehaviour
             SetQuality(oldqualityIndex, qualityDropdowm);
             qualityDropdowm.value = oldqualityIndex;
 
-            oldIsFullScreen = true;
-            SetFullScreen(oldIsFullScreen, fullscreenToggle);
+            fullscreenmodes = new FullScreenMode[3]; // создаем массив режимов экрана
+            fullscreenmodes[0] = FullScreenMode.ExclusiveFullScreen; // добавляем Полноэкранный
+            fullscreenmodes[1] = FullScreenMode.Windowed; // добавляем Оконный
+            fullscreenmodes[2] = FullScreenMode.FullScreenWindow; // добавляем Оконный без рамок
+            fullscreenDropdown.ClearOptions(); // Очищаем опции в дропдауне режимов экрана
+            List<string> fsmoptions = new List<string>(); // лист из строковых обозначений режимов экрана (пока пустой)
+            fsmoptions.Add("Полноэкранный"); // добавляем в лист "Полноэкранный"
+            fsmoptions.Add("Оконный"); // добавляем в лист "Оконный"
+            fsmoptions.Add("Оконный без рамок"); // добавляем в лист "Оконный без рамок"
+            fullscreenDropdown.AddOptions(fsmoptions); // добавляем в дропдаун опции выбора создающиеся с помощью строковых обозначений записанных в листе
+            fullscreenDropdown.RefreshShownValue(); // перезагружаем картинку
+            oldfullscreenModeIndex = 0; // для первого запуска чтобы был полноэкранный режим
+            SetFullScreenMode(oldfullscreenModeIndex, fullscreenDropdown); // ставим режим экрана на 1(полноэкранный)
+
 
             resolutions = Screen.resolutions; // Записываем разрешения экрана игрока в массив
             resolutionDropdown.ClearOptions(); // очищаем разрешения которые были до этого момента в кнопке в настройках
@@ -73,9 +95,22 @@ public class MainMenuSettings : MonoBehaviour
             oldresolutionIndex = currentResolutionIndex;
             flag = false;
             SaveFlag();
+            SaveSettings(oldvolume, oldqualityIndex, oldresolutionIndex, oldfullscreenModeIndex);
         }
         else 
         {
+            fullscreenmodes = new FullScreenMode[3];
+            fullscreenmodes[0] = FullScreenMode.ExclusiveFullScreen;
+            fullscreenmodes[1] = FullScreenMode.Windowed;
+            fullscreenmodes[2] = FullScreenMode.FullScreenWindow;
+            fullscreenDropdown.ClearOptions();
+            List<string> fsmoptions = new List<string>();
+            fsmoptions.Add("Полноэкранный");
+            fsmoptions.Add("Оконный");
+            fsmoptions.Add("Оконный без рамок");
+            fullscreenDropdown.AddOptions(fsmoptions);
+
+
             resolutions = Screen.resolutions;
             resolutionDropdown.ClearOptions();
             List<string> options = new List<string>();
@@ -102,16 +137,17 @@ public class MainMenuSettings : MonoBehaviour
         qualityDd.value = qualityIndex;
     }
 
-    public void SetFullScreen(bool IsFullScreen, Toggle fullscreenT) // функция изменения полноэкранного режима
+    public void SetFullScreenMode(int fullscreenmodeIndex, Dropdown fullscreenmodeDD) 
     {
-        Screen.fullScreen = IsFullScreen;
-        fullscreenT.isOn = IsFullScreen;
+        Screen.fullScreenMode = fullscreenmodes[fullscreenmodeIndex];
+        fullscreenmodeDD.value = fullscreenmodeIndex;
     }
+    
 
     public void SetResolution(int resolutionIndex,Dropdown resolutionDD) // функция смены разрешения
     {
         Resolution resolution = resolutions[resolutionIndex]; // для удобства создаем переменную разрешения в которую записываем то разрешение на которое меняем
-        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen, resolution.refreshRate); // меняем разрешение
+        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreenMode, resolution.refreshRate); // меняем разрешение
         resolutionDD.value = resolutionIndex;
     }
 
@@ -136,15 +172,10 @@ public class MainMenuSettings : MonoBehaviour
             flag = false;
         }
     }
-    public void SaveSettings(float v, int indq, int indr, bool isfull) 
+    public void SaveSettings(float v, int indq, int indr, int indf )
     {
-        int isfullsreen;
-        if (isfull)
-            isfullsreen = 1;
-        else
-            isfullsreen = 0;
-        
-        PlayerPrefs.SetInt("IsFullScreen", isfullsreen);
+
+        PlayerPrefs.SetInt("FullScreenMode", indf);
         PlayerPrefs.SetFloat("Volume",v);
         PlayerPrefs.SetInt("QualityIndex",indq);
         PlayerPrefs.SetInt("ResolutionIndex",indr);
@@ -154,23 +185,19 @@ public class MainMenuSettings : MonoBehaviour
     public void LoadSettings() 
     {
         oldvolume = PlayerPrefs.GetFloat("Volume");
-        int temp = PlayerPrefs.GetInt("IsFullScreen");
-        if (temp == 1)
-            oldIsFullScreen = true;
-        else
-            oldIsFullScreen = false;
+        oldfullscreenModeIndex = PlayerPrefs.GetInt("FullScreenMode");
         oldresolutionIndex = PlayerPrefs.GetInt("ResolutionIndex");
         oldqualityIndex = PlayerPrefs.GetInt("QualityIndex");
         SetVolume(oldvolume, volumeSlider);
         SetQuality(oldqualityIndex, qualityDropdowm);
-        SetFullScreen(oldIsFullScreen, fullscreenToggle);
+        SetFullScreenMode(oldfullscreenModeIndex, fullscreenDropdown);
         SetResolution(oldresolutionIndex, resolutionDropdown);
     }
 
     public void SetNewResolution(int resolutionIndex) 
     {
         Resolution resolution = resolutions[resolutionIndex];
-        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen, resolution.refreshRate);
+        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreenMode, resolution.refreshRate);
         newresolutionIndex = resolutionIndex;
     }
 
@@ -186,18 +213,18 @@ public class MainMenuSettings : MonoBehaviour
         newvolume = volume;
     }
 
-    public void SetNewIsFullScreen(bool IsFullScreen) 
+    public void SetNewFullScreenMode(int fullscreenmodeIndex) 
     {
-        Screen.fullScreen = IsFullScreen;
-        newIsFullScreen = IsFullScreen;
+        Screen.fullScreenMode = fullscreenmodes[fullscreenmodeIndex];
+        newfullscreenModeIndex = fullscreenmodeIndex;
     }
     public void SaveButton() 
     {
-        oldIsFullScreen = newIsFullScreen;
+        oldfullscreenModeIndex = newfullscreenModeIndex;
         oldqualityIndex = newqualityIndex;
         oldresolutionIndex = newresolutionIndex;
         oldvolume = newvolume;
-        SaveSettings(oldvolume, oldqualityIndex, oldresolutionIndex, oldIsFullScreen);
+        SaveSettings(oldvolume, oldqualityIndex, oldresolutionIndex, oldfullscreenModeIndex);
     }
 
     public void CancelButton() 
@@ -205,6 +232,12 @@ public class MainMenuSettings : MonoBehaviour
         SetVolume(oldvolume, volumeSlider);
         SetQuality(oldqualityIndex, qualityDropdowm);
         SetResolution(oldresolutionIndex, resolutionDropdown);
-        SetFullScreen(oldIsFullScreen, fullscreenToggle);
+        SetFullScreenMode(oldfullscreenModeIndex, fullscreenDropdown);
+    }
+
+    public void DeleteSettingsButton() // удаление настроек с компа
+    {
+        PlayerPrefs.DeleteAll();
+        Application.Quit();
     }
 }
