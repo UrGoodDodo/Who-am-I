@@ -190,6 +190,27 @@ public class Move : MonoBehaviour
                 camera.GetComponent<MoveCamera>().minY = -296;
                 camera.GetComponent<MoveCamera>().maxY = -296;
                 break;
+            case 3111://Комната в общаге слева ПЛОХАЯ
+                GetComponent<Transform>().position = new Vector3(-9.5f, -297, 1);
+                camera.GetComponent<Transform>().position = new Vector3(4.5f, -1, -10);
+                camera.GetComponent<MoveCamera>().minX = -2.15f;
+                camera.GetComponent<MoveCamera>().maxX = 2.1f;
+                camera.GetComponent<MoveCamera>().minY = -296;
+                camera.GetComponent<MoveCamera>().maxY = -296;
+
+                break;
+            case 3112://Комната в общаге слева ХОРОШАЯ
+                GetComponent<Transform>().position = new Vector3(-9.5f, -297, 1);
+                camera.GetComponent<Transform>().position = new Vector3(4.5f, -1, -10);
+                camera.GetComponent<MoveCamera>().minX = -2.15f;
+                camera.GetComponent<MoveCamera>().maxX = 2.1f;
+                camera.GetComponent<MoveCamera>().minY = -296;
+                camera.GetComponent<MoveCamera>().maxY = -296;
+
+                break;
+            
+            
+            
             case 312://Комната в общаге справа
                 GetComponent<Transform>().position = new Vector3(9.5f, -297, 1);
                 camera.GetComponent<Transform>().position = new Vector3(4.5f, -1, -10);
