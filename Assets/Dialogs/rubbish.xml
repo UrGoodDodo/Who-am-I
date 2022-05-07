@@ -1,0 +1,17 @@
+<dialogue>
+    <node>
+        <npctext> И что я такого натворил?  </npctext>
+        <npclogo> 1 </npclogo>
+        <npcname>  </npcname>
+    </node>
+    <node>
+        <npctext> Видимо, что-то страшное, раз сейчас моя участь – вечно смотреть за рутиной незнакомого мне паренька. </npctext>
+        <npclogo> 1 </npclogo>
+        <npcname>  </npcname>
+    </node>
+    <node>
+        <npctext> Это когда-нибудь закончится? </npctext>
+        <npclogo> 1 </npclogo>
+        <npcname>  </npcname>
+    </node>    
+</dialogue>

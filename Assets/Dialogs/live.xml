@@ -1,0 +1,12 @@
+<dialogue>   
+    <node>
+        <npctext> Разумеется я выберу жить дальше. </npctext>
+        <npclogo> 1 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> Даже если жизнь и кажется скучной, это не повод ее обрывать.  </npctext>
+        <npclogo> 1 </npclogo>
+        <npcname> Я </npcname>
+    </node>     
+</dialogue>

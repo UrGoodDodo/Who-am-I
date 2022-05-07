@@ -1,0 +1,72 @@
+<dialogue>
+    <node>
+        <npctext> Если брать во внимание слова того существа, то мне следовало бы не упускать деталей. </npctext>
+        <npclogo> 1 </npclogo>
+        <npcname>  </npcname>
+    </node>
+    <node>
+        <npctext> Что-то это не похоже на комнату, где я обычно оказываюсь. </npctext>
+        <npclogo> 1 </npclogo>
+        <npcname>  </npcname>
+    </node>
+    <node>
+        <npctext> Да куда я его дел? </npctext>
+        <npclogo> 7 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+   <node>
+        <npctext> Если тебе нужна помощь, может наконец-то скажешь, что ты конкретно ты ищешь.  </npctext>
+        <npclogo> 8 </npclogo>
+        <npcname> ??? </npcname>
+    </node>
+    <node>
+        <npctext> Не отвлекай. </npctext>
+        <npclogo> 7 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> Мое дело предложить. Твое – отказаться. </npctext>
+        <npclogo> 8 </npclogo>
+        <npcname> ??? </npcname>
+    </node>
+    <node>
+        <npctext> Если тебе нужна помощь, может наконец-то скажешь, что ты конкретно ты ищешь.  </npctext>
+        <npclogo> 8 </npclogo>
+        <npcname> ??? </npcname>
+    </node>
+    <node>
+        <npctext> ... </npctext>
+        <npclogo> 7 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> ... </npctext>
+        <npclogo> 8 </npclogo>
+        <npcname> ??? </npcname>
+    </node>
+    <node>
+        <npctext> Рома </npctext>
+        <npclogo> 7 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> Уже не отвлекаю.  </npctext>
+        <npclogo> 8 </npclogo>
+        <npcname> Рома </npcname>
+    </node>
+    <node>
+        <npctext> Не видел мой студенческий?  </npctext>
+        <npclogo> 7 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> Посмотри в куртке, вечно в карманах все таскаешь. </npctext>
+        <npclogo> 8 </npclogo>
+        <npcname> Рома </npcname>
+    </node>
+     <node>
+        <npctext> Ну или в боковом кармане рюкзака. </npctext>
+        <npclogo> 8 </npclogo>
+        <npcname> Рома </npcname>
+    </node>
+</dialogue>

@@ -1,0 +1,12 @@
+<dialogue>   
+    <node>
+        <npctext> Мне ждать тебя на пары или ты сегодня опять отдыхаешь? </npctext>
+        <npclogo> 0 </npclogo>
+        <npcname> Друг </npcname>
+    </node>
+    <node>
+        <npctext> Уже на пути. </npctext>
+        <npclogo> 7 </npclogo>
+        <npcname> Я </npcname>
+    </node>    
+</dialogue>

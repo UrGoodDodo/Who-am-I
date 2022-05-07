@@ -312,6 +312,9 @@ public class DialogueManager : MonoBehaviour
 
                     break;
                 }
+            case 29:
+                questGiver.GetComponent<QuestGiver>().OpenQuestWindow(7);
+                break;
         }
     }
 }

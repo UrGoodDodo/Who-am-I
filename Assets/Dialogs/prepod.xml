@@ -1,0 +1,47 @@
+<dialogue>   
+    <node>
+        <npctext> Здравствуйте. Хотели меня видеть? </npctext>
+        <npclogo> 7 </npclogo>
+        <npcname> Я </npcname>
+    </node>   
+     <node>
+        <npctext> Здравствуйте, Евгений. Да, хотел видеть.  </npctext>
+        <npclogo> 0 </npclogo>
+        <npcname> Преподаватель </npcname>
+    </node>
+    <node>
+        <npctext> Вы собираетесь отчисляться?  </npctext>
+        <npclogo> 0 </npclogo>
+        <npcname> Преподаватель </npcname>
+    </node>     
+    <node>
+        <npctext> Да, понимаю. </npctext>
+        <npclogo> 7 </npclogo>
+        <npcname> Я </npcname>
+    </node> 
+    <node>
+        <npctext> Думаете что-то с этим делать?   </npctext>
+        <npclogo> 0 </npclogo>
+        <npcname> Преподаватель </npcname>
+    </node>     
+    <node>
+        <npctext> Могу я взять какие-то дополнительные задания?  </npctext>
+        <npclogo> 7 </npclogo>
+        <npcname> Я </npcname>
+    </node> 
+    <node>
+        <npctext> Если вы подойдете завтра к 201 кабинету, я подумаю.  </npctext>
+        <npclogo> 0 </npclogo>
+        <npcname> Преподаватель </npcname>
+    </node>     
+    <node>
+        <npctext> Благодарю вас. </npctext>
+        <npclogo> 7 </npclogo>
+        <npcname> Я </npcname>
+    </node> 
+    <node>
+        <npctext> Да у тебя проблемы. </npctext>
+        <npclogo> 1 </npclogo>
+        <npcname>  </npcname>
+    </node> 
+</dialogue>

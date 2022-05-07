@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Linq;
 
 public class Move : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class Move : MonoBehaviour
     public GameObject dm;
     public QuestGiver qg;
     public ClassTest ct;
+    public Choiser choiser;
 
     public DialogueTriger dt;
     private void Update()
@@ -189,28 +191,26 @@ public class Move : MonoBehaviour
                 camera.GetComponent<MoveCamera>().maxX = 2.1f;
                 camera.GetComponent<MoveCamera>().minY = -296;
                 camera.GetComponent<MoveCamera>().maxY = -296;
+                if (choiser.choisess.Sum() >= 0)
+                {
+                    dt.currentDialog = 31;
+                    StartCoroutine(StartDialogWithTimer(29, 1f));
+                }
+                else
+                {                    
+                    StartCoroutine(StartDialogWithTimer(30, 1f));
+                }
                 break;
-            case 3111://Комната в общаге слева ПЛОХАЯ
-                GetComponent<Transform>().position = new Vector3(-9.5f, -297, 1);
-                camera.GetComponent<Transform>().position = new Vector3(4.5f, -1, -10);
-                camera.GetComponent<MoveCamera>().minX = -2.15f;
-                camera.GetComponent<MoveCamera>().maxX = 2.1f;
-                camera.GetComponent<MoveCamera>().minY = -296;
-                camera.GetComponent<MoveCamera>().maxY = -296;
 
+            case 3111://Комната в общаге слева ПЛОХАЯ                
+                choiser.choisess = new int[] { -1, 0 };
+                MoveOutLobbyToLocation(311);
                 break;
+
             case 3112://Комната в общаге слева ХОРОШАЯ
-                GetComponent<Transform>().position = new Vector3(-9.5f, -297, 1);
-                camera.GetComponent<Transform>().position = new Vector3(4.5f, -1, -10);
-                camera.GetComponent<MoveCamera>().minX = -2.15f;
-                camera.GetComponent<MoveCamera>().maxX = 2.1f;
-                camera.GetComponent<MoveCamera>().minY = -296;
-                camera.GetComponent<MoveCamera>().maxY = -296;
-
-                break;
-            
-            
-            
+                choiser.choisess = new int[] { 1, 1 };
+                MoveOutLobbyToLocation(311);
+                break;   
             case 312://Комната в общаге справа
                 GetComponent<Transform>().position = new Vector3(9.5f, -297, 1);
                 camera.GetComponent<Transform>().position = new Vector3(4.5f, -1, -10);

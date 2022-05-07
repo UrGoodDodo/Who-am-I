@@ -1,0 +1,12 @@
+<dialogue>   
+    <node>
+        <npctext> Почему меня перенесло сюда?  </npctext>
+        <npclogo> 1 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> Что произошло? </npctext>
+        <npclogo> 1 </npclogo>
+        <npcname> Я </npcname>
+    </node>    
+</dialogue>
