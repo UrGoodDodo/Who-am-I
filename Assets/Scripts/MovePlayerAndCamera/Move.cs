@@ -10,6 +10,7 @@ public class Move : MonoBehaviour
     public Sprite stay; //Отображение стоящего персонажа
     private float side; //Определяет сторону, в которую смотрит игрок
     public GameObject player;
+    public GameObject[] slot = new GameObject[2];
 
     public GameObject dm;
     public QuestGiver qg;
@@ -185,6 +186,8 @@ public class Move : MonoBehaviour
                 break;
 
             case 311://Комната в общаге слева
+                slot[0].GetComponent<LighterOnOff>().enabled = false;
+                slot[1].SetActive(false);
                 GetComponent<Transform>().position = new Vector3(-9.5f, -297, 1);
                 camera.GetComponent<Transform>().position = new Vector3(4.5f, -1, -10);
                 camera.GetComponent<MoveCamera>().minX = -2.15f;
@@ -197,7 +200,7 @@ public class Move : MonoBehaviour
                     StartCoroutine(StartDialogWithTimer(29, 1f));
                 }
                 else
-                {                    
+                {
                     StartCoroutine(StartDialogWithTimer(30, 1f));
                 }
                 break;
@@ -210,7 +213,7 @@ public class Move : MonoBehaviour
             case 3112://Комната в общаге слева ХОРОШАЯ
                 choiser.choisess = new int[] { 1, 1 };
                 MoveOutLobbyToLocation(311);
-                break;   
+                break;
             case 312://Комната в общаге справа
                 GetComponent<Transform>().position = new Vector3(9.5f, -297, 1);
                 camera.GetComponent<Transform>().position = new Vector3(4.5f, -1, -10);

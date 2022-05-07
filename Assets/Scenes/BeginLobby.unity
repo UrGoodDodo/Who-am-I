@@ -15744,6 +15744,9 @@ MonoBehaviour:
   speed: 7
   stay: {fileID: 8076908385630270135, guid: 3fb8b7e5ae83cff458360fdfc10916a5, type: 3}
   player: {fileID: 728460105}
+  slot:
+  - {fileID: 205904504}
+  - {fileID: 1570416714}
   dm: {fileID: 923450693}
   qg: {fileID: 1622915523}
   ct: {fileID: 319064283}
@@ -35666,7 +35669,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.07821799, y: 0.38551265}
   m_AnchorMax: {x: 0.397, y: 0.5}
-  m_AnchoredPosition: {x: 12.509644, y: -5.188202}
+  m_AnchoredPosition: {x: 12.510071, y: -5.188202}
   m_SizeDelta: {x: -20.1137, y: -10.3764}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1468201833
@@ -52487,6 +52490,7 @@ MonoBehaviour:
   speed: 3.5
   stay: {fileID: -3495536450398619366, guid: b29e20b893dbd03408eec390fdbce43d, type: 3}
   player: {fileID: 2116302823}
+  slot: []
   dm: {fileID: 923450693}
   qg: {fileID: 0}
   ct: {fileID: 0}
