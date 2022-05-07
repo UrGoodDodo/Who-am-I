@@ -6,12 +6,12 @@
     </node>
     <node>
         <npctext> Обращайся.  </npctext>
-        <npclogo> 0 </npclogo>
+        <npclogo> 8 </npclogo>
         <npcname> Рома </npcname>
     </node>
      <node>
         <npctext> Мусор выбросить не забудь.  </npctext>
-        <npclogo> 0 </npclogo>
+        <npclogo> 8 </npclogo>
         <npcname> Рома </npcname>
     </node>
     <node>
@@ -21,7 +21,7 @@
     </node>
     <node>
       <npctext> И ещё, ты же не забыл позвонить маме?  </npctext>
-      <npclogo> 0 </npclogo>
+      <npclogo> 8 </npclogo>
       <npcname> Рома </npcname>
     </node>
 </dialogue>

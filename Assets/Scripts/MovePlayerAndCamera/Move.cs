@@ -16,8 +16,10 @@ public class Move : MonoBehaviour
     public QuestGiver qg;
     public ClassTest ct;
     public Choiser choiser;
-
+    public GameObject blackscreen;
+    public GameObject mirror;
     public DialogueTriger dt;
+    public GameObject tips;
     private void Update()
     {
         transform.position += new Vector3(speed, 0, 0) * Input.GetAxis("Horizontal") * Time.deltaTime;  //Движение влево/вправо на стандартные клавиши
@@ -194,6 +196,8 @@ public class Move : MonoBehaviour
                 camera.GetComponent<MoveCamera>().maxX = 2.1f;
                 camera.GetComponent<MoveCamera>().minY = -296;
                 camera.GetComponent<MoveCamera>().maxY = -296;
+                mirror.SetActive(true);
+                tips.SetActive(false);
                 if (choiser.choisess.Sum() >= 0)
                 {
                     dt.currentDialog = 31;
@@ -261,6 +265,16 @@ public class Move : MonoBehaviour
                 camera.GetComponent<MoveCamera>().maxX = 5.72f;
                 camera.GetComponent<MoveCamera>().minY = -370;
                 camera.GetComponent<MoveCamera>().maxY = -370;
+                if (choiser.choisess.Sum() >= 0)
+                {
+                    StartCoroutine(StartDialogWithTimer(33, 1f));
+                    blackscreen.SetActive(true);
+                }
+                else
+                {
+                    qg.OpenQuestWindow(9);
+                    dt.currentDialog = 39;
+                }                    
                 break;
             case 342://Коридор Универа справа
                 GetComponent<Transform>().position = new Vector3(13, -371, 1);

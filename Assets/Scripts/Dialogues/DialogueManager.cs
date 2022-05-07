@@ -41,6 +41,7 @@ public class DialogueManager : MonoBehaviour
     public GameObject stranger;
     public GameObject streetStranger;
     public GameObject mother;
+    public GameObject mirror;
 
     [Header("Player Settings")]
     public GameObject player;
@@ -314,6 +315,33 @@ public class DialogueManager : MonoBehaviour
                 }
             case 29:
                 questGiver.GetComponent<QuestGiver>().OpenQuestWindow(7);
+                break;
+            case 33:
+                blackScreen.SetActive(false);
+                player.GetComponent<Move>().MoveOutLobbyToLocation(-112);
+                questGiver.GetComponent<QuestGiver>().CloseQuestWindow(8);
+                StartCoroutine(StartDialogWithTimer(36, 1f));
+                break;
+            case 34:
+                dt.currentDialog = 35;
+                dt.arbitr.enabled = true;
+                mirror.SetActive(false);
+                break;
+            case 35:
+                choiser.ShowChoiser(2);
+                break;
+            case 36:                
+                dt.arbitr.enabled = false;
+                break;
+            case 37:
+            case 38:
+                SceneManager.LoadScene(1);
+                break;
+            case 39:
+                questGiver.GetComponent<QuestGiver>().CloseQuestWindow(9);
+                blackScreen.SetActive(true);
+                StartCoroutine(new WaitForSecondsRealtime(1f));
+                blackScreen.SetActive(false);
                 break;
         }
     }

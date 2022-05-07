@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Choiser : MonoBehaviour
 {
@@ -76,6 +77,17 @@ public class Choiser : MonoBehaviour
                     CloseChoiser();
                     break;
                 }
+            case 2:
+                if (choise == -1)
+                {
+                    dm.GetComponent<DialogueManager>().StartDialogue(37);                    
+                }
+                else
+                {
+                    dm.GetComponent<DialogueManager>().StartDialogue(38);                    
+                }
+                CloseChoiser();
+                break;               
         }
     }
 }

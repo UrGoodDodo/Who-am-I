@@ -15,7 +15,7 @@ public class kurtki : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.F) && !isCheked)
+        if (Input.GetKey(KeyCode.F) && !isCheked && textPanel.active)
         {
             isCheked = true;
             textPanel.SetActive(false);
@@ -25,7 +25,7 @@ public class kurtki : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)	//Происходит при срабатывании тригера коллайдера на объекте
     {
-        if (!isCheked)
+        if (!isCheked && collision.tag == "Player")
             textPanel.SetActive(true);
     }
 
@@ -41,5 +41,7 @@ public class kurtki : MonoBehaviour
         panel.SetActive(false);
         qg.CloseQuestWindow(7);
         FindObjectOfType<DialogueTriger>().roma.enabled = true;
+        qg.FixColor();
+        qg.OpenQuestWindow(8);
     }
 }
