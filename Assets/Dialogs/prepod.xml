@@ -6,23 +6,39 @@
     </node>   
      <node>
         <npctext> Здравствуйте, Евгений. Да, хотел видеть.  </npctext>
-        <npclogo> 0 </npclogo>
-        <npcname> Преподаватель </npcname>
+        <npclogo> 9 </npclogo>
+        <npcname> Професор </npcname>
     </node>
     <node>
         <npctext> Вы собираетесь отчисляться?  </npctext>
-        <npclogo> 0 </npclogo>
-        <npcname> Преподаватель </npcname>
+        <npclogo> 9 </npclogo>
+        <npcname> Професор </npcname>
     </node>     
     <node>
-        <npctext> Да, понимаю. </npctext>
+        <npctext> Вроде не планирую.  </npctext>
         <npclogo> 7 </npclogo>
         <npcname> Я </npcname>
-    </node> 
-    <node>
+    </node>
+  <node>
+    <npctext> Тогда я не могу понять количество ваших пропусков.   </npctext>
+    <npclogo> 9 </npclogo>
+    <npcname> Професор </npcname>
+  </node>
+  <node>
+    <npctext> Вы понимаете, что я вас просто не допущу к экзаменам?  </npctext>
+    <npclogo> 9 </npclogo>
+    <npcname> Професор </npcname>
+  </node>
+  <node>
+    <npctext>  Да, понимаю.   </npctext>
+    <npclogo> 7 </npclogo>
+    <npcname> Я </npcname>
+  </node>
+
+  <node>
         <npctext> Думаете что-то с этим делать?   </npctext>
-        <npclogo> 0 </npclogo>
-        <npcname> Преподаватель </npcname>
+        <npclogo> 9 </npclogo>
+        <npcname> Професор </npcname>
     </node>     
     <node>
         <npctext> Могу я взять какие-то дополнительные задания?  </npctext>
@@ -31,8 +47,8 @@
     </node> 
     <node>
         <npctext> Если вы подойдете завтра к 201 кабинету, я подумаю.  </npctext>
-        <npclogo> 0 </npclogo>
-        <npcname> Преподаватель </npcname>
+        <npclogo> 9 </npclogo>
+        <npcname>Професор</npcname>
     </node>     
     <node>
         <npctext> Благодарю вас. </npctext>

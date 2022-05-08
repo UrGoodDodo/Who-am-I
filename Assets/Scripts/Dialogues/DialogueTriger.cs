@@ -13,6 +13,7 @@ public class DialogueTriger : MonoBehaviour
     public BoxCollider2D stranger;
     public BoxCollider2D forestStranger;
     public BoxCollider2D roma;
+    public BoxCollider2D prepod;
 
     public int currentDialog;
     private void Start()
@@ -25,6 +26,7 @@ public class DialogueTriger : MonoBehaviour
 
         arbitr.enabled = true;
 
+        prepod.enabled = true;
         roma.enabled = false;
 
         currentDialog = 1;

@@ -20,6 +20,9 @@ public class Move : MonoBehaviour
     public GameObject mirror;
     public DialogueTriger dt;
     public GameObject tips;
+    public GameObject roma;
+
+    public CircleCollider2D kurtki;
     private void Update()
     {
         transform.position += new Vector3(speed, 0, 0) * Input.GetAxis("Horizontal") * Time.deltaTime;  //Движение влево/вправо на стандартные клавиши
@@ -69,6 +72,11 @@ public class Move : MonoBehaviour
                 camera.GetComponent<MoveCamera>().maxX = 4.6f;
                 camera.GetComponent<MoveCamera>().minY = 0;
                 camera.GetComponent<MoveCamera>().maxY = 0;
+                if (dm.GetComponent<DialogueManager>().finishedDialogs[29] || dm.GetComponent<DialogueManager>().finishedDialogs[30])
+                {
+                    dt.arbitr.enabled = false;
+                    mirror.SetActive(true);
+                }
                 break;
 
             case 101: //Детская слева
@@ -195,8 +203,7 @@ public class Move : MonoBehaviour
                 camera.GetComponent<MoveCamera>().minX = -2.15f;
                 camera.GetComponent<MoveCamera>().maxX = 2.1f;
                 camera.GetComponent<MoveCamera>().minY = -296;
-                camera.GetComponent<MoveCamera>().maxY = -296;
-                mirror.SetActive(true);
+                camera.GetComponent<MoveCamera>().maxY = -296;                
                 tips.SetActive(false);
                 if (choiser.choisess.Sum() >= 0)
                 {
@@ -206,18 +213,21 @@ public class Move : MonoBehaviour
                 else
                 {
                     StartCoroutine(StartDialogWithTimer(30, 1f));
+                    roma.SetActive(false);
                 }
                 break;
 
             case 3111://Комната в общаге слева ПЛОХАЯ                
                 choiser.choisess = new int[] { -1, 0 };
+                kurtki.enabled = false;
                 MoveOutLobbyToLocation(311);
                 break;
 
             case 3112://Комната в общаге слева ХОРОШАЯ
-                choiser.choisess = new int[] { 1, 1 };
+                choiser.choisess = new int[] { 1, 1 };                
                 MoveOutLobbyToLocation(311);
                 break;
+
             case 312://Комната в общаге справа
                 GetComponent<Transform>().position = new Vector3(9.5f, -297, 1);
                 camera.GetComponent<Transform>().position = new Vector3(4.5f, -1, -10);
@@ -265,16 +275,23 @@ public class Move : MonoBehaviour
                 camera.GetComponent<MoveCamera>().maxX = 5.72f;
                 camera.GetComponent<MoveCamera>().minY = -370;
                 camera.GetComponent<MoveCamera>().maxY = -370;
-                if (choiser.choisess.Sum() >= 0)
+                if (!dm.GetComponent<DialogueManager>().finishedDialogs[39])
                 {
-                    StartCoroutine(StartDialogWithTimer(33, 1f));
-                    blackscreen.SetActive(true);
+                    if (choiser.choisess.Sum() >= 0)
+                    {
+                        StartCoroutine(StartDialogWithTimer(33, 1f));
+                        blackscreen.SetActive(true);
+                    }
+                    else
+                    {
+                        qg.OpenQuestWindow(9);
+                        dt.currentDialog = 39;
+                    }
                 }
                 else
                 {
-                    qg.OpenQuestWindow(9);
-                    dt.currentDialog = 39;
-                }                    
+                    qg.OpenQuestWindow(10);
+                }
                 break;
             case 342://Коридор Универа справа
                 GetComponent<Transform>().position = new Vector3(13, -371, 1);

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Linq;
+using System.Threading;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -42,6 +44,7 @@ public class DialogueManager : MonoBehaviour
     public GameObject streetStranger;
     public GameObject mother;
     public GameObject mirror;
+    public GameObject ugroza;
 
     [Header("Player Settings")]
     public GameObject player;
@@ -316,16 +319,32 @@ public class DialogueManager : MonoBehaviour
             case 29:
                 questGiver.GetComponent<QuestGiver>().OpenQuestWindow(7);
                 break;
+            case 30:
+                questGiver.GetComponent<QuestGiver>().OpenQuestWindow(8);
+                break;
+            case 31:
+                dt.roma.enabled = false;
+                break;
             case 33:
-                blackScreen.SetActive(false);
-                player.GetComponent<Move>().MoveOutLobbyToLocation(-112);
-                questGiver.GetComponent<QuestGiver>().CloseQuestWindow(8);
-                StartCoroutine(StartDialogWithTimer(36, 1f));
+                if (choiser.choisess.Sum() >= 0)
+                {
+                    blackScreen.SetActive(false);
+                    player.GetComponent<Move>().MoveOutLobbyToLocation(-112);
+                    questGiver.GetComponent<QuestGiver>().CloseQuestWindow(8);
+                    StartCoroutine(StartDialogWithTimer(36, 1f));
+                }
+                else
+                {
+                    questGiver.GetComponent<QuestGiver>().CloseQuestWindow(8);
+                    questGiver.GetComponent<QuestGiver>().OpenQuestWindow(9);
+                    dt.currentDialog = 39;
+                    dt.prepod.enabled = true;
+                }
                 break;
             case 34:
                 dt.currentDialog = 35;
                 dt.arbitr.enabled = true;
-                mirror.SetActive(false);
+                mirror.GetComponent<Button>().enabled = false;
                 break;
             case 35:
                 choiser.ShowChoiser(2);
@@ -340,9 +359,29 @@ public class DialogueManager : MonoBehaviour
             case 39:
                 questGiver.GetComponent<QuestGiver>().CloseQuestWindow(9);
                 blackScreen.SetActive(true);
-                StartCoroutine(new WaitForSecondsRealtime(1f));
-                blackScreen.SetActive(false);
+                StartCoroutine(Wait());                
+                player.GetComponent<Move>().MoveOutLobbyToLocation(341);
+                dt.prepod.enabled = false;
+                questGiver.GetComponent<QuestGiver>().OpenQuestWindow(10);
+                ugroza.SetActive(true);
+                dt.currentDialog = 40;
+                break;
+            case 40:
+                blackScreen.SetActive(true);
+                StartCoroutine(Wait());
+                StartCoroutine(StartDialogWithTimer(41, 2.5f));
+                questGiver.GetComponent<QuestGiver>().CloseQuestWindow(10);
+                break;
+            case 41:
+                player.GetComponent<Move>().MoveOutLobbyToLocation(-112);
+                StartCoroutine(StartDialogWithTimer(42, 1f));
                 break;
         }
+    }
+
+    IEnumerator Wait()
+    {
+        yield return new WaitForSeconds(2f);
+        blackScreen.SetActive(false);
     }
 }
