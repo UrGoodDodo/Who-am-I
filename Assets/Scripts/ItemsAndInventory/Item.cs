@@ -66,6 +66,14 @@ public class Item : MonoBehaviour
                             pl.extraQuest.numericGoal += 1;
                             qg.CloseExtraQuestWindow(0);
                         }
+                        if (index == 4)
+                        {
+                            slot.GetComponent<Image>().sprite = sprite[index]; // Меняем картинку на слоте
+                            slot.GetComponent<Slot>().itemid = 1;   //Меняем айди предмета в слоте
+                            Destroy(item); //Удаление объекта с карты
+                            if (OutRoom != null)
+                                OutRoom.SetActive(true);
+                        }
 
                     }
                 }

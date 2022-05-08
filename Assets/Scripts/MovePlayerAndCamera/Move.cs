@@ -11,6 +11,8 @@ public class Move : MonoBehaviour
     private float side; //Определяет сторону, в которую смотрит игрок
     public GameObject player;
     public GameObject[] slot = new GameObject[2];
+    public GameObject[] newSlot = new GameObject[2];
+    public GameObject[] Phone = new GameObject[2];
 
     public GameObject dm;
     public QuestGiver qg;
@@ -198,12 +200,19 @@ public class Move : MonoBehaviour
             case 311://Комната в общаге слева
                 slot[0].GetComponent<LighterOnOff>().enabled = false;
                 slot[1].SetActive(false);
+                slot[2].SetActive(false);
+
+                newSlot[0].GetComponent<Slot>().itemid = 3;
+                newSlot[1].SetActive(true);
+
+
+
                 GetComponent<Transform>().position = new Vector3(-9.5f, -297, 1);
                 camera.GetComponent<Transform>().position = new Vector3(4.5f, -1, -10);
                 camera.GetComponent<MoveCamera>().minX = -2.15f;
                 camera.GetComponent<MoveCamera>().maxX = 2.1f;
                 camera.GetComponent<MoveCamera>().minY = -296;
-                camera.GetComponent<MoveCamera>().maxY = -296;                
+                camera.GetComponent<MoveCamera>().maxY = -296;
                 tips.SetActive(false);
                 if (choiser.choisess.Sum() >= 0)
                 {
@@ -220,11 +229,13 @@ public class Move : MonoBehaviour
             case 3111://Комната в общаге слева ПЛОХАЯ                
                 choiser.choisess = new int[] { -1, 0 };
                 kurtki.enabled = false;
+                Phone[0].SetActive(true);
                 MoveOutLobbyToLocation(311);
                 break;
 
             case 3112://Комната в общаге слева ХОРОШАЯ
-                choiser.choisess = new int[] { 1, 1 };                
+                choiser.choisess = new int[] { 1, 1 };
+                Phone[1].SetActive(true);
                 MoveOutLobbyToLocation(311);
                 break;
 

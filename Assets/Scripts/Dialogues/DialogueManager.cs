@@ -9,7 +9,7 @@ using System.Threading;
 public class DialogueManager : MonoBehaviour
 {
     public GameObject questGiver;
-    public DialogueTriger dt;   
+    public DialogueTriger dt;
 
     public Text dialogueText;	//Текст в диалоге    
     public Text playerText;
@@ -66,7 +66,7 @@ public class DialogueManager : MonoBehaviour
         finishedDialogs = new bool[dialogAssets.Length];
         finishedFlags = new bool[2];
 
-        StartCoroutine(StartDialogWithTimer(0, 11f));        
+        StartCoroutine(StartDialogWithTimer(0, 11f));
     }
 
     public void Update()
@@ -87,7 +87,7 @@ public class DialogueManager : MonoBehaviour
         playerHudi.GetComponent<Animator>().enabled = false;
         PlayerPigama.GetComponent<Animator>().enabled = false;
         player.GetComponent<AudioSource>().enabled = false;
-        
+
 
         if (dialogueID == 2 || dialogueID == 3)
         {
@@ -173,6 +173,7 @@ public class DialogueManager : MonoBehaviour
                         item.SetActive(false);
                     foreach (var item in ChRoomACT2)
                         item.SetActive(true);
+                    ChRoomACT2[3].GetComponent<Slot>().itemid = 1;
                     slotimage.SetActive(true);
                     slotimage.GetComponent<Image>().sprite = phone;
 
@@ -349,7 +350,7 @@ public class DialogueManager : MonoBehaviour
             case 35:
                 choiser.ShowChoiser(2);
                 break;
-            case 36:                
+            case 36:
                 dt.arbitr.enabled = false;
                 break;
             case 37:
@@ -359,7 +360,7 @@ public class DialogueManager : MonoBehaviour
             case 39:
                 questGiver.GetComponent<QuestGiver>().CloseQuestWindow(9);
                 blackScreen.SetActive(true);
-                StartCoroutine(Wait());                
+                StartCoroutine(Wait());
                 player.GetComponent<Move>().MoveOutLobbyToLocation(341);
                 dt.prepod.enabled = false;
                 questGiver.GetComponent<QuestGiver>().OpenQuestWindow(10);
