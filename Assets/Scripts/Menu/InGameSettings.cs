@@ -93,7 +93,8 @@ public class InGameSettings : MonoBehaviour
 
     public void SetNewVolume(float volume)
     {
-        audioMixer.SetFloat("Volume", volume);
+        //audioMixer.SetFloat("Volume", volume);
+        audioMixer.SetFloat("Volume", Mathf.Log10(volume) * 20);
         newvolume = volume;
     }
 
@@ -134,7 +135,8 @@ public class InGameSettings : MonoBehaviour
 
     public void SetVolume(float volume, Slider volumeS) // функция изменения звука
     {
-        audioMixer.SetFloat("Volume", volume);
+        //audioMixer.SetFloat("Volume", volume);
+        audioMixer.SetFloat("Volume", Mathf.Log10(volume) * 20);
         volumeS.value = volume;
     }
 
