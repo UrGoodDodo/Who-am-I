@@ -5703,6 +5703,7 @@ GameObject:
   - component: {fileID: 229743163}
   - component: {fileID: 229743162}
   - component: {fileID: 229743161}
+  - component: {fileID: 229743165}
   m_Layer: 5
   m_Name: Telephone
   m_TagString: Untagged
@@ -5790,6 +5791,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &229743165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 229743160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4461d9db4cb79504192c7461da7c11bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dm: {fileID: 923450694}
+  choiser: {fileID: 1399884499}
 --- !u!1001 &232433318
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7115,7 +7130,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 289927535}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 229743165}
+        m_TargetAssemblyTypeName: telephone, Assembly-CSharp
+        m_MethodName: Phone
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &289927535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10951,7 +10978,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 441529010}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 229743165}
+        m_TargetAssemblyTypeName: telephone, Assembly-CSharp
+        m_MethodName: Phone
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &441529010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12297,7 +12336,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 483542483}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 229743165}
+        m_TargetAssemblyTypeName: telephone, Assembly-CSharp
+        m_MethodName: Phone
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &483542483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18034,7 +18085,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &752278684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21748,6 +21799,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questGiver: {fileID: 1622915522}
   dt: {fileID: 1545828372}
+  tips: {fileID: 752278683}
   dialogueText: {fileID: 870021434}
   playerText: {fileID: 1468201833}
   playerSprite: {fileID: 1061781}
@@ -21810,6 +21862,13 @@ MonoBehaviour:
   - {fileID: 4900000, guid: 079731c46dcfbdb48baea90a5327d09a, type: 3}
   - {fileID: 4900000, guid: e20a0ca4350aad94280344788c600916, type: 3}
   - {fileID: 4900000, guid: 2ef2ea0584dd4bc488e90f35efb3aafd, type: 3}
+  - {fileID: 4900000, guid: 6117dfe8298563b4f9ccb7f6882bac62, type: 3}
+  - {fileID: 4900000, guid: f1aec96c8a103bb4ab24a9b6789fbcda, type: 3}
+  - {fileID: 4900000, guid: 466b1e9008ddf10408b942c0d471ec23, type: 3}
+  - {fileID: 4900000, guid: 51102f30200f7874696b5a675b6bfc43, type: 3}
+  - {fileID: 4900000, guid: 81cd268b20bdfcf4bb5758deee66fb78, type: 3}
+  - {fileID: 4900000, guid: 656969342bae9ab419b727da53cf2edf, type: 3}
+  - {fileID: 4900000, guid: 9a8497c01cfcbca4daeeb19559162adc, type: 3}
   OutOfLobby: {fileID: 1993373858}
   OutOfLobby2: {fileID: 141064425}
   P_TimeLine: {fileID: 14314007}
@@ -26101,7 +26160,7 @@ Transform:
   m_GameObject: {fileID: 1182755564}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 192, y: -400.13, z: 0}
-  m_LocalScale: {x: 12, y: 12, z: 1}
+  m_LocalScale: {x: 13, y: 13, z: 1}
   m_Children: []
   m_Father: {fileID: 1727479205}
   m_RootOrder: 4
@@ -37716,7 +37775,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.07821799, y: 0.38551265}
   m_AnchorMax: {x: 0.397, y: 0.5}
-  m_AnchoredPosition: {x: 12.519226, y: -5.188202}
+  m_AnchoredPosition: {x: 12.520691, y: -5.188202}
   m_SizeDelta: {x: -20.1137, y: -10.3764}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1468201833
@@ -39537,8 +39596,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1549824987}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 401.72, y: -322.66, z: 0}
-  m_LocalScale: {x: 15, y: 15, z: 1}
+  m_LocalPosition: {x: 401.72, y: -320.49, z: 0}
+  m_LocalScale: {x: 6.5, y: 6.5, z: 1}
   m_Children: []
   m_Father: {fileID: 1608273214}
   m_RootOrder: 4
@@ -39588,7 +39647,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.15, y: 0.32}
+  m_Size: {x: 0.32, y: 0.64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -39611,8 +39670,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.15, y: 0.32}
-    newSize: {x: 0.15, y: 0.32}
+    oldSize: {x: 0.32, y: 0.64}
+    newSize: {x: 0.32, y: 0.64}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -40405,7 +40464,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.9411765}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -41176,6 +41235,12 @@ MonoBehaviour:
       \u0441\u043F\u0430\u0442\u044C\xBB"
     termsText:
     - "\u041B\u043E\u0436\u0438\u0442\u0435\u0441\u044C \u0441\u043F\u0430\u0442\u044C"
+    numericGoal: 0
+  - questID: 2
+    IsActive: 0
+    title: "\xAB\u0427\u0438\u0441\u0442\u043E\u0442\u0430\xBB"
+    termsText:
+    - "\u0412\u044B\u043D\u0435\u0441\u0438\u0442\u0435 \u043C\u0443\u0441\u043E\u0440"
     numericGoal: 0
   player: {fileID: 728460114}
   questWindow: {fileID: 1337810863}
@@ -56043,7 +56108,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2138562484}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 229743165}
+        m_TargetAssemblyTypeName: telephone, Assembly-CSharp
+        m_MethodName: Phone
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2138562484
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -10,6 +10,7 @@ public class DialogueManager : MonoBehaviour
 {
     public GameObject questGiver;
     public DialogueTriger dt;
+    public GameObject tips;
 
     public Text dialogueText;	//Текст в диалоге    
     public Text playerText;
@@ -155,6 +156,9 @@ public class DialogueManager : MonoBehaviour
         finishedDialogs[dialogueID] = true;
         switch (dialogueID)
         {
+            case 0:
+                tips.SetActive(true);
+                break;
             case 1:
                 {
                     P_TimeLine.SetActive(true);
@@ -325,6 +329,7 @@ public class DialogueManager : MonoBehaviour
                 break;
             case 31:
                 dt.roma.enabled = false;
+                questGiver.GetComponent<QuestGiver>().OpenExtraQuestWindow(2);
                 break;
             case 33:
                 if (choiser.choisess.Sum() >= 0)
@@ -366,6 +371,7 @@ public class DialogueManager : MonoBehaviour
                 questGiver.GetComponent<QuestGiver>().OpenQuestWindow(10);
                 ugroza.SetActive(true);
                 dt.currentDialog = 40;
+                Debug.Log("smth");
                 break;
             case 40:
                 blackScreen.SetActive(true);

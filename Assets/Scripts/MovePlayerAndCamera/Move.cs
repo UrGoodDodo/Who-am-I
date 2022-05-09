@@ -279,7 +279,7 @@ public class Move : MonoBehaviour
                 camera.GetComponent<MoveCamera>().minY = -296;
                 camera.GetComponent<MoveCamera>().maxY = -296;
                 break;
-            case 341://Коридор Универа слева
+            case 341://Коридор Универа слева                
                 GetComponent<Transform>().position = new Vector3(-13, -371, 1);
                 camera.GetComponent<Transform>().position = new Vector3(4.5f, -1, -10);
                 camera.GetComponent<MoveCamera>().minX = -5.79f;
@@ -302,7 +302,7 @@ public class Move : MonoBehaviour
                 else
                 {
                     qg.OpenQuestWindow(10);
-                }
+                }                
                 break;
             case 342://Коридор Универа справа
                 GetComponent<Transform>().position = new Vector3(13, -371, 1);
