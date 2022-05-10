@@ -8,6 +8,8 @@ using System.Threading;
 
 public class DialogueManager : MonoBehaviour
 {
+    public int skin = 0;
+
     public GameObject questGiver;
     public DialogueTriger dt;
     public GameObject tips;
@@ -46,6 +48,7 @@ public class DialogueManager : MonoBehaviour
     public GameObject mother;
     public GameObject mirror;
     public GameObject ugroza;
+    public kurtki kurtki;
 
     [Header("Player Settings")]
     public GameObject player;
@@ -173,8 +176,7 @@ public class DialogueManager : MonoBehaviour
             case 1:
                 {
                     P_TimeLine.SetActive(true);
-                    //player.GetComponent<Move>().MoveOutLobbyToLocation(0); 
-                    //OutOfLobby.SetActive(true);  
+                    skin = 1;
                     dt.currentDialog = 6;
                     dt.arbitr.enabled = false;
                     dt.mother.enabled = true;
@@ -198,6 +200,9 @@ public class DialogueManager : MonoBehaviour
                     PlayerPigama.SetActive(true);
                     player.GetComponent<Move>().player = PlayerPigama;
                     player.GetComponent<Move>().stay = stayPigama;
+
+                    skin = 2;
+
                     break;
                 }
             case 5:
@@ -316,7 +321,7 @@ public class DialogueManager : MonoBehaviour
                     PlayerPigama.SetActive(false);
                     playerHudi.SetActive(false);
                     StartCoroutine(StartDialogWithTimer(26, 0.5f));
-
+                    skin = 0;
                     dt.mother.enabled = false;
                     dt.arbitr.enabled = true;
 
@@ -328,8 +333,9 @@ public class DialogueManager : MonoBehaviour
             case 27:
             case 28:
                 {
-                    fon.SetActive(true);
-
+                    player.GetComponent<Move>().MoveOutLobbyToLocation(311);
+                    if (choiser.choisess.Sum() >= 0)
+                        kurtki.isCheked = false;
                     break;
                 }
             case 29:

@@ -15,7 +15,7 @@ public class kurtki : MonoBehaviour
     public Sprite rukzakSprite;
     public Sprite studak;
 
-    public bool isCheked = false;
+    public bool isCheked = true;
 
     private void Update()
     {
@@ -24,6 +24,7 @@ public class kurtki : MonoBehaviour
             isCheked = true;
             textPanel.SetActive(false);
             panel.SetActive(true);
+            FindObjectOfType<Move>().enabled = false;
         }
     }
 
@@ -43,6 +44,7 @@ public class kurtki : MonoBehaviour
         wear.color = new Color(128 / 255.0f, 128 / 255.0f, 128 / 255.0f);
         dm.StartDialogue(32);
         panel.SetActive(false);
+        FindObjectOfType<Move>().enabled = true;
     }
 
     public void FinishKurtki1()

@@ -21,8 +21,7 @@ public class DialogueTriger : MonoBehaviour
         mother.enabled = false;
         friend.enabled = false;
         stranger.enabled = false;
-        forestStranger.enabled = false;
-        mother.enabled = false;
+        forestStranger.enabled = false;        
 
         arbitr.enabled = true;
 
