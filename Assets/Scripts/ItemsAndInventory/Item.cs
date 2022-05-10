@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using System.Linq;
 public class Item : MonoBehaviour
 {
     public Sprite[] sprite;   //Картинка предмета в слоте
@@ -18,6 +18,8 @@ public class Item : MonoBehaviour
     public QuestGiver qg;
 
     public Text rucsack;
+
+    public DialogueManager dm;
 
     void OnMouseEnter()
     {
@@ -69,10 +71,29 @@ public class Item : MonoBehaviour
                         if (index == 4)
                         {
                             slot.GetComponent<Image>().sprite = sprite[index]; // Меняем картинку на слоте
-                            slot.GetComponent<Slot>().itemid = 1;   //Меняем айди предмета в слоте
+                            slot.GetComponent<Slot>().itemid = 5;   //Меняем айди предмета в слоте
                             Destroy(item); //Удаление объекта с карты
-                            if (OutRoom != null)
-                                OutRoom.SetActive(true);
+                        }
+                        if (index == 5)
+                        {
+                            slot.GetComponent<Image>().sprite = sprite[index]; // Меняем картинку на слоте
+                            slot.GetComponent<Slot>().itemid = 6;   //Меняем айди предмета в слоте
+                            Destroy(item); //Удаление объекта с карты
+                            OutRoom.GetComponent<Transform>().position = new Vector3(12.63f, 0, 126.4341f);
+                            OutRoom.GetComponent<Transform>().position -= new Vector3(1, 294, 0);
+                        }
+                        if (index == 6) //Мусор
+                        {
+                            slot.GetComponent<Image>().sprite = sprite[0]; // Меняем картинку на слоте
+                            slot.GetComponent<Slot>().itemid = 0;   //Меняем айди предмета в слоте
+                            OutRoom.SetActive(true);
+                            //if (FindObjectOfType<Choiser>().choisess.Sum() >= 0) 
+                            dm.StartDialogue(49);
+                            FindObjectOfType<QuestGiver>().CloseExtraQuestWindow(2);
+                        }
+                        if (index == 7)
+                        {
+                            dm.StartDialogue(34);
                         }
 
                     }

@@ -11,6 +11,7 @@ public class Slot : MonoBehaviour
     public GameObject act2;    //Принимает значение объекта, который будет спавнить
     public Canvas canvas;
     public LighterOnOff Light;
+    public GameObject rukzak;
     void Start()
     {
         GetComponent<Button>().enabled = false;
@@ -58,6 +59,14 @@ public class Slot : MonoBehaviour
         if (itemid == 4)
         {
             Light.Lighter();
+        }
+        if (itemid == 5)
+        {
+            rukzak.SetActive(!rukzak.active);
+        }
+        if (itemid == 6)
+        {
+
         }
 
     }

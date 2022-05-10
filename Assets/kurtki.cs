@@ -4,12 +4,16 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class kurtki : MonoBehaviour
-{    
+{
     public GameObject textPanel;
     public GameObject panel;
     public DialogueManager dm;
     public Text wear;
     public QuestGiver qg;
+
+    public GameObject[] rukzak = new GameObject[3];
+    public Sprite rukzakSprite;
+    public Sprite studak;
 
     public bool isCheked = false;
 
@@ -38,6 +42,19 @@ public class kurtki : MonoBehaviour
     {
         wear.color = new Color(128 / 255.0f, 128 / 255.0f, 128 / 255.0f);
         dm.StartDialogue(32);
+        panel.SetActive(false);
+    }
+
+    public void FinishKurtki1()
+    {
+        isCheked = true;
+        textPanel.SetActive(false);
+        dm.StartDialogue(50);
+        rukzak[0].SetActive(false);
+        rukzak[1].GetComponent<Image>().sprite = rukzakSprite;
+        rukzak[1].GetComponent<Slot>().itemid = 0;
+        rukzak[2].GetComponent<Image>().sprite = studak;
+        rukzak[3].SetActive(true);
         panel.SetActive(false);
         qg.CloseQuestWindow(7);
         FindObjectOfType<DialogueTriger>().roma.enabled = true;

@@ -6,7 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class Choiser : MonoBehaviour
 {
-    public int[] choisess = new int[2]{0,0};
+    public bool finish;
+
+    public int[] choisess = new int[2] { 0, 0 };
 
     public TextAsset[] choises;
 
@@ -23,7 +25,7 @@ public class Choiser : MonoBehaviour
 
     public DialogueTriger dt;
     public void ShowChoiser(int choiseID)
-    {        
+    {
         choiserWindow.SetActive(true);
 
         this.choiseID = choiseID;
@@ -57,7 +59,7 @@ public class Choiser : MonoBehaviour
                     else
                     {
                         dm.GetComponent<DialogueManager>().StartDialogue(11);
-                        choisess[choiseID] = choise;                        
+                        choisess[choiseID] = choise;
                     }
                     CloseChoiser();
                     break;
@@ -72,7 +74,7 @@ public class Choiser : MonoBehaviour
                     else
                     {
                         dm.GetComponent<DialogueManager>().StartDialogue(19);
-                        choisess[choiseID] = choise;                        
+                        choisess[choiseID] = choise;
                     }
                     CloseChoiser();
                     break;
@@ -80,14 +82,16 @@ public class Choiser : MonoBehaviour
             case 2:
                 if (choise == -1)
                 {
-                    dm.GetComponent<DialogueManager>().StartDialogue(37);                    
+                    dm.GetComponent<DialogueManager>().StartDialogue(37);
+                    finish = true;
                 }
                 else
                 {
-                    dm.GetComponent<DialogueManager>().StartDialogue(38);                    
+                    dm.GetComponent<DialogueManager>().StartDialogue(38);
+                    finish = false;
                 }
                 CloseChoiser();
-                break;               
+                break;
         }
     }
 }

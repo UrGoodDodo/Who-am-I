@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Linq;
+using UnityEngine.UI;
 
 public class Move : MonoBehaviour
 {
@@ -14,6 +15,9 @@ public class Move : MonoBehaviour
     public GameObject[] newSlot = new GameObject[2];
     public GameObject[] Phone = new GameObject[2];
 
+    public GameObject Student;
+    public Sprite stayStudent;
+
     public GameObject dm;
     public QuestGiver qg;
     public ClassTest ct;
@@ -23,6 +27,13 @@ public class Move : MonoBehaviour
     public DialogueTriger dt;
     public GameObject tips;
     public GameObject roma;
+
+    [Header("ACT3")]
+    public GameObject[] Slots = new GameObject[3];
+    public GameObject[] OffObject = new GameObject[3];
+    public GameObject[] OnObjects = new GameObject[3];
+    public Sprite[] SlotSprites = new Sprite[2];
+    public GameObject trashbak;
 
     public CircleCollider2D kurtki;
     private void Update()
@@ -206,7 +217,6 @@ public class Move : MonoBehaviour
                 newSlot[1].SetActive(true);
 
 
-
                 GetComponent<Transform>().position = new Vector3(-9.5f, -297, 1);
                 camera.GetComponent<Transform>().position = new Vector3(4.5f, -1, -10);
                 camera.GetComponent<MoveCamera>().minX = -2.15f;
@@ -224,12 +234,32 @@ public class Move : MonoBehaviour
                     StartCoroutine(StartDialogWithTimer(30, 1f));
                     roma.SetActive(false);
                 }
+
+                GetComponent<Animator>().enabled = false;
+                GetComponent<SpriteRenderer>().enabled = false;
+
+                Student.SetActive(true);
+                GetComponent<Move>().player = Student;
+                GetComponent<Move>().stay = stayStudent;
                 break;
 
             case 3111://Комната в общаге слева ПЛОХАЯ                
                 choiser.choisess = new int[] { -1, 0 };
                 kurtki.enabled = false;
                 Phone[0].SetActive(true);
+                foreach (var item in OnObjects)
+                {
+                    item.SetActive(true);
+                }
+                foreach (var item in OffObject)
+                {
+                    item.SetActive(false);
+                }
+                OnObjects[0].GetComponent<Transform>().position = new Vector3(12.63f, 0, 126.4341f);
+                OnObjects[0].GetComponent<Transform>().position -= new Vector3(1, 294, 0);
+                Slots[0].GetComponent<Image>().sprite = SlotSprites[0];
+                Slots[1].GetComponent<Image>().sprite = SlotSprites[1];
+                trashbak.GetComponent<Collider2D>().enabled = false;
                 MoveOutLobbyToLocation(311);
                 break;
 
@@ -280,7 +310,7 @@ public class Move : MonoBehaviour
                 camera.GetComponent<MoveCamera>().maxY = -296;
                 break;
             case 341://Коридор Универа слева                
-                GetComponent<Transform>().position = new Vector3(-13, -371, 1);
+                GetComponent<Transform>().position = new Vector3(-11, -371, 1);
                 camera.GetComponent<Transform>().position = new Vector3(4.5f, -1, -10);
                 camera.GetComponent<MoveCamera>().minX = -5.79f;
                 camera.GetComponent<MoveCamera>().maxX = 5.72f;
@@ -302,7 +332,7 @@ public class Move : MonoBehaviour
                 else
                 {
                     qg.OpenQuestWindow(10);
-                }                
+                }
                 break;
             case 342://Коридор Универа справа
                 GetComponent<Transform>().position = new Vector3(13, -371, 1);

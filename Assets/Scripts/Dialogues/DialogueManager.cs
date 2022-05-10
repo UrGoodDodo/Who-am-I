@@ -54,6 +54,12 @@ public class DialogueManager : MonoBehaviour
     public GameObject PlayerPigama;
     public Sprite stayPigama;
     public GameObject playerHudi;
+    public GameObject PlayerStudent;
+    public Sprite StayStudent;
+    public GameObject ChillGG;
+    public GameObject[] Slots = new GameObject[4];
+    public Sprite slotSprite;
+    public GameObject[] PhoneSlotAndCanvas = new GameObject[2];
 
     [Header("Change Sprites")]
     public GameObject lobby2;
@@ -61,6 +67,9 @@ public class DialogueManager : MonoBehaviour
     public GameObject fon;
     public GameObject[] slots;
     public Sprite d_mask;
+
+    [Header("END")]
+    public GameObject END;
 
     public void Start()
     {
@@ -87,6 +96,7 @@ public class DialogueManager : MonoBehaviour
         player.GetComponent<Animator>().enabled = false;
         playerHudi.GetComponent<Animator>().enabled = false;
         PlayerPigama.GetComponent<Animator>().enabled = false;
+        PlayerStudent.GetComponent<Animator>().enabled = false;
         player.GetComponent<AudioSource>().enabled = false;
 
 
@@ -144,6 +154,7 @@ public class DialogueManager : MonoBehaviour
         player.GetComponent<Animator>().enabled = true;
         playerHudi.GetComponent<Animator>().enabled = true;
         PlayerPigama.GetComponent<Animator>().enabled = true;
+        PlayerStudent.GetComponent<Animator>().enabled = true;
         player.GetComponent<AudioSource>().enabled = true;
 
         if (dialogueID == 2 || dialogueID == 3)
@@ -336,6 +347,21 @@ public class DialogueManager : MonoBehaviour
                 {
                     blackScreen.SetActive(false);
                     player.GetComponent<Move>().MoveOutLobbyToLocation(-112);
+                    player.SetActive(true);
+                    player.GetComponent<Move>().stay = stay;
+                    player.GetComponent<Move>().player = player;
+                    player.GetComponent<Animator>().enabled = true;
+                    player.GetComponent<SpriteRenderer>().enabled = true;
+                    PlayerStudent.SetActive(false);
+                    foreach (var item in Slots)
+                    {
+                        item.GetComponent<Slot>().itemid = 0;
+                        item.GetComponent<Image>().sprite = slotSprite;
+                    }
+                    foreach (var item in PhoneSlotAndCanvas)
+                    {
+                        item.SetActive(false);
+                    }
                     questGiver.GetComponent<QuestGiver>().CloseQuestWindow(8);
                     StartCoroutine(StartDialogWithTimer(36, 1f));
                 }
@@ -360,7 +386,36 @@ public class DialogueManager : MonoBehaviour
                 break;
             case 37:
             case 38:
-                SceneManager.LoadScene(1);
+                if (choiser.choisess.Sum() >= 0)
+                {
+                    if (choiser.finish)
+                    {
+                        END.GetComponent<ENDING>().id = 0;//самая хорошая
+                        END.GetComponent<ENDING>().END();
+                    }
+                    else
+                    {
+                        END.GetComponent<ENDING>().id = 2;
+                        END.GetComponent<ENDING>().END();
+                        //Хорошая, но выбрали смерть
+                    }
+                }
+                else
+                {
+                    if (choiser.finish)
+                    {
+                        END.GetComponent<ENDING>().id = 1;
+                        END.GetComponent<ENDING>().END();
+                        //Плохая, но выжили
+                    }
+                    else
+                    {
+                        END.GetComponent<ENDING>().id = 3;
+                        END.GetComponent<ENDING>().END();
+                        //Плохая, да ещё и умерли
+                    }
+                }
+                player.SetActive(false);
                 break;
             case 39:
                 questGiver.GetComponent<QuestGiver>().CloseQuestWindow(9);
@@ -371,9 +426,13 @@ public class DialogueManager : MonoBehaviour
                 questGiver.GetComponent<QuestGiver>().OpenQuestWindow(10);
                 ugroza.SetActive(true);
                 dt.currentDialog = 40;
-                Debug.Log("smth");
                 break;
             case 40:
+                ugroza.SetActive(false);
+                player.SetActive(false);
+                Instantiate(ChillGG); //Спавнит объект на сцене
+                ChillGG.GetComponent<Transform>().localScale = new Vector3(13, 13, 1);
+                ChillGG.GetComponent<Transform>().position = new Vector3(372.19f, -297.71f, 1);
                 blackScreen.SetActive(true);
                 StartCoroutine(Wait());
                 StartCoroutine(StartDialogWithTimer(41, 2.5f));
@@ -381,6 +440,21 @@ public class DialogueManager : MonoBehaviour
                 break;
             case 41:
                 player.GetComponent<Move>().MoveOutLobbyToLocation(-112);
+                player.SetActive(true);
+                player.GetComponent<Move>().stay = stay;
+                player.GetComponent<Move>().player = player;
+                player.GetComponent<Animator>().enabled = true;
+                player.GetComponent<SpriteRenderer>().enabled = true;
+                PlayerStudent.SetActive(false);
+                foreach (var item in Slots)
+                {
+                    item.GetComponent<Slot>().itemid = 0;
+                    item.GetComponent<Image>().sprite = slotSprite;
+                }
+                foreach (var item in PhoneSlotAndCanvas)
+                {
+                    item.SetActive(false);
+                }
                 StartCoroutine(StartDialogWithTimer(42, 1f));
                 break;
         }

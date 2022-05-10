@@ -1,6 +1,6 @@
 <dialogue>
     <node>
-        <npctext> Кажется, его тут нет. </npctext>
+        <npctext> Вот он где! </npctext>
         <npclogo> 7 </npclogo>
         <npcname> Я </npcname>
     </node>    
