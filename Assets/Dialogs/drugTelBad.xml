@@ -1,0 +1,42 @@
+<dialogue>   
+    <node>
+        <npctext> Слушаю.  </npctext>
+        <npclogo> 0 </npclogo>
+        <npcname> Друг </npcname>
+    </node>
+    <node>
+        <npctext> Это я. Хотел узнать, как ты.  </npctext>
+        <npclogo> 7 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> ...  </npctext>
+        <npclogo> 0 </npclogo>
+        <npcname> Друг </npcname>
+    </node>
+    <node>
+        <npctext> Меня слышно?   </npctext>
+        <npclogo> 7 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> Я спокойно, чего тебе тоже желаю.  </npctext>
+        <npclogo> 0 </npclogo>
+        <npcname> Друг </npcname>
+    </node>
+    <node>
+        <npctext> У меня тоже все нормально, вроде как.  </npctext>
+        <npclogo> 7 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> Если это все, мне надо бежать. Вешаю трубку.  </npctext>
+        <npclogo> 0 </npclogo>
+        <npcname> Друг </npcname>
+    </node>
+    <node>
+        <npctext> Что-то у тебя совсем все плохо стало.  </npctext>
+        <npclogo> 1 </npclogo>
+        <npcname>  </npcname>
+    </node>
+</dialogue>

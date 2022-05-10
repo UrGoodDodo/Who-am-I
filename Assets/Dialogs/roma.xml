@@ -1,0 +1,27 @@
+<dialogue>   
+    <node>
+        <npctext> Нашел. Спасибо за помощь.  </npctext>
+        <npclogo> 7 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> Обращайся.  </npctext>
+        <npclogo> 8 </npclogo>
+        <npcname> Рома </npcname>
+    </node>
+     <node>
+        <npctext> Мусор выбросить не забудь.  </npctext>
+        <npclogo> 8 </npclogo>
+        <npcname> Рома </npcname>
+    </node>
+    <node>
+        <npctext> Понял. </npctext>
+        <npclogo> 7 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+      <npctext> И ещё, ты же не забыл позвонить маме?  </npctext>
+      <npclogo> 8 </npclogo>
+      <npcname> Рома </npcname>
+    </node>
+</dialogue>

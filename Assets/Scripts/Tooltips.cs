@@ -10,8 +10,8 @@ public class Tooltips : MonoBehaviour
 
     // First tip is light, second is pickup and last one is inventory
 
-    public static bool[] IsTipsShowed;
-    public static bool[] IsTipsBlocked;
+    public bool[] IsTipsShowed;
+    public bool[] IsTipsBlocked;
     public GameObject[] Tips;
 
     private Transform player;
@@ -27,7 +27,7 @@ public class Tooltips : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
         item = GameObject.FindGameObjectWithTag("Item").transform;
 
-        StartCoroutine(ShowLightTip(13f));
+        StartCoroutine(ShowLightTip(1f));
     }
     // Происходит каждый кадр
     void Update()

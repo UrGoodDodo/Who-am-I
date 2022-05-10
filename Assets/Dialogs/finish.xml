@@ -1,0 +1,7 @@
+<dialogue>   
+    <node>
+        <npctext> Я решил, что не хочу возвращаться.  </npctext>
+        <npclogo> 1 </npclogo>
+        <npcname> Я </npcname>
+    </node>     
+</dialogue>

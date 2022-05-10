@@ -1,0 +1,162 @@
+<dialogue>
+    <node>
+        <npctext> Почему ты мне ни о чем не сказал?  </npctext>
+        <npclogo> 1 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> Я не понимаю, что ты имеешь в виду.  </npctext>
+        <npclogo> 2 </npclogo>
+        <npcname> Арбитр </npcname>
+    </node>
+    <node>
+        <npctext> Я и этот парень, за которым меня отправили наблюдать.   </npctext>
+        <npclogo> 1 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> Почему он выглядит в точности, как я?  </npctext>
+        <npclogo> 1 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> Это не то, о чем мне нужно было рассказать.  </npctext>
+        <npclogo> 2 </npclogo>
+        <npcname> Арбитр </npcname>
+    </node>
+    <node>
+        <npctext> Ты должен был дойти до этой мысли сам.</npctext>
+        <npclogo> 2 </npclogo>
+        <npcname> Арбитр </npcname>
+    </node>
+    <node>
+        <npctext> И ты дошел. </npctext>
+        <npclogo> 2 </npclogo>
+        <npcname> Арбитр </npcname>
+    </node>
+    <node>
+        <npctext> Это все звучит, как бред. </npctext>
+        <npclogo> 1 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> Что мне теперь делать со всей полученной информацией?  </npctext>
+        <npclogo> 1 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> *вздыхает*  </npctext>
+        <npclogo> 2 </npclogo>
+        <npcname> Арбитр </npcname>
+    </node>
+    <node>
+        <npctext> «Этот парень», как ты его называешь, находится сейчас в состоянии продолжающегося сна.  </npctext>
+        <npclogo> 2 </npclogo>
+        <npcname> Арбитр </npcname>
+    </node>
+    <node>
+        <npctext> Он наблюдает за своей жизнью извне.  </npctext>
+        <npclogo> 2 </npclogo>
+        <npcname> Арбитр </npcname>
+    </node>
+    <node>
+        <npctext> Иными словами, друг мой, «этот парень» и есть ты сам.  </npctext>
+        <npclogo> 2 </npclogo>
+        <npcname> Арбитр </npcname>
+    </node>
+    <node>
+        <npctext> Хочешь сказать, что все это время я следил за собственной жизнью? </npctext>
+        <npclogo> 1 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> Именно.  </npctext>
+        <npclogo> 2 </npclogo>
+        <npcname> Арбитр </npcname>
+    </node>
+    <node>
+        <npctext> В голове не укладывается...  </npctext>
+        <npclogo> 1 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> Получается, я сейчас нахожусь в собственном сне? </npctext>
+        <npclogo> 1 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> Думаю, что это верное определение, друг мой.  </npctext>
+        <npclogo> 2 </npclogo>
+        <npcname> Арбитр </npcname>
+    </node>
+    <node>
+        <npctext> Все еще звучит, как бред.  </npctext>
+        <npclogo> 1 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> Но даже если это действительно так.  </npctext>
+        <npclogo> 1 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> Зачем мне было наблюдать за своей жизнью?  </npctext>
+        <npclogo> 1 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> Чтобы набраться смелости проснуться.   </npctext>
+        <npclogo> 2 </npclogo>
+        <npcname> Арбитр </npcname>
+    </node>
+    <node>
+        <npctext> Проснуться?  </npctext>
+        <npclogo> 1 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> Ты прошел через всю свою жизнь.  </npctext>
+        <npclogo> 2 </npclogo>
+        <npcname> Арбитр </npcname>
+    </node>
+    <node>
+        <npctext> Сплошная рутина, ничего выдающегося.  </npctext>
+        <npclogo> 2 </npclogo>
+        <npcname> Арбитр </npcname>
+    </node>
+    <node>
+        <npctext> Ты можешь на этом закончить свою жизнь, либо... </npctext>
+        <npclogo> 2 </npclogo>
+        <npcname> Арбитр </npcname>
+    </node>
+    <node>
+        <npctext> Вернуться к рутине и продолжать жить. </npctext>
+        <npclogo> 2 </npclogo>
+        <npcname> Арбитр </npcname>
+    </node>
+    <node>
+        <npctext> Выбор только за тобой.  </npctext>
+        <npclogo> 2 </npclogo>
+        <npcname> Арбитр </npcname>
+    </node>
+    <node>
+        <npctext> Скажи мне...  </npctext>
+        <npclogo> 1 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> Если я откажусь вернуться к жизни, что получу взамен? </npctext>
+        <npclogo> 1 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+     <node>
+        <npctext> Ответ на этот вопрос не могу дать даже я, друг мой. </npctext>
+        <npclogo> 2 </npclogo>
+        <npcname> Арбитр </npcname>
+    </node>
+     <node>
+        <npctext> Единственный способ узнать – попробовать. </npctext>
+        <npclogo> 2 </npclogo>
+        <npcname> Арбитр </npcname>
+    </node>
+</dialogue>

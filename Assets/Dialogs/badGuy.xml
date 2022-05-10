@@ -1,0 +1,82 @@
+<dialogue>   
+    <node>
+        <npctext> Так ты пришел. </npctext>
+        <npclogo> 11 </npclogo>
+        <npcname> ??? </npcname>
+    </node>
+    <node>
+        <npctext> Раз попросил о встрече, значит что-то действительно важное. </npctext>
+        <npclogo> 7 </npclogo>
+        <npcname> Я </npcname>
+    </node>  
+    <node>
+        <npctext> Твоя последняя работа. Никак не хочешь прокомментировать? </npctext>
+        <npclogo> 11 </npclogo>
+        <npcname> ??? </npcname>
+    </node>
+    <node>
+        <npctext> А что не так? Я сделал все в точности, как ты сказал.  </npctext>
+        <npclogo> 7 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> Насколько мне помнится.  </npctext>
+        <npclogo> 11 </npclogo>
+        <npcname> ??? </npcname>
+    </node>
+    <node>
+        <npctext> Сливать мои данные я тебя не просил.  </npctext>
+        <npclogo> 11 </npclogo>
+        <npcname> ??? </npcname>
+    </node>
+    <node>
+        <npctext> Не просил, поэтому я этого не делал.  </npctext>
+        <npclogo> 7 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> Ты ведь знаешь, что отрицать очевидное бессмысленно?  </npctext>
+        <npclogo> 11 </npclogo>
+        <npcname> ??? </npcname>
+    </node>
+    <node>
+        <npctext> Поэтому очевидного не отрицаю.  </npctext>
+        <npclogo> 7 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> Я этого не делал.   </npctext>
+        <npclogo> 7 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> Продолжать упрямиться сейчас – не лучший выбор.  </npctext>
+        <npclogo> 11 </npclogo>
+        <npcname> ??? </npcname>
+    </node>
+    <node>
+        <npctext> Что ты хочешь этим сказать?  </npctext>
+        <npclogo> 7 </npclogo>
+        <npcname> Я </npcname>
+    </node>  
+    <node>
+        <npctext> Признай свою ошибку, и мы как-нибудь договоримся.   </npctext>
+        <npclogo> 11 </npclogo>
+        <npcname> ??? </npcname>
+    </node>
+    <node>
+        <npctext> Утечка личных данных, сам понимаешь, дело, достойное полиции.   </npctext>
+        <npclogo> 11 </npclogo>
+        <npcname> ??? </npcname>
+    </node>
+    <node>
+        <npctext> Последний раз скажу, что я ничего подобного не делал.   </npctext>
+        <npclogo> 7 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> Ладно, поговорить не получилось.  </npctext>
+        <npclogo> 11 </npclogo>
+        <npcname> ??? </npcname>
+    </node>
+</dialogue>

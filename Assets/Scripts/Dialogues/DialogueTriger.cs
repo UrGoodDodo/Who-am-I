@@ -12,6 +12,8 @@ public class DialogueTriger : MonoBehaviour
     public CircleCollider2D arbitr;
     public BoxCollider2D stranger;
     public BoxCollider2D forestStranger;
+    public BoxCollider2D roma;
+    public BoxCollider2D prepod;
 
     public int currentDialog;
     private void Start()
@@ -19,10 +21,12 @@ public class DialogueTriger : MonoBehaviour
         mother.enabled = false;
         friend.enabled = false;
         stranger.enabled = false;
-        forestStranger.enabled = false;
-        mother.enabled = false;
+        forestStranger.enabled = false;        
 
         arbitr.enabled = true;
+
+        prepod.enabled = true;
+        roma.enabled = false;
 
         currentDialog = 1;
     }

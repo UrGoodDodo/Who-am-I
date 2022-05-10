@@ -16,7 +16,7 @@ public class shkaf : MonoBehaviour
 
     public Text wear;
 
-    bool isWeared = false;
+    public bool isWeared = false;
 
     private void Update()
     {
@@ -33,6 +33,8 @@ public class shkaf : MonoBehaviour
             player.GetComponent<Move>().player = PlayerHudi;
             player.GetComponent<Move>().stay = hudistay;
             oldPlayer.SetActive(false);
+
+            dm.skin = 3;
         }
     }
 

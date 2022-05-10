@@ -1,0 +1,32 @@
+<dialogue>
+    <node>
+        <npctext> Если брать во внимание слова того существа, то мне следовало бы не упускать деталей. </npctext>
+        <npclogo> 1 </npclogo>
+        <npcname>  </npcname>
+    </node>
+    <node>
+        <npctext> Что-то это не похоже на комнату, где я обычно оказываюсь. </npctext>
+        <npclogo> 1 </npclogo>
+        <npcname> </npcname>
+    </node>   
+    <node>
+        <npctext> *звук уведомления* </npctext>
+        <npclogo> 0 </npclogo>
+        <npcname>  </npcname>
+    </node>  
+    <node>
+        <npctext> Не забыл, что мы сегодня встречаемся? </npctext>
+        <npclogo> 0 </npclogo>
+        <npcname> ??? </npcname>
+    </node>
+    <node>
+        <npctext> Все помню, около девяти вечера возле старого парка. </npctext>
+        <npclogo> 7 </npclogo>
+        <npcname> Я </npcname>
+    </node> 
+    <node>
+        <npctext> Хорошо. </npctext>
+        <npclogo> 0 </npclogo>
+        <npcname> ??? </npcname>
+    </node>    
+</dialogue>

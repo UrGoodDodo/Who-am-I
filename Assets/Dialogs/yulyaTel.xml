@@ -1,0 +1,27 @@
+<dialogue>   
+    <node>
+        <npctext> Говори быстрее, у меня полная посадка.   </npctext>
+        <npclogo> 0 </npclogo>
+        <npcname> Юля </npcname>
+    </node>
+    <node>
+        <npctext> И тебе привет. Хотел спросить, как дела на работе.   </npctext>
+        <npclogo> 7 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> Я отпишусь тебе позже. </npctext>
+        <npclogo> 0 </npclogo>
+        <npcname> Юля </npcname>
+    </node>  
+    <node>
+        <npctext> *конец звонка*  </npctext>
+        <npclogo> 0 </npclogo>
+        <npcname>  </npcname>
+    </node>
+    <node>
+        <npctext> Опять занята.   </npctext>
+        <npclogo> 7 </npclogo>
+        <npcname> Я </npcname>
+    </node> 
+</dialogue>

@@ -7,10 +7,18 @@ public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
+
+    public GameObject SettingsMenu;
+
 	//Происходит каждый кадр
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (SettingsMenu.active && Input.GetKeyDown(KeyCode.Escape)) 
+        {
+            SettingsMenu.SetActive(false);
+            pauseMenuUI.SetActive(true);
+        }
+        else if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (GameIsPaused)
                 Resume();

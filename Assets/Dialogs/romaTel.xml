@@ -1,0 +1,27 @@
+<dialogue>   
+    <node>
+        <npctext> *гудок* </npctext>
+        <npclogo> 0 </npclogo>
+        <npcname>  </npcname>
+    </node>
+    <node>
+        <npctext> *гудок* </npctext>
+        <npclogo> 0 </npclogo>
+        <npcname>  </npcname>
+    </node>
+    <node>
+        <npctext> *гудок* </npctext>
+        <npclogo> 0 </npclogo>
+        <npcname>  </npcname>
+    </node>
+    <node>
+        <npctext> *Абонент не доступен* </npctext>
+        <npclogo> 0 </npclogo>
+        <npcname>  </npcname>
+    </node>
+    <node>
+        <npctext> Как обычно. </npctext>
+        <npclogo> 7 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+</dialogue>

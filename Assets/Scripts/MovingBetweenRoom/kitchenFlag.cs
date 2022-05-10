@@ -26,7 +26,9 @@ public class kitchenFlag : MonoBehaviour
 
             player.GetComponent<Move>().enabled = false;
             player.GetComponent<Animator>().enabled = false;
-            player.GetComponent<AudioSource>().enabled = false; 
+            player.GetComponent<AudioSource>().enabled = false;
+
+            dm.GetComponent<DialogueManager>().skin = 0;
         }
     }
 

@@ -1,0 +1,27 @@
+<dialogue>   
+    <node>
+        <npctext> Удивительно, что я узнаю, как выгляжу, только сейчас.   </npctext>
+        <npclogo> 1 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> ... </npctext>
+        <npclogo> 1 </npclogo>
+        <npcname> Я </npcname>
+    </node> 
+    <node>
+        <npctext> Подождите... </npctext>
+        <npclogo> 1 </npclogo>
+        <npcname> Я </npcname>
+    </node> 
+    <node>
+        <npctext> Тот паренек... </npctext>
+        <npclogo> 1 </npclogo>
+        <npcname> Я </npcname>
+    </node> 
+    <node>
+        <npctext> Почему я выгляжу в точности, как тот паренек?  </npctext>
+        <npclogo> 1 </npclogo>
+        <npcname> Я </npcname>
+    </node>    
+</dialogue>

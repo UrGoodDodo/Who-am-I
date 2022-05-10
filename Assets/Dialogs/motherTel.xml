@@ -1,0 +1,37 @@
+<dialogue>   
+    <node>
+        <npctext> Привет, сынок. Что-то случилось?   </npctext>
+        <npclogo> 0 </npclogo>
+        <npcname> Мама </npcname>
+    </node>
+    <node>
+        <npctext> Позвонил узнать, как дела. Чего сразу начинать. </npctext>
+        <npclogo> 7 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> У меня-то хорошо дела, но вот с компьютером твои разобраться не могу. </npctext>
+        <npclogo> 0 </npclogo>
+        <npcname> Мама </npcname>
+    </node>
+    <node>
+        <npctext> Когда в следующий раз приедешь? </npctext>
+        <npclogo> 0 </npclogo>
+        <npcname> Мама </npcname>
+    </node>
+    <node>
+        <npctext> Пока не знаю. Я напишу тебе, как выбью время. </npctext>
+        <npclogo> 7 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> Как скажешь. Тогда жду вестей. </npctext>
+        <npclogo> 0 </npclogo>
+        <npcname> Мама </npcname>
+    </node>
+    <node>
+        <npctext> И тебе пока. </npctext>
+        <npclogo> 7 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+</dialogue>

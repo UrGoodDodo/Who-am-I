@@ -1,0 +1,12 @@
+<dialogue>   
+    <node>
+        <npctext> *Абонент занес вас в черный список.*   </npctext>
+        <npclogo> 0 </npclogo>
+        <npcname>  </npcname>
+    </node>
+    <node>
+        <npctext> Почему я все еще не удалил ее номер? </npctext>
+        <npclogo> 7 </npclogo>
+        <npcname> Я </npcname>
+    </node>    
+</dialogue>

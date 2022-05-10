@@ -1,0 +1,32 @@
+<dialogue>   
+    <node>
+        <npctext> Даже слышать от тебя не хочу о том, что ты проспал.  </npctext>
+        <npclogo> 0 </npclogo>
+        <npcname> Друг </npcname>
+    </node>
+    <node>
+        <npctext> Да не проспал я.  </npctext>
+        <npclogo> 7 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> ...  </npctext>
+        <npclogo> 0 </npclogo>
+        <npcname> Друг </npcname>
+    </node>
+    <node>
+        <npctext> Ты там помер что ли?   </npctext>
+        <npclogo> 7 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+    <node>
+        <npctext> Ты, и не проспал. Нет, ну такое надо отметить.   </npctext>
+        <npclogo> 0 </npclogo>
+        <npcname> Друг </npcname>
+    </node>
+    <node>
+        <npctext> Вешаю трубку. </npctext>
+        <npclogo> 7 </npclogo>
+        <npcname> Я </npcname>
+    </node>
+</dialogue>
