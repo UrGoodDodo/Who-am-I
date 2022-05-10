@@ -33685,7 +33685,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &907472060
 Transform:
   m_ObjectHideFlags: 0
@@ -34302,6 +34302,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: e029a5a46b4c70f4a8aec8a4f5e2b94e, type: 3}
   - {fileID: 21300000, guid: 0f0a2278fa292b74b900a6c2ccfe8825, type: 3}
   - {fileID: 21300000, guid: b21fa6b718341b74f9253d61714ac19c, type: 3}
+  - {fileID: 21300000, guid: 5f87f53952bf66f46af7542f391d2ee9, type: 3}
   dialogAssets:
   - {fileID: 4900000, guid: 8fec1ec5ada60ff49a01cea94c9bb698, type: 3}
   - {fileID: 4900000, guid: 7be676cf6efff2e48b76da1d4cf45715, type: 3}
@@ -51818,7 +51819,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.07821799, y: 0.38551265}
   m_AnchorMax: {x: 0.397, y: 0.5}
-  m_AnchoredPosition: {x: 12.531677, y: -5.188202}
+  m_AnchoredPosition: {x: 12.53186, y: -5.188202}
   m_SizeDelta: {x: -20.1137, y: -10.3764}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1468201833
