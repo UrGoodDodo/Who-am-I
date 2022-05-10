@@ -473,6 +473,9 @@ public class DialogueManager : MonoBehaviour
                 }
                 StartCoroutine(StartDialogWithTimer(42, 1f));
                 break;
+            case 51:
+                choiser.ShowChoiser(2);
+                break;
         }
     }
 
