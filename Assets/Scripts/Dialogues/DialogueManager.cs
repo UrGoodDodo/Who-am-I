@@ -334,9 +334,13 @@ public class DialogueManager : MonoBehaviour
             case 27:
             case 28:
                 {
-                    player.GetComponent<Move>().MoveOutLobbyToLocation(311);
                     if (choiser.choisess.Sum() >= 0)
+                    {
                         kurtki.isCheked = false;
+                        player.GetComponent<Move>().MoveOutLobbyToLocation(3112);
+                    }
+                    else
+                        player.GetComponent<Move>().MoveOutLobbyToLocation(3111);
                     break;
                 }
             case 29:
