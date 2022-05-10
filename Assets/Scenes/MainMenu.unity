@@ -1317,6 +1317,8 @@ MonoBehaviour:
   shkaf: {fileID: 0}
   tips: {fileID: 0}
   cam: {fileID: 0}
+  dt: {fileID: 0}
+  kurtki: {fileID: 0}
   isLoaded: 0
 --- !u!114 &202801559
 MonoBehaviour:
@@ -5743,7 +5745,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24300002, guid: 4bc9379afb4f8d0488858d9c99ab2d42, type: 2}
   m_audioClip: {fileID: 8300000, guid: ed007dad0ae466f468dc3852ec10c31c, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.208
   m_Pitch: 1
   Loop: 1
   Mute: 0
