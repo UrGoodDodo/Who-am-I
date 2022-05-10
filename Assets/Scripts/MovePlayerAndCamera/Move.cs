@@ -34,6 +34,7 @@ public class Move : MonoBehaviour
     public GameObject[] OnObjects = new GameObject[3];
     public Sprite[] SlotSprites = new Sprite[2];
     public GameObject trashbak;
+    public GameObject LighterOnPlayer;
 
     public CircleCollider2D kurtki;
     private void Update()
@@ -211,10 +212,12 @@ public class Move : MonoBehaviour
             case 311://Комната в общаге слева
                 slot[0].GetComponent<LighterOnOff>().enabled = false;
                 slot[1].SetActive(false);
+                slot[2].GetComponent<Light>().enabled = false;
                 slot[2].SetActive(false);
 
                 newSlot[0].GetComponent<Slot>().itemid = 3;
                 newSlot[1].SetActive(true);
+
 
 
                 GetComponent<Transform>().position = new Vector3(-9.5f, -297, 1);

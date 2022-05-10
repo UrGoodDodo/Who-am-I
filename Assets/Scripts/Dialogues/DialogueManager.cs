@@ -65,6 +65,7 @@ public class DialogueManager : MonoBehaviour
     public GameObject[] PhoneSlotAndCanvas = new GameObject[2];
 
     [Header("Change Sprites")]
+    public GameObject lobby3;
     public GameObject lobby2;
     public GameObject lobby;
     public GameObject fon;
@@ -359,6 +360,9 @@ public class DialogueManager : MonoBehaviour
                     player.GetComponent<Animator>().enabled = true;
                     player.GetComponent<SpriteRenderer>().enabled = true;
                     PlayerStudent.SetActive(false);
+                    lobby.SetActive(false);
+                    lobby2.SetActive(false);
+                    lobby3.SetActive(true);
                     foreach (var item in Slots)
                     {
                         item.GetComponent<Slot>().itemid = 0;
@@ -452,6 +456,9 @@ public class DialogueManager : MonoBehaviour
                 player.GetComponent<Animator>().enabled = true;
                 player.GetComponent<SpriteRenderer>().enabled = true;
                 PlayerStudent.SetActive(false);
+                lobby.SetActive(false);
+                lobby2.SetActive(false);
+                lobby3.SetActive(true);
                 foreach (var item in Slots)
                 {
                     item.GetComponent<Slot>().itemid = 0;
