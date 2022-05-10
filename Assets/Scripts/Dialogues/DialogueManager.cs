@@ -384,7 +384,10 @@ public class DialogueManager : MonoBehaviour
                 }
                 break;
             case 34:
-                dt.currentDialog = 35;
+                if (choiser.choisess.Sum() >= 0)
+                    dt.currentDialog = 35;
+                else
+                    dt.currentDialog = 51;
                 dt.arbitr.enabled = true;
                 mirror.GetComponent<Button>().enabled = false;
                 break;

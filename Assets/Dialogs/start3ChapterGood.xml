@@ -15,7 +15,7 @@
         <npcname> Я </npcname>
     </node>
    <node>
-        <npctext> Если тебе нужна помощь, может наконец-то скажешь, что ты конкретно ты ищешь.  </npctext>
+        <npctext> Если тебе нужна помощь, может наконец-то скажешь, что конкретно ты ищешь?  </npctext>
         <npclogo> 8 </npclogo>
         <npcname> ??? </npcname>
     </node>
